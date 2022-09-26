@@ -1,19 +1,20 @@
 import React from "react";
 
-export interface Props {}
+export interface Props {
+  headline: string;
+  subheadline: string;
+}
 
 /**
  * An Headline React Component.
  * @author Lea Janina Will
  * @version 0.1
  */
-export const Headline: React.FC<Props> = () => {
+export const Headline: React.FC<Props> = ({ headline, subheadline }) => {
   return (
     <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-      <span className="block">Want to be millionaire ?</span>
-      <span className="block text-navy-200 border-black">
-        It&#x27;s today or never.
-      </span>
+      <span className="block">{headline}</span>
+      <span className="block text-navy-200 border-black">{subheadline}</span>
     </h2>
   );
 };

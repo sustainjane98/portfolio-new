@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 export interface Props {}
 
@@ -7,11 +7,8 @@ export interface Props {}
  * @author Lea Janina Will
  * @version 0.1
  */
-export const HeadlineBody: React.FC<Props> = () => {
+export const HeadlineBody: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <p className="text-xl mt-4 max-w-md mx-auto text-gray-100">
-      I had noticed that both in the very poor and very rich extremes of society
-      the mad were often allowed to mingle freely
-    </p>
+    <p className="text-xl mt-4 max-w-md mx-auto text-gray-100">{children}</p>
   );
 };
