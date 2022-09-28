@@ -23,6 +23,7 @@ const Biography: React.FC<Props> = () => {
       <HeaderWithTwoSections />
       <Skills
         title="Skills"
+        id="skills"
         skills={[
           {
             title: "Frontend",

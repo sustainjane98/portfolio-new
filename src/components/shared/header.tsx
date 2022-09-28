@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import Image, { StaticImageData } from "next/image";
 import classNames from "classnames";
+import { Navigation } from "./navigation";
 
 export interface Props {
   src: StaticImageData;
@@ -19,6 +20,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
 }) => {
   return (
     <header className={`w-screen h-screen relative ${className} `}>
+      <Navigation backgroundStyle={className ?? "bg-grey-900"} />
       <Image src={src} alt="Man with Rainbow Flag" layout="fill" />
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
         <div className="relative top-0 left-0 w-full h-full">

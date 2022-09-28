@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 export interface Props {
   title: string;
   skills: CardProps[];
+  id?: string;
 }
 
 /**
@@ -19,11 +20,11 @@ export interface Props {
  * @author Lea Janina Will
  * @version 0.1
  */
-export const Skills: React.FC<Props> = ({ skills, title }) => {
+export const Skills: React.FC<Props> = ({ skills, title, id }) => {
   const { pathname } = useRouter();
 
   return (
-    <div className="my-12">
+    <div className="my-12" id={id}>
       <h3 className="font-extrabold text-3xl flex justify-center items-center">
         <span>{title}</span>
       </h3>
