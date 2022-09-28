@@ -24,7 +24,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
         <div className="relative top-0 left-0 w-full h-full">
           <div className="bg-[#0c111663] top-0 left-0 w-full h-full" />
           <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center flex-col">
-            {children}
+            <div>{children}</div>
           </div>
         </div>
       </div>

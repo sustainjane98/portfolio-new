@@ -2,8 +2,9 @@ import React from "react";
 import { Header } from "../../shared/header";
 import programmingBackground from "../../../assets/radowan-nakif-rehan-cYyqhdbJ9TI-unsplash.jpg";
 import { NextSeo } from "next-seo";
-import { Headline } from "../../intro/headline";
-import { HeadlineBody } from "../../intro/headline-body";
+import { Headline } from "../../shared/headline";
+import { HeadlineBody } from "../../shared/headline-body";
+import { ScrollDownIndicator } from "../../shared/scroll-down-indicator";
 
 export interface Props {}
 
@@ -25,6 +26,7 @@ export const HeaderWithTwoSections: React.FC<Props> = () => {
           I am a fullstack developer who is on fire for frontend development. I
           am particularly familiar with the following technologies...
         </HeadlineBody>
+        <ScrollDownIndicator />
       </Header>
     </>
   );
