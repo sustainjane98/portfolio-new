@@ -8,9 +8,9 @@ import {
   ServerIcon,
   PencilIcon,
   ArrowTrendingUpIcon,
+  InformationCircleIcon,
 } from "@heroicons/react/24/solid";
 import { NavigationItem } from "./navigation-item";
-import { useInView } from "react-intersection-observer";
 
 export interface Props {}
 
@@ -38,55 +38,68 @@ export const Navigation: React.FC<Props> = () => {
         </button>
       </div>
       {open && (
-        <nav className="fixed z-10 h-full px-12 py-8 w-auto max-w-md bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0">
-          <NavigationItem
-            onClick={() => setOpen(false)}
-            href="/"
-            icon={<HomeIcon className="w-6 h-6" />}
-          >
-            Home
-          </NavigationItem>
-          <NavigationItem
-            onClick={() => setOpen(false)}
-            href="/bio"
-            icon={<UserIcon className="w-6 h-6" />}
-          >
-            Who am I
-          </NavigationItem>
-          <NavigationItem
-            onClick={() => setOpen(false)}
-            href="/bio#skills"
-            subItems={[
-              {
-                href: "/bio#skills",
-                children: "Overview",
-                icon: <ComputerDesktopIcon className="w-6 h-6" />,
-              },
-              {
-                href: "/bio/skills/frontend",
-                children: "Frontend",
-                icon: <ComputerDesktopIcon className="w-6 h-6" />,
-              },
-              {
-                href: "/bio/skills/backend",
-                children: "Backend",
-                icon: <ServerIcon className="w-6 h-6" />,
-              },
-              {
-                href: "/bio/skills/design",
-                children: "Design",
-                icon: <PencilIcon className="w-6 h-6" />,
-              },
-              {
-                href: "/bio/skills/process_model",
-                children: "Project Management",
-                icon: <ArrowTrendingUpIcon className="w-6 h-6" />,
-              },
-            ]}
-          >
-            Skills
-          </NavigationItem>
-        </nav>
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black/[0.50] z-20"
+          onClick={() => setOpen(false)}
+        >
+          <nav className="fixed z-10 h-full px-12 py-8 w-auto max-w-md bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0">
+            <NavigationItem
+              onClick={() => setOpen(false)}
+              href="/"
+              icon={<HomeIcon className="w-6 h-6" />}
+            >
+              Home
+            </NavigationItem>
+            <NavigationItem
+              onClick={() => setOpen(false)}
+              href="/bio"
+              icon={<UserIcon className="w-6 h-6" />}
+            >
+              Who am I
+            </NavigationItem>
+            <NavigationItem
+              onClick={() => setOpen(false)}
+              href="/bio#skills"
+              subItems={[
+                {
+                  href: "/bio#skills",
+                  children: "Overview",
+                  icon: <ComputerDesktopIcon className="w-6 h-6" />,
+                },
+                {
+                  href: "/bio/skills/frontend",
+                  children: "Frontend",
+                  icon: <ComputerDesktopIcon className="w-6 h-6" />,
+                },
+                {
+                  href: "/bio/skills/backend",
+                  children: "Backend",
+                  icon: <ServerIcon className="w-6 h-6" />,
+                },
+                {
+                  href: "/bio/skills/design",
+                  children: "Design",
+                  icon: <PencilIcon className="w-6 h-6" />,
+                },
+                {
+                  href: "/bio/skills/process_model",
+                  children: "Project Management",
+                  icon: <ArrowTrendingUpIcon className="w-6 h-6" />,
+                },
+              ]}
+            >
+              Skills
+            </NavigationItem>
+            <div className="h-full" />
+            <NavigationItem
+              onClick={() => setOpen(false)}
+              href="/impressum"
+              icon={<InformationCircleIcon className="w-6 h-6" />}
+            >
+              Impressum
+            </NavigationItem>
+          </nav>
+        </div>
       )}
     </>
   );
