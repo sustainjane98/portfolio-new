@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { CardBubble, Props as CardBubbleProps } from "./card-bubble";
 
 export interface Props {
   icon: React.ReactNode;
@@ -7,6 +8,7 @@ export interface Props {
   description: string;
   href: string;
   external?: boolean;
+  bubbles?: CardBubbleProps[];
 }
 
 /**
@@ -20,9 +22,16 @@ export const Card: React.FC<Props> = ({
   icon,
   href,
   external,
+  bubbles,
 }) => {
   return (
-    <div className="inline-grid grid-rows-[auto_auto_minmax(auto,_100%)_auto] w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-white mt-6  shadow-lg rounded-lg">
+    <div
+      className={`inline-grid ${
+        bubbles
+          ? "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]"
+          : "grid-rows-[auto_auto_minmax(auto,_100%)_auto]"
+      } w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-white mt-6  shadow-lg rounded-lg`}
+    >
       <div className="flex-shrink-0">
         <div className="flex items-center mx-auto justify-center h-12 w-12 rounded-md bg-navy-500 text-white">
           {icon}
@@ -32,6 +41,13 @@ export const Card: React.FC<Props> = ({
         {title}
       </h3>
       <p className="text-md  text-gray-500 py-4 text-start">{description}</p>
+      {bubbles && (
+        <div className="flex justify-center content-start pb-6 gap-2 flex-wrap px-6">
+          {bubbles.map((props, index) => (
+            <CardBubble key={index} {...props} />
+          ))}
+        </div>
+      )}
 
       {external ? (
         <a href={href} target={"_blank"} rel="noreferrer">

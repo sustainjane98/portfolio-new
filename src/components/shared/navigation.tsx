@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  UserIcon,
+  ComputerDesktopIcon,
+  ServerIcon,
+  PencilIcon,
+  ArrowTrendingUpIcon,
+} from "@heroicons/react/24/solid";
 import { NavigationItem } from "./navigation-item";
-import { useScroll } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export interface Props {}
 
@@ -13,33 +21,68 @@ export interface Props {}
  */
 export const Navigation: React.FC<Props> = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <>
-      <div className="fixed top-0 left-0 bottom-0 z-10 ml-4 my-4 flex flex-col">
+      <div className="fixed top-0 left-0 z-10 pl-3 pt-4 flex flex-col">
         <button
           onClick={() => {
             setOpen((prev) => !prev);
           }}
         >
           {open ? (
-            <XMarkIcon className="w-10 h-10 fill-white" />
+            <XMarkIcon className="w-10 h-10 fill-navy-400" />
           ) : (
-            <Bars3Icon className="w-10 h-10 fill-white" />
+            <Bars3Icon className="w-10 h-10 fill-navy-400" />
           )}
         </button>
       </div>
       {open && (
-        <nav className="fixed z-10 h-full w-auto px-16 py-8 max-w-md bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0">
-          <NavigationItem onClick={() => setOpen(false)} href="/">
+        <nav className="fixed z-10 h-full px-12 py-8 w-auto max-w-md bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0">
+          <NavigationItem
+            onClick={() => setOpen(false)}
+            href="/"
+            icon={<HomeIcon className="w-6 h-6" />}
+          >
             Home
           </NavigationItem>
-          <NavigationItem onClick={() => setOpen(false)} href="/bio">
+          <NavigationItem
+            onClick={() => setOpen(false)}
+            href="/bio"
+            icon={<UserIcon className="w-6 h-6" />}
+          >
             Who am I
           </NavigationItem>
           <NavigationItem
             onClick={() => setOpen(false)}
             href="/bio#skills"
-            subItems={[{ href: "/skill/frontend", children: "Frontend" }]}
+            subItems={[
+              {
+                href: "/bio#skills",
+                children: "Overview",
+                icon: <ComputerDesktopIcon className="w-6 h-6" />,
+              },
+              {
+                href: "/bio/skills/frontend",
+                children: "Frontend",
+                icon: <ComputerDesktopIcon className="w-6 h-6" />,
+              },
+              {
+                href: "/bio/skills/backend",
+                children: "Backend",
+                icon: <ServerIcon className="w-6 h-6" />,
+              },
+              {
+                href: "/bio/skills/design",
+                children: "Design",
+                icon: <PencilIcon className="w-6 h-6" />,
+              },
+              {
+                href: "/bio/skills/process_model",
+                children: "Project Management",
+                icon: <ArrowTrendingUpIcon className="w-6 h-6" />,
+              },
+            ]}
           >
             Skills
           </NavigationItem>

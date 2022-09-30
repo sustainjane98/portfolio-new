@@ -42,14 +42,14 @@ const Biography: React.FC<Props> = () => {
           {
             title: "Design",
             description:
-              "The term process model is used in various contexts. For example, in business process modeling the enterprise process model is often referred to as the business process model.",
+              "The term Project Management is used in various contexts. For example, in business Project Managementing the enterprise Project Management is often referred to as the business Project Management.",
             href: `${pathname}/skills/design`,
             icon: <PencilIcon className="w-6 h-6" />,
           },
           {
-            title: "Process Models",
+            title: "Project Managements",
             description:
-              "The term process model is used in various contexts. For example, in business process modeling the enterprise process model is often referred to as the business process model.",
+              "The term Project Management is used in various contexts. For example, in business Project Managementing the enterprise Project Management is often referred to as the business Project Management.",
             href: `${pathname}/skills/process_model`,
             icon: <ArrowTrendingUpIcon className="w-8 h-8" />,
           },
