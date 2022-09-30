@@ -21,6 +21,10 @@ import ReactHookFormIcon from "../../../../assets/react-hook-form.svg";
 import FormikIcon from "../../../../assets/formik.svg";
 import FramerMotionIcon from "../../../../assets/framer-motion.svg";
 import HeadlessUIIcon from "../../../../assets/headless.svg";
+import NrwlIcon from "../../../../assets/nrwl-logo-white.svg";
+import NpmIcon from "../../../../assets/npm-square-red-1.svg";
+import YarnIcon from "../../../../assets/yarn.svg";
+import { DocumentDuplicateIcon } from "@heroicons/react/24/solid";
 
 export interface Props {}
 
@@ -48,12 +52,29 @@ const FrotendPage: React.FC<Props> = () => {
           title: "Frontend Skills",
           skills: [
             {
-              title: "Nx",
+              title: "Monorepo + Package Manager",
               description:
                 "Nx is a next generation build system with first class monorepo support and powerful integrations.",
               href: "https://nx.dev/",
               external: true,
-              icon: <ReactIcon className="w-6 h-6" />,
+              icon: <DocumentDuplicateIcon className="w-6 h-6" />,
+              bubbles: [
+                {
+                  icon: <NrwlIcon className="w-6 h-6" />,
+                  href: "https://nx.dev",
+                  external: true,
+                },
+                {
+                  icon: <NpmIcon className="w-6 h-6" />,
+                  href: "https://nx.dev",
+                  external: true,
+                },
+                {
+                  icon: <YarnIcon className="w-6 h-6" />,
+                  href: "https://nx.dev",
+                  external: true,
+                },
+              ],
             },
             {
               title: "React (Native)",
@@ -158,6 +179,17 @@ const FrotendPage: React.FC<Props> = () => {
               href: "https://html5.org/",
               external: true,
               icon: <HTML5Icon className="w-6 h-6" />,
+              bubbles: [
+                {
+                  icon: (
+                    <div className="flex justify-center items-center">
+                      <span className="font-bold text-white">EJS</span>
+                    </div>
+                  ),
+                  href: "https://ejs.co/",
+                  external: true,
+                },
+              ],
             },
             {
               title: "CSS3",

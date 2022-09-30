@@ -7,6 +7,10 @@ import KotlinIcon from "../../../assets/kotlin-2.svg";
 import SwiftIcon from "../../../assets/swift-15.svg";
 import ElixirIcon from "../../../assets/elixir-1.svg";
 import JavaIcon from "../../../assets/java-14.svg";
+import GinIcon from "../../../assets/gin.svg";
+import GooseIcon from "../../../assets/goose_logo.svg";
+import HibenateIcon from "../../../assets/hibernate-icon.svg";
+import SpringIcon from "../../../assets/spring-3.svg";
 
 export interface Props {}
 
@@ -16,6 +20,28 @@ export interface Props {}
  * @version 0.1
  */
 const Backend: React.FC<Props> = () => {
+  const javaAndKotlin = [
+    {
+      icon: <HibenateIcon className="w-6 h-6" />,
+      href: "https://hibernate.org/",
+      external: true,
+    },
+    {
+      icon: <SpringIcon className="w-6 h-6" />,
+      href: "https://spring.io/",
+      external: true,
+    },
+    {
+      icon: (
+        <div className="w-6 h-6 flex items-center justify-center">
+          <span className="font-bold text-white">L</span>
+        </div>
+      ),
+      href: "https://projectlombok.org/",
+      external: true,
+    },
+  ];
+
   return (
     <>
       <NextSeo title="Backend Skills" />
@@ -39,6 +65,18 @@ const Backend: React.FC<Props> = () => {
               href: "https://go.dev/",
               icon: <GolangIcon className="w-8 h-8" />,
               external: true,
+              bubbles: [
+                {
+                  icon: <GinIcon className="w-7 h-7" />,
+                  href: "https://github.com/gin-gonic/gin",
+                  external: true,
+                },
+                {
+                  icon: <GooseIcon className="w-8 h-8" />,
+                  href: "https://github.com/pressly/goose",
+                  external: true,
+                },
+              ],
             },
             {
               title: "Kotlin",
@@ -47,6 +85,7 @@ const Backend: React.FC<Props> = () => {
               href: "https://kotlinlang.org/",
               icon: <KotlinIcon className="w-6 h-6" />,
               external: true,
+              bubbles: javaAndKotlin,
             },
             {
               title: "Swift",
@@ -71,6 +110,7 @@ const Backend: React.FC<Props> = () => {
               href: "https://www.java.com/download/manual.jsp",
               icon: <JavaIcon className="w-8 h-8" />,
               external: true,
+              bubbles: javaAndKotlin,
             },
           ],
         }}
