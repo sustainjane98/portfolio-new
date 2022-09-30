@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -22,6 +22,11 @@ export interface Props {}
 export const Navigation: React.FC<Props> = () => {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (open) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "visible";
+  }, [open]);
+
   return (
     <>
       <div className="fixed top-0 left-0 z-10 pl-3 pt-4 flex flex-col">
@@ -38,11 +43,12 @@ export const Navigation: React.FC<Props> = () => {
         </button>
       </div>
       {open && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black/[0.50] z-20"
-          onClick={() => setOpen(false)}
-        >
-          <nav className="fixed z-10 h-full px-12 py-8 w-auto max-w-md bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0">
+        <div className="fixed top-0 left-0 w-full h-full z-10 flex">
+          <div
+            className="h-full w-full bg-black/[0.50] cursor-pointer"
+            onClick={() => setOpen(false)}
+          />
+          <nav className="fixed z-20 h-full px-12 py-8 w-auto max-w-md bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0">
             <NavigationItem
               onClick={() => setOpen(false)}
               href="/"
