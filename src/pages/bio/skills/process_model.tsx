@@ -25,7 +25,7 @@ export interface Props {}
 const ProcessModel: React.FC<Props> = () => {
   return (
     <>
-      <NextSeo />
+      <NextSeo title="Project Management Skills" />
       <SkillsTemplate
         header={{
           headline: {
