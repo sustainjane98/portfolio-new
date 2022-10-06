@@ -128,6 +128,13 @@ const FrotendPage: React.FC<Props> = () => {
                   external: true,
                 },
               ],
+              links: [
+                {
+                  description: "Example",
+                  href: "https://github.com/jawil003/example-app",
+                  external: true,
+                },
+              ],
             },
             {
               title: "Angular",

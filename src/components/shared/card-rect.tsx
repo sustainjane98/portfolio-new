@@ -7,7 +7,7 @@ export interface Props {
 
 /**
  * An CardRect React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const CardRect: React.FC<Props> = ({ icon, disableAutoPlace }) => {

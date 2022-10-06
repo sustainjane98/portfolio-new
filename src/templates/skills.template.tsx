@@ -24,7 +24,7 @@ export interface Props {
 
 /**
  * An SkillsTemplate React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const SkillsTemplate: React.FC<Props> = ({

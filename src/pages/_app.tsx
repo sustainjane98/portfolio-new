@@ -5,7 +5,7 @@ import { DefaultSeo } from "next-seo";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <DefaultSeo titleTemplate="%s | Lea Will" />
+      <DefaultSeo titleTemplate="%s | Jane Will" />
       <Component {...pageProps} />
     </>
   );

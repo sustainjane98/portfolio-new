@@ -13,7 +13,7 @@ export interface Props {
 
 /**
  * An NavigationItem React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const NavigationItem: React.FC<Props> = ({

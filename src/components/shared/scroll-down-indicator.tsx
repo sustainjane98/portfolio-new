@@ -8,7 +8,7 @@ const ArrowDownIconMotionComponent = motion(ArrowDownIcon);
 
 /**
  * An ScrollDownIndicator React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const ScrollDownIndicator: React.FC<Props> = () => {

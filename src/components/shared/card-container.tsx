@@ -6,7 +6,7 @@ export interface Props {
 
 /**
  * An CardContainer React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const CardContainer: React.FC<PropsWithChildren<Props>> = ({

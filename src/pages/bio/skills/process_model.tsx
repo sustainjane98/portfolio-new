@@ -19,7 +19,7 @@ export interface Props {}
 
 /**
  * An ProcessModel React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 const ProcessModel: React.FC<Props> = () => {

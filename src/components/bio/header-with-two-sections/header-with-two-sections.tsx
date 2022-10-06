@@ -10,7 +10,7 @@ export interface Props {}
 
 /**
  * An HeaderWithTwoSections React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const HeaderWithTwoSections: React.FC<Props> = () => {
@@ -19,7 +19,7 @@ export const HeaderWithTwoSections: React.FC<Props> = () => {
       <NextSeo title="Bio" />
       <Header src={programmingBackground} className="bg-[#0c1116]">
         <Headline
-          headline="I am Lea Janina"
+          headline="I am Jane"
           subheadline="I am a software developer"
         />
         <HeadlineBody>

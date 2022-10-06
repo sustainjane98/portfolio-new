@@ -7,7 +7,7 @@ export interface Props {
 
 /**
  * An Headline React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const Headline: React.FC<Props> = ({ headline, subheadline }) => {

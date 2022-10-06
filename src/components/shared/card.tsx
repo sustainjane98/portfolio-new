@@ -10,11 +10,12 @@ export interface Props {
   href: string;
   external?: boolean;
   bubbles?: CardBubbleProps[];
+  links?: { description: string; href: string; external?: boolean }[];
 }
 
 /**
  * An Card React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const Card: React.FC<Props> = ({
@@ -24,6 +25,7 @@ export const Card: React.FC<Props> = ({
   href,
   external,
   bubbles,
+  links,
 }) => {
   return (
     <div
@@ -48,21 +50,40 @@ export const Card: React.FC<Props> = ({
         </div>
       )}
 
-      {external ? (
-        <a href={href} target={"_blank"} rel="noreferrer">
-          <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
-            Learn more
-          </span>
-        </a>
-      ) : (
-        <Link href={href} passHref>
-          <a>
+      <div className="flex justify-center gap-4 flex-row">
+        {external ? (
+          <a href={href} target={"_blank"} rel="noreferrer">
             <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
               Learn more
             </span>
           </a>
-        </Link>
-      )}
+        ) : (
+          <Link href={href} passHref>
+            <a>
+              <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
+                Learn more
+              </span>
+            </a>
+          </Link>
+        )}
+        {links?.map(({ description, href, external }, index) =>
+          external ? (
+            <a href={href} target={"_blank"} rel="noreferrer">
+              <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
+                {description}
+              </span>
+            </a>
+          ) : (
+            <Link href={href} passHref key={index}>
+              <a>
+                <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
+                  {description}
+                </span>
+              </a>
+            </Link>
+          )
+        )}
+      </div>
     </div>
   );
 };

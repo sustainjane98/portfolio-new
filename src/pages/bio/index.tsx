@@ -13,7 +13,7 @@ export interface Props {}
 
 /**
  * An Biography React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 const Biography: React.FC<Props> = () => {

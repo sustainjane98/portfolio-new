@@ -4,7 +4,7 @@ export interface Props {}
 
 /**
  * An HeadlineBody React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const HeadlineBody: React.FC<PropsWithChildren> = ({ children }) => {

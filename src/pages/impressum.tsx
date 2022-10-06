@@ -12,7 +12,7 @@ export interface Props {}
 
 /**
  * An Impressum React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 const Impressum: React.FC<Props> = () => {

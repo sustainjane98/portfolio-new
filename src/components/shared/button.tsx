@@ -9,7 +9,7 @@ export interface Props {
 
 /**
  * An Button React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const Button: React.FC<Props> = ({ href, onClick, children }) => {

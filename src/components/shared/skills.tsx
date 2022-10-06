@@ -10,7 +10,7 @@ export interface Props {
 
 /**
  * An Skills React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const Skills: React.FC<Props> = ({ skills, title, id }) => {

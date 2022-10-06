@@ -12,7 +12,7 @@ export interface Props {}
 
 /**
  * An FrontendHeader React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const FrontendHeader: React.FC<Props> = () => {

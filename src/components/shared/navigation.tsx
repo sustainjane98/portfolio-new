@@ -16,7 +16,7 @@ export interface Props {}
 
 /**
  * An Navigation React Component.
- * @author Lea Janina Will
+ * @author Jane Will
  * @version 0.1
  */
 export const Navigation: React.FC<Props> = () => {
@@ -29,7 +29,7 @@ export const Navigation: React.FC<Props> = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-10 pl-3 pt-4 flex flex-col">
+      <div className="fixed top-[0px_+_env(safe-area-inset-left)] left-0 z-30 pl-3 pt-4 flex flex-col">
         <button
           onClick={() => {
             setOpen((prev) => !prev);
@@ -43,7 +43,7 @@ export const Navigation: React.FC<Props> = () => {
         </button>
       </div>
       {open && (
-        <div className="fixed top-0 left-0 w-full h-full z-10 flex">
+        <div className="fixed top-0 left-0 w-full h-full z-30 flex">
           <div
             className="h-full w-full bg-black/[0.50] cursor-pointer"
             onClick={() => setOpen(false)}

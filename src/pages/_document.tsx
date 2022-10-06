@@ -22,6 +22,10 @@ export default function Document() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta
+          name="viewport"
+          content="initial-scale=1, viewport-fit=cover"
+        ></meta>
       </Head>
       <body>
         <Main />
