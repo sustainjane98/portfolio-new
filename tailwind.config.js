@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -981,5 +983,28 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [],
+  plugins: [
+    plugin(function ({ theme, e, addUtilities }) {
+      let newUtilities = {};
+
+      const spacings = Object.entries(theme("spacing"));
+
+      for (const [key, value] of spacings) {
+        newUtilities = {
+          ...newUtilities,
+          [`.${e(`px-ios-${key}`)}`]: {
+            ["padding-left"]: `calc(env(safe-area-inset-left) + ${value})`,
+            ["padding-right"]: `calc(env(safe-area-inset-right) + ${value})`,
+          },
+          [`.${e(`pl-ios-${key}`)}`]: {
+            ["padding-left"]: `calc(env(safe-area-inset-left) + ${value})`,
+          },
+          [`.${e(`pr-ios-${key}`)}`]: {
+            ["padding-right"]: `calc(env(safe-area-inset-right) + ${value})`,
+          },
+        };
+      }
+      addUtilities(newUtilities);
+    }),
+  ],
 };

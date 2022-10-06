@@ -29,7 +29,7 @@ export const Card: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className={`inline-grid ${
+      className={`px-ios-4 inline-grid ${
         bubbles
           ? "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]"
           : "grid-rows-[auto_auto_minmax(auto,_100%)_auto]"

@@ -29,7 +29,7 @@ export const Navigation: React.FC<Props> = () => {
 
   return (
     <>
-      <div className="fixed top-[0px_+_env(safe-area-inset-left)] left-0 z-30 pl-3 pt-4 flex flex-col">
+      <div className="fixed top-0 left-0 z-30 pl-ios-3 pt-4 flex flex-col">
         <button
           onClick={() => {
             setOpen((prev) => !prev);
