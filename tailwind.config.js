@@ -1002,6 +1002,16 @@ module.exports = {
           [`.${e(`pr-ios-${key}`)}`]: {
             ["padding-right"]: `calc(env(safe-area-inset-right) + ${value})`,
           },
+          [`.${e(`pt-ios-${key}`)}`]: {
+            ["padding-top"]: `calc(env(safe-area-inset-top) + ${value})`,
+          },
+          [`.${e(`pb-ios-${key}`)}`]: {
+            ["padding-bottom"]: `calc(env(safe-area-inset-bottom) + ${value})`,
+          },
+          [`.${e(`py-ios-${key}`)}`]: {
+            ["padding-bottom"]: `calc(env(safe-area-inset-bottom) + ${value})`,
+            ["padding-top"]: `calc(env(safe-area-inset-top) + ${value})`,
+          },
         };
       }
       addUtilities(newUtilities);

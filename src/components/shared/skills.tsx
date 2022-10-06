@@ -15,7 +15,7 @@ export interface Props {
  */
 export const Skills: React.FC<Props> = ({ skills, title, id }) => {
   return (
-    <div className="my-12" id={id}>
+    <div className="px-4 py-ios-12 pb-4" id={id}>
       <h3 className="font-extrabold text-3xl flex justify-center items-center">
         <span>{title}</span>
       </h3>

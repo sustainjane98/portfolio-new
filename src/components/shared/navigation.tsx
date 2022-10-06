@@ -11,6 +11,7 @@ import {
   InformationCircleIcon,
 } from "@heroicons/react/24/solid";
 import { NavigationItem } from "./navigation-item";
+import { main } from "../../config/navigation-links";
 
 export interface Props {}
 
@@ -48,54 +49,18 @@ export const Navigation: React.FC<Props> = () => {
             className="h-full w-full bg-black/[0.50] cursor-pointer"
             onClick={() => setOpen(false)}
           />
-          <nav className="fixed z-20 h-full px-12 py-8 w-auto max-w-md bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0">
-            <NavigationItem
-              onClick={() => setOpen(false)}
-              href="/"
-              icon={<HomeIcon className="w-6 h-6" />}
-            >
-              Home
-            </NavigationItem>
-            <NavigationItem
-              onClick={() => setOpen(false)}
-              href="/bio"
-              icon={<UserIcon className="w-6 h-6" />}
-            >
-              Who am I
-            </NavigationItem>
-            <NavigationItem
-              onClick={() => setOpen(false)}
-              href="/bio#skills"
-              subItems={[
-                {
-                  href: "/bio#skills",
-                  children: "Overview",
-                  icon: <ComputerDesktopIcon className="w-6 h-6" />,
-                },
-                {
-                  href: "/bio/skills/frontend",
-                  children: "Frontend",
-                  icon: <ComputerDesktopIcon className="w-6 h-6" />,
-                },
-                {
-                  href: "/bio/skills/backend",
-                  children: "Backend",
-                  icon: <ServerIcon className="w-6 h-6" />,
-                },
-                {
-                  href: "/bio/skills/design",
-                  children: "Design",
-                  icon: <PencilIcon className="w-6 h-6" />,
-                },
-                {
-                  href: "/bio/skills/process_model",
-                  children: "Project Management",
-                  icon: <ArrowTrendingUpIcon className="w-6 h-6" />,
-                },
-              ]}
-            >
-              Skills
-            </NavigationItem>
+          <nav className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]">
+            {main.map((props, index) => (
+              <NavigationItem
+                {...props}
+                key={index}
+                onClick={() => setOpen(false)}
+                subItems={props.subItems?.map((props) => ({
+                  ...props,
+                  onClick: () => setOpen(false),
+                }))}
+              />
+            ))}
             <div className="h-full" />
             <NavigationItem
               onClick={() => setOpen(false)}

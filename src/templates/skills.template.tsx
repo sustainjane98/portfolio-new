@@ -12,6 +12,7 @@ import {
 import { ScrollDownIndicator } from "../components/shared/scroll-down-indicator";
 import { Skills, Props as SkillsProps } from "../components/shared/skills";
 import { Button, Props as ButtonProps } from "../components/shared/button";
+import { Footer } from "../components/shared/footer";
 
 export interface Props {
   header: {
@@ -46,6 +47,7 @@ export const SkillsTemplate: React.FC<Props> = ({
         )}
       </Header>
       {skills && <Skills {...skills} />}
+      <Footer />
     </>
   );
 };

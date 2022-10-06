@@ -8,6 +8,7 @@ import {
   ServerIcon,
   ArrowTrendingUpIcon,
 } from "@heroicons/react/20/solid";
+import { Footer } from "../../components/shared/footer";
 
 export interface Props {}
 
@@ -55,6 +56,7 @@ const Biography: React.FC<Props> = () => {
           },
         ]}
       />
+      <Footer />
     </>
   );
 };
