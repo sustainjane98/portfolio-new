@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { main } from "../../config/navigation-links";
+import GetInItLogo from "../../assets/get-in-it.svg";
 
 export interface Props {}
 
@@ -83,8 +84,19 @@ export const Footer: React.FC<Props> = () => {
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a
+              href={
+                "https://www.get-in-it.de/profil/XjtwpO5JPtgzOK9Ru5dT7ADDJHHc8NsW"
+              }
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GetInItLogo className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200" />
+            </a>
+            <a
               className="ml-3 text-gray-500 dark:text-gray-200"
               href={"https://www.linkedin.com/in/jannik-will-450564182/"}
+              target="_blank"
+              rel="noreferrer"
             >
               <svg
                 fill="currentColor"

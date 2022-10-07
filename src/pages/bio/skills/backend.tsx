@@ -4,7 +4,6 @@ import { SkillsTemplate } from "../../../templates/skills.template";
 import serverImage from "../../../assets/adi-goldstein-EUsVwEOsblE-unsplash.jpg";
 import GolangIcon from "../../../assets/golang-1.svg";
 import KotlinIcon from "../../../assets/kotlin-2.svg";
-import SwiftIcon from "../../../assets/swift-15.svg";
 import ElixirIcon from "../../../assets/elixir-1.svg";
 import JavaIcon from "../../../assets/java-14.svg";
 import GinIcon from "../../../assets/gin.svg";
@@ -63,7 +62,7 @@ const Backend: React.FC<Props> = () => {
             {
               title: "Golang",
               description:
-                "Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.",
+                "I have been studying the Golang programming language in my spare time. I was particularly impressed by the simplicity and the strength in the area of parallel processing. I used the language together with the Gin framework to create web servers. It is currently my most used language for backend applications. I hope that a better error handling will be implemented soon.",
               href: "https://go.dev/",
               icon: <GolangIcon className="w-8 h-8" />,
               external: true,
@@ -83,24 +82,16 @@ const Backend: React.FC<Props> = () => {
             {
               title: "Kotlin",
               description:
-                "Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library, but type inference allows its syntax to be more concise. Kotlin mainly targets the JVM, but also compiles to JavaScript or native code via LLVM.",
+                "I have completed the tutorial of Kotlin, the language itself, but have not yet used it in a larger project. But I find it definitely more user friendly than Java.",
               href: "https://kotlinlang.org/",
               icon: <KotlinIcon className="w-6 h-6" />,
               external: true,
               bubbles: javaAndKotlin,
             },
             {
-              title: "Swift",
-              description:
-                "Swift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. and the open-source community. First released in 2014, Swift was developed as a replacement for Apple's earlier programming language Objective-C, as Objective-C had been largely unchanged since the early 1980s and lacked modern language features. ",
-              href: "https://swift.org",
-              icon: <SwiftIcon className="w-10 h-10" />,
-              external: true,
-            },
-            {
               title: "Elixir",
               description:
-                "Elixir is a functional, concurrent, general-purpose programming language that runs on the BEAM virtual machine which is also used to implement the Erlang programming language. Elixir builds on top of Erlang and shares the same abstractions for building distributed, fault-tolerant applications. Elixir also provides productive tooling and an extensible design. The latter is supported by compile-time metaprogramming with macros and polymorphism via protocols.",
+                "I got involved with the Elixir programming language when I was looking into creating voice-based chat applications, like Discord. Discord uses Elixir for this functionality. Elixir has a very interesting error handling, which works either by throwing or by return types, but the missing typing didn't appeal to me very much.",
               href: "https://elixir-lang.org/",
               icon: <ElixirIcon className="w-10 h-10" />,
               external: true,
@@ -108,7 +99,7 @@ const Backend: React.FC<Props> = () => {
             {
               title: "Java",
               description:
-                "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need to recompile.",
+                "I have been working with Java already during my education in university and secondary school. In my studies I had subjects from the basics, over algorithms and data structures, to advanced technologies, like JavaFX. In my first part-time job, I then learned about data management with MySQL and Hibernate. Furthermore, I know my way around Spring and Lombok.",
               href: "https://www.java.com/download/manual.jsp",
               icon: <JavaIcon className="w-8 h-8" />,
               external: true,
@@ -117,7 +108,7 @@ const Backend: React.FC<Props> = () => {
             {
               title: "API Design",
               description:
-                "An application programming interface (API) is a way for two or more computer programs to communicate with each other. It is a type of software interface, offering a service to other pieces of software. A document or standard that describes how to build or use such a connection or interface is called an API specification. A computer system that meets this standard is said to implement or expose an API. The term API may refer either to the specification or to the implementation.",
+                "While working in the Java area, I learned a lot about creating REST APIs. In my spare time, I started to work with GraphQL in the Node.js area and I am still very enthusiastic about this technology. It allows to design an API as efficient as possible and at the same time to decide in the frontend which data is really needed for the current query.",
               icon: <ServerIcon className="w-8 h-8" />,
               bubbles: [
                 {

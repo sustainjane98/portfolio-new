@@ -41,7 +41,7 @@ const ProcessModel: React.FC<Props> = () => {
             {
               title: "Scrum",
               description:
-                "Scrum, or SCRUM, is a framework for project management with an initial emphasis on software development, although it has been used in other fields including research, sales, marketing and advanced technologies. It is designed for teams of ten or fewer members who break their work into goals that can be completed within time-boxed iterations, called sprints, no longer than one month and most commonly two weeks. The scrum team assesses progress in time-boxed daily meetings of 15 minutes or fewer, called daily scrums.",
+                "I have used Scrum practically in my last activities. Although it was a modified version due to the use of Atlassian Jira, I still had good experiences with agile working.",
               icon: <UsersIcon className="w-6 h-6 fill-white" />,
               href: "https://www.scrum.org/resources/what-is-scrum",
               external: true,
@@ -49,7 +49,7 @@ const ProcessModel: React.FC<Props> = () => {
             {
               title: "Atlassian Suite",
               description:
-                "Atlassian Corporation Plc is an Australian software company that develops products for software developers, project managers and other software development teams. The company is domiciled in the UK, with global headquarters in Sydney, Australia, and US headquarters in San Francisco.",
+                "I practically used Atlassian Suite to have my development tasks clearly laid out. We used Jira to distribute tasks, Bitbucket for source code versioning and Confluence for notes and other documents.",
               icon: <AtlassianIcon className="w-8 h-8" />,
               href: "https://www.atlassian.com/",
               external: true,
@@ -74,7 +74,7 @@ const ProcessModel: React.FC<Props> = () => {
             {
               title: "Microsoft Office",
               description:
-                "Microsoft Teams is a platform developed by Microsoft that combines chat, meetings, notes and attachments. The service is integrated into the Microsoft 365 suite with Microsoft Office and Skype/Skype for Business. Microsoft Teams help and FAQ content is available in 37 languages. In addition, the collaboration software offers extensions that can be integrated with third-party products. Microsoft launched the service globally on March 14, 2017.",
+                "I used the Microsoft Office Suite in my practical work to hold video conferences and communicate with my team via Teams. In addition, I had to fill out my timesheet in Excel. In the course of my studies, I also created various presentations and documents in PowerPoint and Word, and I know my way around these as well.",
               icon: <MicrosoftIcon className="w-6 h-6" />,
               href: "https://www.microsoft.com/",
               external: true,
@@ -109,7 +109,7 @@ const ProcessModel: React.FC<Props> = () => {
             {
               title: "Slack",
               description:
-                "Slack is a messaging program designed specifically for the office, but has also been adopted for personal use. Developed by the Canadian software company Slack Technologies, and now owned by Salesforce, Slack offers many IRC-style features, including persistent chat rooms (channels) organized by topic, private groups, and direct messaging. In addition to these online communication features, Slack integrates with other software.",
+                "I used the Slack messaging app in my job to keep in touch with my team and the company. In the process, I learned how this application works and how to use it effectively for team communication.",
               icon: <SlackIcon className="w-6 h-6" />,
               href: "https://www.slack.com/",
               external: true,

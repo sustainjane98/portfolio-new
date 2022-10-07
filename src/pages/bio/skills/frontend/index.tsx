@@ -24,6 +24,7 @@ import HeadlessUIIcon from "../../../../assets/headless.svg";
 import NrwlIcon from "../../../../assets/nrwl-logo-white.svg";
 import NpmIcon from "../../../../assets/npm-square-red-1.svg";
 import YarnIcon from "../../../../assets/yarn.svg";
+import SwiftIcon from "../../../assets/swift-15.svg";
 import { DocumentDuplicateIcon } from "@heroicons/react/24/solid";
 
 export interface Props {}
@@ -133,6 +134,14 @@ const FrotendPage: React.FC<Props> = () => {
                   external: true,
                 },
               ],
+            },
+            {
+              title: "Swift",
+              description:
+                "I have been exposed to the Swift programming language mainly in the area of native app development and used it in a private project. However, the language is also very suitable for the development of backend applications.",
+              href: "https://swift.org",
+              icon: <SwiftIcon className="w-10 h-10" />,
+              external: true,
             },
             {
               title: "Angular",
