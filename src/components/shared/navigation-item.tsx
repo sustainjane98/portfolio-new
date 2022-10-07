@@ -30,23 +30,24 @@ export const NavigationItem: React.FC<Props> = ({
   const [show, setShow] = useState(false);
 
   const Anchor = (
-    <a
-      className={`block py-2 pr-4 pl-3 text-white rounded${
-        isActive ? " text-navy-200" : ""
-      }  md:p-0 flex flex-row gap-x-2 items-center`}
-    >
-      <span className="font-semibold text-2xl text-right">{children}</span>
-      {subItems ? (
-        <button onClick={() => setShow((prev) => !prev)}>
-          {show ? (
+    <a>
+      <button
+        onClick={() => setShow((prev) => !prev)}
+        className={`block py-2 pr-4 pl-3 text-white rounded${
+          isActive ? " text-navy-200" : ""
+        }  md:p-0 flex flex-row gap-x-2 items-center`}
+      >
+        <span className="font-semibold text-2xl text-right">{children}</span>
+        {subItems ? (
+          show ? (
             <ChevronUpIcon className="w-6 h-6" />
           ) : (
             <ChevronDownIcon className="w-6 h-6" />
-          )}
-        </button>
-      ) : (
-        icon ?? <div className="w-6" />
-      )}
+          )
+        ) : (
+          icon ?? <div className="w-6" />
+        )}
+      </button>
     </a>
   );
 
