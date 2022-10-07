@@ -7,6 +7,7 @@ import { CardRect } from "../components/shared/card-rect";
 import LinkedInIcon from "../assets/linkedin-icon-2.svg";
 import GithubIcon from "../assets/github-icon-1.svg";
 import { NextSeo } from "next-seo";
+import { Footer } from "../components/shared/footer";
 
 export interface Props {}
 
@@ -49,6 +50,7 @@ const Impressum: React.FC<Props> = () => {
           </a>
         </div>
       </Header>
+      <Footer />
     </>
   );
 };
