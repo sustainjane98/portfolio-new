@@ -1,6 +1,6 @@
 import React from "react";
 import { SkillsTemplate } from "../templates/skills.template";
-import errorImage from "../assets/elisa-ventur-bmJAXAz6ads-unsplash.jpg";
+import errorImage from "../assets/elisa-ventur-bmJAXAz6ads-unsplash.webp";
 import { NextSeo } from "next-seo";
 export interface Props {}
 

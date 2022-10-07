@@ -8,7 +8,6 @@ import {
   ServerIcon,
   ArrowTrendingUpIcon,
 } from "@heroicons/react/20/solid";
-import { Footer } from "../../components/shared/footer";
 import { motion } from "framer-motion";
 import { globalAnimationVariants } from "../../animations/global";
 import { NextSeo } from "next-seo";

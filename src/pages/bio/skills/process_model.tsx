@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 import React from "react";
 import { SkillsTemplate } from "../../../templates/skills.template";
-import processImage from "../../../assets/kaleidico-3V8xo5Gbusk-unsplash.jpg";
+import processImage from "../../../assets/kaleidico-3V8xo5Gbusk-unsplash.webp";
 import { UsersIcon } from "@heroicons/react/24/solid";
 import AtlassianIcon from "../../../assets/atlassian-1.svg";
 import JiraIcon from "../../../assets/jira-1.svg";

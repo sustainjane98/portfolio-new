@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 import React from "react";
 import { SkillsTemplate } from "../../../../templates/skills.template";
-import frontendImage from "../../../../assets/charlesdeluvio-pjAH2Ax4uWk-unsplash.jpg";
+import frontendImage from "../../../../assets/charlesdeluvio-pjAH2Ax4uWk-unsplash.webp";
 import { useRouter } from "next/router";
 import ReactIcon from "../../../../assets/react-2.svg";
 import AngularIcon from "../../../../assets/angular-icon-1.svg";
@@ -24,7 +24,7 @@ import HeadlessUIIcon from "../../../../assets/headless.svg";
 import NrwlIcon from "../../../../assets/nrwl-logo-white.svg";
 import NpmIcon from "../../../../assets/npm-square-red-1.svg";
 import YarnIcon from "../../../../assets/yarn.svg";
-import SwiftIcon from "../../../assets/swift-15.svg";
+import SwiftIcon from "../../../../assets/swift-15.svg";
 import { DocumentDuplicateIcon } from "@heroicons/react/24/solid";
 
 export interface Props {}

@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 import React from "react";
 import { SkillsTemplate } from "../../../templates/skills.template";
-import serverImage from "../../../assets/adi-goldstein-EUsVwEOsblE-unsplash.jpg";
+import serverImage from "../../../assets/adi-goldstein-EUsVwEOsblE-unsplash.webp";
 import GolangIcon from "../../../assets/golang-1.svg";
 import KotlinIcon from "../../../assets/kotlin-2.svg";
 import ElixirIcon from "../../../assets/elixir-1.svg";

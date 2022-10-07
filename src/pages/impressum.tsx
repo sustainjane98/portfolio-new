@@ -1,13 +1,12 @@
 import React from "react";
 import { Header } from "../components/shared/header";
-import houseImage from "../assets/vu-anh-TiVPTYCG_3E-unsplash.jpg";
+import houseImage from "../assets/vu-anh-TiVPTYCG_3E-unsplash.webp";
 import { Headline } from "../components/shared/headline";
 import { HeadlineBody } from "../components/shared/headline-body";
 import { CardRect } from "../components/shared/card-rect";
 import LinkedInIcon from "../assets/linkedin-icon-2.svg";
 import GithubIcon from "../assets/github-icon-1.svg";
 import { NextSeo } from "next-seo";
-import { Footer } from "../components/shared/footer";
 
 export interface Props {}
 

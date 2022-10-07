@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "../../shared/header";
-import programmingBackground from "../../../assets/radowan-nakif-rehan-cYyqhdbJ9TI-unsplash.jpg";
+import programmingBackground from "../../../assets/radowan-nakif-rehan-cYyqhdbJ9TI-unsplash.webp";
 import { Headline } from "../../shared/headline";
 import { HeadlineBody } from "../../shared/headline-body";
 import { ScrollDownIndicator } from "../../shared/scroll-down-indicator";

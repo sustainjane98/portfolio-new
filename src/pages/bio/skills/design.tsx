@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 import React from "react";
 import { SkillsTemplate } from "../../../templates/skills.template";
-import uiImage from "../../../assets/ux-indonesia-qC2n6RQU4Vw-unsplash.jpg";
+import uiImage from "../../../assets/ux-indonesia-qC2n6RQU4Vw-unsplash.webp";
 import FigmaIcon from "../../../assets/figma-1.svg";
 import AdobeXDIcon from "../../../assets/adobe-xd-1.svg";
 import AffinityIcon from "../../../assets/affinity-1.svg";

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import headerImage from "../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash.jpg";
+import headerImage from "../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash.webp";
 import { SkillsTemplate } from "../templates/skills.template";
 
 const Home: NextPage = () => {
