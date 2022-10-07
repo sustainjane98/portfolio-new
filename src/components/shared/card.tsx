@@ -59,7 +59,7 @@ export const Card: React.FC<Props> = ({
       <div className="flex justify-center gap-4 flex-row">
         {external ? (
           <a href={href} target={"_blank"} rel="noreferrer">
-            <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
+            <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
               Learn more
             </span>
           </a>
@@ -75,14 +75,14 @@ export const Card: React.FC<Props> = ({
         {links?.map(({ description, href, external }, index) =>
           external ? (
             <a href={href} target={"_blank"} rel="noreferrer">
-              <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
+              <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
                 {description}
               </span>
             </a>
           ) : (
             <Link href={href} passHref key={index}>
               <a>
-                <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800">
+                <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
                   {description}
                 </span>
               </a>
