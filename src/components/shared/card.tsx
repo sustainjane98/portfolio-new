@@ -8,7 +8,7 @@ export interface Props {
   icon: React.ReactNode;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   external?: boolean;
   bubbles?: CardBubbleProps[];
   links?: { description: string; href: string; external?: boolean }[];
@@ -57,21 +57,22 @@ export const Card: React.FC<Props> = ({
       )}
 
       <div className="flex justify-center gap-4 flex-row">
-        {external ? (
-          <a href={href} target={"_blank"} rel="noreferrer">
-            <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-              Learn more
-            </span>
-          </a>
-        ) : (
-          <Link href={href} passHref>
-            <a>
+        {href &&
+          (external ? (
+            <a href={href} target={"_blank"} rel="noreferrer">
               <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
                 Learn more
               </span>
             </a>
-          </Link>
-        )}
+          ) : (
+            <Link href={href} passHref>
+              <a>
+                <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
+                  Learn more
+                </span>
+              </a>
+            </Link>
+          ))}
         {links?.map(({ description, href, external }, index) =>
           external ? (
             <a href={href} target={"_blank"} rel="noreferrer">

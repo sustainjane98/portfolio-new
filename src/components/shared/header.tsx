@@ -20,7 +20,6 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
 }) => {
   return (
     <header className={`w-screen min-h-screen relative ${className} `}>
-      <Navigation />
       <div className="absolute top-0 left-0 w-full min-h-screen">
         <div className="relative w-[100vw_+_env(safe-area-inset-left)] min-h-screen">
           <Image

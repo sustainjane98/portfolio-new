@@ -13,6 +13,9 @@ import { ScrollDownIndicator } from "../components/shared/scroll-down-indicator"
 import { Skills, Props as SkillsProps } from "../components/shared/skills";
 import { Button, Props as ButtonProps } from "../components/shared/button";
 import { Footer } from "../components/shared/footer";
+import { MapPinIcon } from "@heroicons/react/20/solid";
+import { motion } from "framer-motion";
+import { globalAnimationVariants } from "../animations/global";
 
 export interface Props {
   header: {
@@ -33,7 +36,14 @@ export const SkillsTemplate: React.FC<Props> = ({
   skills,
 }) => {
   return (
-    <>
+    <motion.main
+      variants={globalAnimationVariants}
+      initial="hidden" // Set the initial state to variants.hidden
+      animate="enter" // Animated state to variants.enter
+      exit="exit" // Exit state (used later) to variants.exit
+      transition={{ type: "linear" }} // Set the transition to linear
+      className=""
+    >
       <Header src={src} className={className}>
         <Headline {...headline} />
         {body && <HeadlineBody>{body}</HeadlineBody>}
@@ -47,7 +57,6 @@ export const SkillsTemplate: React.FC<Props> = ({
         )}
       </Header>
       {skills && <Skills {...skills} />}
-      <Footer />
-    </>
+    </motion.main>
   );
 };

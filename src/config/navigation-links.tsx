@@ -20,11 +20,6 @@ export const main: NavigationItem[] = [
     children: "Skills",
     subItems: [
       {
-        href: "/bio#skills",
-        children: "Overview",
-        icon: <ComputerDesktopIcon className="w-6 h-6" />,
-      },
-      {
         href: "/bio/skills/frontend",
         children: "Frontend",
         icon: <ComputerDesktopIcon className="w-6 h-6" />,

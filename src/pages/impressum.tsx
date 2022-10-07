@@ -50,7 +50,6 @@ const Impressum: React.FC<Props> = () => {
           </a>
         </div>
       </Header>
-      <Footer />
     </>
   );
 };
