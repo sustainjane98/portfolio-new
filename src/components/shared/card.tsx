@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { CardBubble, Props as CardBubbleProps } from "./card-bubble";
 import { CardReact, CardRect } from "./card-rect";
+import { motion } from "framer-motion";
 
 export interface Props {
   icon: React.ReactNode;
@@ -28,7 +29,10 @@ export const Card: React.FC<Props> = ({
   links,
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       className={`inline-grid ${
         bubbles
           ? "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]"
@@ -84,6 +88,6 @@ export const Card: React.FC<Props> = ({
           )
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };

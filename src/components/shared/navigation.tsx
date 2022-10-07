@@ -12,6 +12,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { NavigationItem } from "./navigation-item";
 import { main } from "../../config/navigation-links";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 export interface Props {}
 
@@ -23,17 +24,34 @@ export interface Props {}
 export const Navigation: React.FC<Props> = () => {
   const [open, setOpen] = useState(false);
 
+  const x = useSpring(200);
+  const opacity = useTransform(x, [200, 150, 100, 50, 0], [0, 0.25, 0.5, 1, 1]);
+
   useEffect(() => {
-    if (open) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "visible";
-  }, [open]);
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [open, x]);
+
+  const toggleNavigation = () => {
+    setOpen((prev) => {
+      if (!prev) {
+        x.set(0);
+      } else {
+        x.set(200);
+      }
+      return !prev;
+    });
+  };
 
   return (
     <>
       <div className="fixed top-0 left-0 z-30 pl-ios-3 pt-4 flex flex-col">
         <button
           onClick={() => {
-            setOpen((prev) => !prev);
+            toggleNavigation();
           }}
         >
           {open ? (
@@ -47,29 +65,32 @@ export const Navigation: React.FC<Props> = () => {
         <div className="fixed top-0 left-0 w-full h-full z-30 flex">
           <div
             className="h-full w-full bg-black/[0.50] cursor-pointer"
-            onClick={() => setOpen(false)}
+            onClick={() => toggleNavigation()}
           />
-          <nav className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]">
+          <motion.nav
+            style={{ x, opacity }}
+            className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
+          >
             {main.map((props, index) => (
               <NavigationItem
                 {...props}
                 key={index}
-                onClick={() => setOpen(false)}
+                onClick={() => toggleNavigation()}
                 subItems={props.subItems?.map((props) => ({
                   ...props,
-                  onClick: () => setOpen(false),
+                  onClick: () => toggleNavigation(),
                 }))}
               />
             ))}
             <div className="h-full" />
             <NavigationItem
-              onClick={() => setOpen(false)}
+              onClick={() => toggleNavigation()}
               href="/impressum"
               icon={<InformationCircleIcon className="w-6 h-6" />}
             >
               Impressum
             </NavigationItem>
-          </nav>
+          </motion.nav>
         </div>
       )}
     </>
