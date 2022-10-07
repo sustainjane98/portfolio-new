@@ -2,17 +2,14 @@ import React, { useEffect, useState } from "react";
 import {
   Bars3Icon,
   XMarkIcon,
-  HomeIcon,
-  UserIcon,
-  ComputerDesktopIcon,
-  ServerIcon,
-  PencilIcon,
-  ArrowTrendingUpIcon,
   InformationCircleIcon,
+  MoonIcon,
 } from "@heroicons/react/24/solid";
 import { NavigationItem } from "./navigation-item";
 import { main } from "../../config/navigation-links";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { Toggle } from "./toggle";
+import { useColorscheme } from "../../hooks/useColorscheme.hook";
 
 export interface Props {}
 
@@ -35,6 +32,8 @@ export const Navigation: React.FC<Props> = () => {
     }
   }, [open, x]);
 
+  const { isDark, changeColorScheme } = useColorscheme();
+
   const toggleNavigation = () => {
     setOpen((prev) => {
       if (!prev) {
@@ -48,7 +47,7 @@ export const Navigation: React.FC<Props> = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-30 pl-ios-3 pt-4 flex flex-col">
+      <div className="fixed top-0 left-0 z-30 px-ios-3 pt-4 flex flex-row justify-between w-screen items-center">
         <button
           onClick={() => {
             toggleNavigation();
@@ -60,6 +59,15 @@ export const Navigation: React.FC<Props> = () => {
             <Bars3Icon className="w-10 h-10 fill-navy-400" />
           )}
         </button>
+        <Toggle
+          active={isDark}
+          onChange={() => {
+            changeColorScheme();
+          }}
+          name="scheme"
+        >
+          <MoonIcon className="inline-block w-6 h-6" />
+        </Toggle>
       </div>
       {open && (
         <div className="fixed top-0 left-0 w-full h-full z-30 flex">

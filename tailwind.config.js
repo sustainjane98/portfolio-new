@@ -7,7 +7,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [],
-  darkMode: "media", // or 'class'
+  darkMode: "class", // or 'media'
   theme: {
     extend: {
       colors: {

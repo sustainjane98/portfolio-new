@@ -11,11 +11,11 @@ export interface Props {}
  */
 export const Footer: React.FC<Props> = () => {
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 dark:text-white body-font">
       <div className="container py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3">
               Main
             </h2>
             <nav className="list-none mb-10">
@@ -24,7 +24,7 @@ export const Footer: React.FC<Props> = () => {
                 .map(({ href, children }, index) => (
                   <li key={index}>
                     <Link href={href}>
-                      <a className="text-gray-600 hover:text-gray-800">
+                      <a className="text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300">
                         {children}
                       </a>
                     </Link>
@@ -33,7 +33,7 @@ export const Footer: React.FC<Props> = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 dark:text-white">
               Skills
             </h2>
             <nav className="list-none mb-10">
@@ -44,7 +44,7 @@ export const Footer: React.FC<Props> = () => {
                 ?.subItems?.map(({ href, children }, index) => (
                   <li key={index}>
                     <Link href={href}>
-                      <a className="text-gray-600 hover:text-gray-800">
+                      <a className="text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300">
                         {children}
                       </a>
                     </Link>
@@ -53,27 +53,29 @@ export const Footer: React.FC<Props> = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3">
               Other
             </h2>
             <nav className="list-none mb-10">
               <li>
                 <Link href={"/impressum"}>
-                  <a className="text-gray-600 hover:text-gray-800">Impressum</a>
+                  <a className="text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300">
+                    Impressum
+                  </a>
                 </Link>
               </li>
             </nav>
           </div>
         </div>
       </div>
-      <div className="bg-gray-100 pb-ios-4">
+      <div className="bg-gray-100 dark:bg-gray-700 pb-ios-4">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-500 text-sm text-center sm:text-left">
+          <p className="text-gray-500 dark:text-gray-200 text-sm text-center sm:text-left">
             © 2022 Jane Will —
             <a
               href="https://twitter.com/knyttneve"
               rel="noopener noreferrer"
-              className="text-gray-600 ml-1"
+              className="text-gray-600 dark:text-gray-200 ml-1"
               target="_blank"
             >
               @sustainjane98
@@ -81,7 +83,7 @@ export const Footer: React.FC<Props> = () => {
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a
-              className="ml-3 text-gray-500"
+              className="ml-3 text-gray-500 dark:text-gray-200"
               href={"https://www.linkedin.com/in/jannik-will-450564182/"}
             >
               <svg
