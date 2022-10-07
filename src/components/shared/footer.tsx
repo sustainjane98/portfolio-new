@@ -52,6 +52,18 @@ export const Footer: React.FC<Props> = () => {
                 ))}
             </nav>
           </div>
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+              Other
+            </h2>
+            <nav className="list-none mb-10">
+              <li>
+                <Link href={"/impressum"}>
+                  <a className="text-gray-600 hover:text-gray-800">Impressum</a>
+                </Link>
+              </li>
+            </nav>
+          </div>
         </div>
       </div>
       <div className="bg-gray-100 pb-ios-4">

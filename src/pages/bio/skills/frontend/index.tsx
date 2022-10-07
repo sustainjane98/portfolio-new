@@ -54,7 +54,7 @@ const FrotendPage: React.FC<Props> = () => {
             {
               title: "Monorepo + Package Manager",
               description:
-                "Nx is a next generation build system with first class monorepo support and powerful integrations.",
+                "A monorepo is used by some development teams. While others use multiple repositories. A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.",
               href: "https://nx.dev/",
               external: true,
               icon: <DocumentDuplicateIcon className="w-6 h-6" />,
