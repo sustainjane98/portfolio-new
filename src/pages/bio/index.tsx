@@ -11,6 +11,7 @@ import {
 import { Footer } from "../../components/shared/footer";
 import { motion } from "framer-motion";
 import { globalAnimationVariants } from "../../animations/global";
+import { NextSeo } from "next-seo";
 
 export interface Props {}
 
@@ -30,6 +31,7 @@ const Biography: React.FC<Props> = () => {
       transition={{ type: "linear" }} // Set the transition to linear
       className=""
     >
+      <NextSeo title="Who am I?" />
       <HeaderWithTwoSections />
       <Skills
         title="Skills"
@@ -38,34 +40,33 @@ const Biography: React.FC<Props> = () => {
           {
             title: "Frontend",
             description:
-              "The frontend is the presentation layer, i.e. the part of an application that the viewer can see, for example in the form of a graphical user interface (GUI). ",
+              "In my studies I found the access to web application development through the subject web technologies. Since I had my problems with JavaScript due to the missing typing, I first dealt with TypeScript and later with the React library. In my first job, I realized several React web applications and learned a lot about design systems and practical web development.",
             href: `${pathname}/skills/frontend`,
             icon: <ComputerDesktopIcon className="w-8 h-8" />,
           },
           {
             title: "Backend",
             description:
-              "The backend is the part of an IT system that deals with data processing in the background - the data layer. The term is used to subdivide more complex software structures.",
+              "In my studies I gained basic and advanced knowledge in the Java environment. In my spare time I also worked with Elixir and Golang. I also learned a lot about api design with rest and graphql.",
             href: `${pathname}/skills/backend`,
             icon: <ServerIcon className="w-8 h-8" />,
           },
           {
             title: "Design",
             description:
-              "The term Project Management is used in various contexts. For example, in business Project Managementing the enterprise Project Management is often referred to as the business Project Management.",
+              "The field of user interface and user experience design has interested me a lot since my first experiences with web application development. Due to my practical experience in this field, I am very familiar with the implementation of design specifications. In addition, I have read renowned literature on the subject to be in the know.",
             href: `${pathname}/skills/design`,
             icon: <PencilIcon className="w-6 h-6" />,
           },
           {
             title: "Project Managements",
             description:
-              "The term Project Management is used in various contexts. For example, in business Project Managementing the enterprise Project Management is often referred to as the business Project Management.",
+              "Modern software development works with agile tools. In my practical experience, I have already worked with the Atlassian Suite. In addition, I am familiar with modern communication applications, such as Slack and Microsoft Teams.",
             href: `${pathname}/skills/process_model`,
             icon: <ArrowTrendingUpIcon className="w-8 h-8" />,
           },
         ]}
       />
-      <Footer />
     </motion.main>
   );
 };

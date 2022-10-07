@@ -13,7 +13,7 @@ const Home: NextPage = () => {
             headline: "I am the caterpillar that became a butterfly",
             subheadline: "I build web pages with passion",
           },
-          body: "I am a software developer, with the misson to realize beautiful and functional web applications. If you like, we can get to know each other better",
+          body: "I am a software developer, with the mission to produce beautiful and functional web applications. If you like, we can get to know each other better",
           src: headerImage,
           className: "bg-navy-500",
           buttons: [{ href: "/bio", children: "Get to know me" }],
