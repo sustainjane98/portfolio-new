@@ -54,9 +54,7 @@ const FrotendPage: React.FC<Props> = () => {
             {
               title: "Monorepo + Package Manager",
               description:
-                "A monorepo is used by some development teams. While others use multiple repositories. A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.",
-              href: "https://nx.dev/",
-              external: true,
+                "In my activities I use both the npm and the yarn package manager, for adding external dependencies. In larger projects I have already used the nrwl nx monorepo manager.",
               icon: <DocumentDuplicateIcon className="w-6 h-6" />,
               bubbles: [
                 {
@@ -66,12 +64,12 @@ const FrotendPage: React.FC<Props> = () => {
                 },
                 {
                   icon: <NpmIcon className="w-6 h-6" />,
-                  href: "https://nx.dev",
+                  href: "https://www.npmjs.com/",
                   external: true,
                 },
                 {
                   icon: <YarnIcon className="w-6 h-6" />,
-                  href: "https://nx.dev",
+                  href: "https://yarnpkg.com/",
                   external: true,
                 },
               ],
@@ -79,7 +77,7 @@ const FrotendPage: React.FC<Props> = () => {
             {
               title: "React (Native)",
               description:
-                "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.",
+                "In my practical work, I have gained extensive knowledge of the React library. I use only modern techniques, such as hooks and functional components. I also have knowledge about common libraries in the React cosmos.",
               href: "https://reactjs.org/",
               icon: <ReactIcon className="w-6 h-6" />,
               bubbles: [
@@ -139,7 +137,7 @@ const FrotendPage: React.FC<Props> = () => {
             {
               title: "Angular",
               description:
-                "Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.",
+                "Besides my knowledge of React, I also gained knowledge of Angular Framework for employment and actively used it.",
               href: "https://angular.io/",
               external: true,
               icon: <AngularIcon className="w-6 h-6" />,
@@ -154,7 +152,7 @@ const FrotendPage: React.FC<Props> = () => {
             {
               title: "TypeScript",
               description:
-                "TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript. As it is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.",
+                "I got involved with TypeScript because JavaScript didn't appeal to me due to the lack of typing. I have used TypeScript in various web applications privately and in employment. So I have a lot of experience and prefer it as a programming language for frontend applications.",
               href: "https://www.typescriptlang.org/",
               external: true,
               icon: <TypescriptIcon className="w-6 h-6" />,
@@ -182,7 +180,7 @@ const FrotendPage: React.FC<Props> = () => {
             {
               title: "HTML5",
               description:
-                "HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and final major HTML version that is a World Wide Web Consortium (W3C) recommendation. The current specification is known as the HTML Living Standard. It is maintained by the Web Hypertext Application Technology Working Group (WHATWG), a consortium of the major browser vendors.",
+                "The language for the structural design of web applications is HTML. So I use this for all my applications and prefer the modern HTML5 standard. I am also familiar with various template engines.",
               href: "https://html5.org/",
               external: true,
               icon: <HTML5Icon className="w-6 h-6" />,
@@ -201,7 +199,7 @@ const FrotendPage: React.FC<Props> = () => {
             {
               title: "CSS3",
               description:
-                "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
+                "For the implementation of design specifications I use CSS. This allows in the specification CSS3 a precise implementation of different user interface designs. In addition, I am familiar with various tools that allow better style structuring",
               href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
               external: true,
               icon: <CSS3Icon className="w-6 h-6" />,
