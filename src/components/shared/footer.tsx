@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { main } from "../../config/navigation-links";
 import GetInItLogo from "../../assets/get-in-it.svg";
+import GithubLogo from "../../assets/github-icon-transp.svg";
 
 export interface Props {}
 
@@ -83,6 +84,13 @@ export const Footer: React.FC<Props> = () => {
             </a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <a
+              href={"https://github.com/jawil003"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubLogo className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200" />
+            </a>
             <a
               href={
                 "https://www.get-in-it.de/profil/XjtwpO5JPtgzOK9Ru5dT7ADDJHHc8NsW"
