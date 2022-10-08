@@ -28,16 +28,13 @@ export interface Props {}
 export const Navigation: React.FC<Props> = () => {
   const [open, setOpen] = useState(false);
 
-  const x = useSpring(200);
-  const opacity = useTransform(x, [200, 150, 100, 50, 0], [0, 0.25, 0.5, 1, 1]);
-
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "visible";
     }
-  }, [open, x]);
+  }, [open]);
 
   const { isDark, changeColorScheme } = useColorscheme();
 
@@ -77,7 +74,6 @@ export const Navigation: React.FC<Props> = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              style={{ x, opacity }}
               className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
             >
               {main.map((props, index) => (
