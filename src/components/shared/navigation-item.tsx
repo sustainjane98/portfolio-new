@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { usePath } from "../../hooks/usePath.hook";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
-import { motion, useAnimationControls } from "framer-motion";
+import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import {
   navigationContainerAnimationVariants,
   navigationItemAnimationVariants,
@@ -80,27 +80,27 @@ export const NavigationItem: React.FC<Props> = ({
       >
         {subItems ? Anchor : <Link href={href}>{Anchor}</Link>}
       </li>
-      {subItems && subItems?.length && show && (
-        <motion.div
-          variants={navigationContainerAnimationVariants}
-          initial={"hidden"}
-          animate={subItemControl}
-          className="flex flex-col items-end gap-y-2"
-          onAnimationComplete={() => {
-            setShow((prev) => !prev);
-          }}
-        >
-          {subItems?.map((subItem, index) => (
-            <motion.div
-              variants={navigationItemAnimationVariants}
-              key={index}
-              className="list-none"
-            >
-              <NavigationItem {...subItem} />
-            </motion.div>
-          ))}
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {subItems && subItems?.length && show && (
+          <motion.div
+            variants={navigationContainerAnimationVariants}
+            initial={"hidden"}
+            animate="show"
+            exit={"hidden"}
+            className="flex flex-col items-end gap-y-2"
+          >
+            {subItems?.map((subItem, index) => (
+              <motion.div
+                key={index}
+                variants={navigationItemAnimationVariants}
+                className="list-none"
+              >
+                <NavigationItem {...subItem} />
+              </motion.div>
+            ))}
+          </motion.div>
+        )}{" "}
+      </AnimatePresence>
     </>
   );
 };

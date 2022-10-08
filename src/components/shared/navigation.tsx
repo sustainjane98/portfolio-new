@@ -7,9 +7,16 @@ import {
 } from "@heroicons/react/24/solid";
 import { NavigationItem } from "./navigation-item";
 import { main } from "../../config/navigation-links";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { Toggle } from "./toggle";
 import { useColorscheme } from "../../hooks/useColorscheme.hook";
+import { navigationBarAnimationVariants } from "../../animations/navigation";
 
 export interface Props {}
 
@@ -34,23 +41,12 @@ export const Navigation: React.FC<Props> = () => {
 
   const { isDark, changeColorScheme } = useColorscheme();
 
-  const toggleNavigation = () => {
-    setOpen((prev) => {
-      if (!prev) {
-        x.set(0);
-      } else {
-        x.set(200);
-      }
-      return !prev;
-    });
-  };
-
   return (
     <>
       <div className="fixed top-0 left-0 z-30 px-ios-3 pt-4 flex flex-row justify-between w-screen items-center">
         <button
           onClick={() => {
-            toggleNavigation();
+            setOpen((prev) => !prev);
           }}
         >
           {open ? (
@@ -69,38 +65,44 @@ export const Navigation: React.FC<Props> = () => {
           <MoonIcon className="inline-block w-6 h-6" />
         </Toggle>
       </div>
-      {open && (
-        <div className="fixed top-0 left-0 w-full h-full z-30 flex">
-          <div
-            className="h-full w-full bg-black/[0.50] cursor-pointer"
-            onClick={() => toggleNavigation()}
-          />
-          <motion.nav
-            style={{ x, opacity }}
-            className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
-          >
-            {main.map((props, index) => (
-              <NavigationItem
-                {...props}
-                key={index}
-                onClick={() => toggleNavigation()}
-                subItems={props.subItems?.map((props) => ({
-                  ...props,
-                  onClick: () => toggleNavigation(),
-                }))}
-              />
-            ))}
-            <div className="h-full" />
-            <NavigationItem
-              onClick={() => toggleNavigation()}
-              href="/impressum"
-              icon={<InformationCircleIcon className="w-6 h-6" />}
+      <AnimatePresence>
+        {open && (
+          <div className="fixed top-0 left-0 w-full h-full z-30 flex">
+            <div
+              className="h-full w-full bg-black/[0.50] cursor-pointer"
+              onClick={() => setOpen((prev) => !prev)}
+            />
+            <motion.nav
+              variants={navigationBarAnimationVariants}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              style={{ x, opacity }}
+              className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
             >
-              Impressum
-            </NavigationItem>
-          </motion.nav>
-        </div>
-      )}
+              {main.map((props, index) => (
+                <NavigationItem
+                  {...props}
+                  key={index}
+                  onClick={() => setOpen((prev) => !prev)}
+                  subItems={props.subItems?.map((props) => ({
+                    ...props,
+                    onClick: () => setOpen((prev) => !prev),
+                  }))}
+                />
+              ))}
+              <div className="h-full" />
+              <NavigationItem
+                onClick={() => setOpen((prev) => !prev)}
+                href="/impressum"
+                icon={<InformationCircleIcon className="w-6 h-6" />}
+              >
+                Impressum
+              </NavigationItem>
+            </motion.nav>
+          </div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
