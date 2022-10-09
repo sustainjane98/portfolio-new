@@ -87,14 +87,6 @@ export const Navigation: React.FC<Props> = () => {
                   }))}
                 />
               ))}
-              <div className="h-full" />
-              <NavigationItem
-                onClick={() => setOpen((prev) => !prev)}
-                href="/impressum"
-                icon={<InformationCircleIcon className="w-6 h-6" />}
-              >
-                Impressum
-              </NavigationItem>
             </motion.nav>
           </div>
         )}

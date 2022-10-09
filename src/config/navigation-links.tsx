@@ -6,6 +6,7 @@ import {
   ServerIcon,
   PencilIcon,
   ArrowTrendingUpIcon,
+  ArrowDownTrayIcon,
 } from "@heroicons/react/24/solid";
 
 export const main: NavigationItem[] = [
@@ -40,5 +41,11 @@ export const main: NavigationItem[] = [
         icon: <ArrowTrendingUpIcon className="w-6 h-6" />,
       },
     ],
+  },
+  {
+    children: "Resume",
+    href: "/resume.pdf",
+    external: true,
+    icon: <ArrowDownTrayIcon className="w-6 h-6" />,
   },
 ];

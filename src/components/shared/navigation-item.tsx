@@ -7,7 +7,6 @@ import {
   navigationContainerAnimationVariants,
   navigationItemAnimationVariants,
 } from "../../animations/navigation";
-import { useUpdateEffect } from "usehooks-ts";
 
 export interface Props {
   href: string;
@@ -15,6 +14,8 @@ export interface Props {
   children: string;
   icon?: React.ReactElement;
   subItems?: Props[];
+  external?: boolean;
+  download?: boolean;
 }
 
 /**
@@ -28,24 +29,22 @@ export const NavigationItem: React.FC<Props> = ({
   onClick,
   subItems,
   icon,
+  external,
+  download,
 }) => {
   const isActive = usePath(
     subItems ? subItems.map(({ href }) => href) : [href]
   );
 
   const [show, setShow] = useState(false);
-  const subItemControl = useAnimationControls();
-
-  useUpdateEffect(() => {
-    if (show) {
-      subItemControl.start("show");
-    } else {
-      subItemControl.start("hidden");
-    }
-  }, [show]);
 
   const Anchor = (
-    <a>
+    href?: string,
+    download?: boolean,
+    target?: string,
+    rel?: string
+  ) => (
+    <a href={href} download={download} target={target} rel={rel}>
       <button
         onClick={() => setShow((prev) => !prev)}
         className={`block py-2 pr-4 pl-3 text-white rounded${
@@ -78,7 +77,13 @@ export const NavigationItem: React.FC<Props> = ({
             : onClick
         }
       >
-        {subItems ? Anchor : <Link href={href}>{Anchor}</Link>}
+        {subItems ? (
+          Anchor()
+        ) : external ? (
+          Anchor(href, download, "_blank", "noreferer")
+        ) : (
+          <Link href={href}>{Anchor()}</Link>
+        )}
       </li>
       <AnimatePresence>
         {subItems && subItems?.length && show && (

@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ColorSchemeProvider>
         <Navigation />
         <AnimatePresence
-          exitBeforeEnter
+          mode="wait"
           initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >
