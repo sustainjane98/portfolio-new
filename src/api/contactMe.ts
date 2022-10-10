@@ -25,6 +25,7 @@ const contactMeHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       text: "Hello world?", // plain text body
       html: "<b>Hello world?</b>", // html body
     });
+    res.status(200).end();
   } catch (err) {
     res.status(500).send("Something went wrong");
   }
