@@ -20,14 +20,14 @@ export const FormContainer: React.FC<Props> = ({
   return (
     <form
       noValidate
-      className={`flex w-full max-w-sm space-x-3 ${className}`}
+      className={`flex w-full max-w-4xl space-x-3 ${className}`}
       onSubmit={onSubmit}
     >
-      <div className="w-full max-w-2xl p-10 m-auto mt-10 bg-white rounded-md shadow dark:bg-gray-800">
+      <div className="relative w-full p-10 m-auto mt-10 bg-white rounded-md shadow dark:bg-gray-800">
         <div className="mb-6 text-2xl font-medium text-center text-gray-800 dark:text-white">
           {title}
         </div>
-        <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">
+        <div className={`m-auto`}>
           {children}
           <div className="col-span-2 text-right">
             <button
@@ -42,3 +42,5 @@ export const FormContainer: React.FC<Props> = ({
     </form>
   );
 };
+
+FormContainer.defaultProps = {};
