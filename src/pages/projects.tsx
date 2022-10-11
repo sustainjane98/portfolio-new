@@ -32,7 +32,11 @@ const Projects: React.FC<Props> = () => {
             external: true,
           },
           {
-            icon: <BookwireOSIcon className="w-8 h-8 fill-white" />,
+            icon: (
+              <div className="w-8 h-8 text-white flex items-center justify-center">
+                <span>OS</span>
+              </div>
+            ),
             description:
               "I developed new features in the existent Bookwire OS System with React in Frontend. I transferred the technology to SPA.",
             title: "Bookwire OS",
