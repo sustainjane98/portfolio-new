@@ -6,21 +6,24 @@ import { ColorSchemeProvider } from "../provider/colorscheme.provider";
 import { Navigation } from "../components/shared/navigation";
 import { Footer } from "../components/shared/footer";
 import { AnimatePresence } from "framer-motion";
+import { AlertProvider } from "../provider/alert.provider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo titleTemplate="%s | Jane Will" />
       <ColorSchemeProvider>
-        <Navigation />
-        <AnimatePresence
-          mode="wait"
-          initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
-          <Component {...pageProps} />
-        </AnimatePresence>
-        <Footer />
+        <AlertProvider>
+          <Navigation />
+          <AnimatePresence
+            mode="wait"
+            initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            <Component {...pageProps} />
+          </AnimatePresence>
+          <Footer />
+        </AlertProvider>
       </ColorSchemeProvider>
       <Head>
         <meta

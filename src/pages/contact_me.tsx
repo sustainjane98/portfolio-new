@@ -14,6 +14,8 @@ import { Select } from "../components/shared/select";
 import { useUpdateEffect } from "usehooks-ts";
 import { ContactMeData } from "../types/contactMeData";
 import ContactMeService from "../services/contactMe.service";
+import { useAlert } from "../hooks/useAlert.hook";
+import { AlertType } from "../components/enums/alerttype.enum";
 
 export interface Props {}
 
@@ -53,12 +55,6 @@ const ContactMe: NextPage = () => {
     control: methods.control,
   });
 
-  const onSubmit = async (data: ContactMeData) => {
-    const contactMeService = new ContactMeService();
-
-    await contactMeService.sendEmail(data);
-  };
-
   useUpdateEffect(() => {
     if (selectedContactReason === "other") {
       methods.setValue("contactReasonString", "");
@@ -66,6 +62,22 @@ const ContactMe: NextPage = () => {
 
     setdisableContactReasonStringVal((prev) => !prev);
   }, [selectedContactReason]);
+
+  const { toggle } = useAlert();
+
+  const onSubmit = async (data: ContactMeData) => {
+    try {
+      const contactMeService = new ContactMeService();
+
+      await contactMeService.sendEmail(data);
+    } catch (err) {
+      toggle("Error", "Something went wrong", AlertType.Error);
+
+      window.setTimeout(() => {
+        toggle();
+      }, 500);
+    }
+  };
 
   return (
     <>
