@@ -70,6 +70,7 @@ const ContactMe: NextPage = () => {
       const contactMeService = new ContactMeService();
 
       await contactMeService.sendEmail(data);
+      methods.reset();
     } catch (err) {
       toggle("Error", "Something went wrong", AlertType.Error);
 
