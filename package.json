@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
-    "mailwind:compile": "mailwind --input-html src/templates/contactMe.ejs --output-html src/templates/contactMe.html"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
@@ -18,6 +17,7 @@
     "classnames": "^2.3.2",
     "email-templates": "^10.0.1",
     "framer-motion": "^7.4.0",
+    "mailgen": "^2.0.27",
     "next": "12.3.1",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
