@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { ContactMeData } from "../types/contactMeData";
+import { ContactMeData } from "../../types/contactMeData";
 import { createTransport, createTestAccount } from "nodemailer";
 import Mailgen from "mailgen";
 
@@ -17,6 +17,11 @@ let transporter = createTransport({
 
 const contactMeHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    if (req.method !== "POST") {
+      res.status(404).end();
+      return;
+    }
+
     const value = req.body as ContactMeData;
     const mailGenerator = new Mailgen({
       theme: "default",
@@ -31,13 +36,11 @@ const contactMeHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       body: {
         name: "Jane",
         intro: "Someone contacted you via your contact form",
-        action: {
-          instructions: "To answer, please click here:",
-          button: {
-            color: "#347eb6", // Optional action button color
-            text: "Answer",
-            link: `mailto:${value.email}`,
-          },
+        table: {
+          data: Object.entries(value)?.map(([key, value]) => ({
+            item: key,
+            value,
+          })),
         },
       },
     };

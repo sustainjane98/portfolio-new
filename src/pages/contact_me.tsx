@@ -13,6 +13,7 @@ import { InputContainer } from "../components/shared/input-container";
 import { Select } from "../components/shared/select";
 import { useUpdateEffect } from "usehooks-ts";
 import { ContactMeData } from "../types/contactMeData";
+import ContactMeService from "../services/contactMe.service";
 
 export interface Props {}
 
@@ -23,7 +24,7 @@ export interface Props {}
  */
 const ContactMe: NextPage = () => {
   const [disableContactReasonStringVal, setdisableContactReasonStringVal] =
-    useState(false);
+    useState(true);
 
   const schema = yup.object({
     name: yup.string().required("name is required"),
@@ -52,7 +53,11 @@ const ContactMe: NextPage = () => {
     control: methods.control,
   });
 
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = async (data: ContactMeData) => {
+    const contactMeService = new ContactMeService();
+
+    await contactMeService.sendEmail(data);
+  };
 
   useUpdateEffect(() => {
     if (selectedContactReason === "other") {
