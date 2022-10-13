@@ -27,7 +27,24 @@ const Home: NextPage = () => {
             headline: "I am the caterpillar that became a butterfly",
             subheadline: "I build web pages with passion",
           },
-          body: "I am a trans woman and software developer, with the mission to produce beautiful and functional web applications. If you like, we can get to know each other better",
+          body: (
+            <>
+              I am a{" "}
+              {
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline"
+                  href="https://transequality.org/issues/resources/frequently-asked-questions-about-transgender-people"
+                >
+                  trans woman
+                </a>
+              }{" "}
+              and software developer, with the mission to produce beautiful and
+              functional web applications. If you like, we can get to know each
+              other better
+            </>
+          ),
           src: headerImage,
           className: "bg-navy-500",
           buttons: [{ href: "/bio", children: "Get to know me" }],

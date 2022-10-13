@@ -20,7 +20,7 @@ import { globalAnimationVariants } from "../animations/global";
 export interface Props {
   header: {
     headline: HeadlineProps;
-    body?: string;
+    body?: React.ReactNode | string;
     buttons?: ButtonProps[];
   } & HeaderProps;
   skills?: SkillsProps;
