@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { Header } from "../../components/shared/header";
-import { Headline } from "../../components/shared/headline";
 import contactImage from "../../assets/pavan-trikutam-71CjSSB83Wo-unsplash.webp";
 import { FormContainer } from "../../components/shared/form-container";
 import { Input } from "../../components/shared/input";
