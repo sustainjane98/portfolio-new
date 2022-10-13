@@ -106,7 +106,12 @@ const ContactMe: NextPage = () => {
               <div className="relative flex xl:flex-row flex-col xl:gap-x-4">
                 <div className="xl:w-80">
                   <Input required label="Name" name="name" />
-                  <Input required label="Email Address" name="email" />
+                  <Input
+                    required
+                    label="Email Address"
+                    name="email"
+                    type="email"
+                  />
 
                   <Select
                     label="Contact Reason"
