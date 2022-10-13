@@ -16,6 +16,8 @@ import { ContactMeData } from "../types/contactMeData";
 import ContactMeService from "../services/contactMe.service";
 import { useAlert } from "../hooks/useAlert.hook";
 import { AlertType } from "../components/enums/alerttype.enum";
+import { Button } from "../components/shared/button";
+import { useButtonState } from "../hooks/useButtonState.hook";
 
 export interface Props {}
 
@@ -63,6 +65,8 @@ const ContactMe: NextPage = () => {
     setdisableContactReasonStringVal((prev) => !prev);
   }, [selectedContactReason]);
 
+  const isError = useButtonState(methods.formState.errors);
+
   const { toggle } = useAlert();
 
   const onSubmit = async (data: ContactMeData) => {
@@ -86,6 +90,14 @@ const ContactMe: NextPage = () => {
       <Header multipleChildren src={contactImage} className="bg-[#8f908b]">
         <FormProvider {...methods}>
           <FormContainer
+            button={
+              <Button
+                isLoading={methods.formState.isSubmitting}
+                disabled={isError}
+              >
+                Send
+              </Button>
+            }
             onSubmit={methods.handleSubmit(onSubmit)}
             className="flex-1 mx-auto"
             title="Contact Me"

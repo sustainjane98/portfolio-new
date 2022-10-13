@@ -1,9 +1,12 @@
+import { Button } from "mailgen";
 import React, { PropsWithChildren } from "react";
+import { useFormContext } from "react-hook-form";
 
 export interface Props extends PropsWithChildren {
   title: string;
   className?: string;
   onSubmit?: React.FormEventHandler<HTMLFormElement>;
+  button: React.ReactElement<Button>;
 }
 
 /**
@@ -16,6 +19,7 @@ export const FormContainer: React.FC<Props> = ({
   className,
   children,
   onSubmit,
+  button,
 }) => {
   return (
     <form
@@ -29,14 +33,7 @@ export const FormContainer: React.FC<Props> = ({
         </div>
         <div className={`m-auto`}>
           {children}
-          <div className="col-span-2 text-right">
-            <button
-              type="submit"
-              className="py-2 px-4  bg-navy-600 hover:bg-navy-700 focus:ring-navy-500 focus:ring-offset-navy-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
-            >
-              Send
-            </button>
-          </div>
+          <div className="col-span-2 text-right">{button}</div>
         </div>
       </div>
     </form>
