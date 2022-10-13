@@ -25,8 +25,10 @@ export const Button: React.FC<Props> = ({
   isLoading,
   ...buttonProps
 }) => {
+  const isDisabled = isLoading || buttonProps.disabled;
+
   const classes = `py-4 px-6  ${
-    !buttonProps?.disabled
+    !isDisabled
       ? "bg-navy-600 hover:bg-navy-700 focus:ring-navy-700 focus:ring-offset-indigo-200"
       : "bg-gray-300"
   } text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg`;
@@ -43,6 +45,7 @@ export const Button: React.FC<Props> = ({
     <button
       onClick={onClick}
       {...buttonProps}
+      disabled={isDisabled}
       className={classes + " flex " + buttonProps?.className ?? ""}
     >
       <div className="flex-1 inline-block" />
