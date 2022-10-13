@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import React from "react";
 import { SkillsTemplate } from "../../templates/skills.template";
 import callcenterImage from "../../assets/charanjeet-dhiman-mHusyBu4bxM-unsplash.webp";
+import { NextSeo } from "next-seo";
 
 /**
  * An Done React Component.
@@ -10,15 +11,18 @@ import callcenterImage from "../../assets/charanjeet-dhiman-mHusyBu4bxM-unsplash
  */
 const Done: NextPage = () => {
   return (
-    <SkillsTemplate
-      header={{
-        headline: {
-          headline: "I received your message",
-          subheadline: "I will answer as fast as possible",
-        },
-        src: callcenterImage,
-      }}
-    />
+    <>
+      <NextSeo title="Contact Request Submitted" />
+      <SkillsTemplate
+        header={{
+          headline: {
+            headline: "I received your message",
+            subheadline: "I will answer as fast as possible",
+          },
+          src: callcenterImage,
+        }}
+      />
+    </>
   );
 };
 
