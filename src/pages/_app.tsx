@@ -7,10 +7,13 @@ import { Navigation } from "../components/shared/navigation";
 import { Footer } from "../components/shared/footer";
 import { AnimatePresence } from "framer-motion";
 import { AlertProvider } from "../provider/alert.provider";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const qc = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <QueryClientProvider client={qc}>
       <DefaultSeo titleTemplate="%s | Jane Will" />
       <ColorSchemeProvider>
         <AlertProvider>
@@ -31,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="initial-scale=1, viewport-fit=cover"
         ></meta>
       </Head>
-    </>
+    </QueryClientProvider>
   );
 }
 

@@ -35,7 +35,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
           {multipleChildren ? (
             children
           ) : (
-            <div className="max-w-7xl">{children}</div>
+            <div className="max-w-7xl relative">{children}</div>
           )}
         </div>
       </div>
