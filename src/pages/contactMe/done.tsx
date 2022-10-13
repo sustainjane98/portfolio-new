@@ -20,6 +20,7 @@ const Done: NextPage = () => {
             subheadline: "I will answer as fast as possible",
           },
           src: callcenterImage,
+          buttons: [{ children: "Contact again", href: "/contactMe" }],
         }}
       />
     </>
