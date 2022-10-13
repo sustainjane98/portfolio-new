@@ -105,8 +105,9 @@ const ContactMe: NextPage = () => {
             <div className="flex flex-col">
               <div className="relative flex xl:flex-row flex-col xl:gap-x-4">
                 <div className="xl:w-80">
-                  <Input required label="Name" name="name" />
+                  <Input autoComplete="on" required label="Name" name="name" />
                   <Input
+                    autoComplete="on"
                     required
                     label="Email Address"
                     name="email"
@@ -124,6 +125,7 @@ const ContactMe: NextPage = () => {
                   {selectedContactReason === "job_offer" ? (
                     <>
                       <Input
+                        autoComplete="on"
                         label="Job Advertisement"
                         name="jobAdvertisement"
                       />
@@ -131,6 +133,7 @@ const ContactMe: NextPage = () => {
                     </>
                   ) : (
                     <Input
+                      autoComplete="on"
                       label="Contact Reason (Value)"
                       name="contactReasonString"
                       required
@@ -139,6 +142,7 @@ const ContactMe: NextPage = () => {
                 </div>
                 <div className="w-full xl:min-h-full">
                   <InputContainer
+                    autoComplete="on"
                     label="Message"
                     name="message"
                     className="xl:col-span-3 xl:row-span-4 w-full xl:min-h-full"
