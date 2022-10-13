@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, {
   Dispatch,
   PropsWithChildren,
@@ -72,6 +73,9 @@ export const ColorSchemeProvider: React.FC<PropsWithChildren> = ({
 
   return (
     <ColorSchemeProviderContext.Provider value={{ isDark, setDark }}>
+      <Head>
+        <meta name="theme-color" content={isDark ? "#1f2937" : "#fff"} />
+      </Head>
       {children}
     </ColorSchemeProviderContext.Provider>
   );
