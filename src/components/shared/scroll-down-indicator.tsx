@@ -2,7 +2,9 @@ import React from "react";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
-export interface Props {}
+export interface Props {
+  className: string;
+}
 
 const ArrowDownIconMotionComponent = motion(ArrowDownIcon);
 
@@ -11,9 +13,11 @@ const ArrowDownIconMotionComponent = motion(ArrowDownIcon);
  * @author Jane Will
  * @version 0.1
  */
-export const ScrollDownIndicator: React.FC<Props> = () => {
+export const ScrollDownIndicator: React.FC<Props> = ({ className }) => {
   return (
-    <div className="absolute bottom-0 left-0 w-full flex justify-center items-center">
+    <div
+      className={`absolute bottom-0 left-0 w-full flex justify-center items-center ${className}`}
+    >
       <ArrowDownIconMotionComponent
         initial={{ y: -20 }}
         animate={{ y: -10 }}
