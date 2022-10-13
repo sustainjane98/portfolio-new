@@ -50,7 +50,7 @@ export const main: NavigationItem[] = [
   },
   {
     children: "Contact Me",
-    href: "/contact_me",
+    href: "/contactMe",
     icon: <PhoneIcon className="w-6 h-6" />,
   },
 ];

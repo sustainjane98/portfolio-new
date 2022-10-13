@@ -1,23 +1,24 @@
 import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
-import { Header } from "../components/shared/header";
-import { Headline } from "../components/shared/headline";
+import { Header } from "../../components/shared/header";
+import { Headline } from "../../components/shared/headline";
 import contactImage from "../assets/pavan-trikutam-71CjSSB83Wo-unsplash.webp";
-import { FormContainer } from "../components/shared/form-container";
-import { Input } from "../components/shared/input";
+import { FormContainer } from "../../components/shared/form-container";
+import { Input } from "../../components/shared/input";
 import { useForm, FormProvider, useWatch } from "react-hook-form";
 import { NextSeo } from "next-seo";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { InputContainer } from "../components/shared/input-container";
-import { Select } from "../components/shared/select";
+import { InputContainer } from "../../components/shared/input-container";
+import { Select } from "../../components/shared/select";
 import { useUpdateEffect } from "usehooks-ts";
-import { ContactMeData } from "../types/contactMeData";
-import ContactMeService from "../services/contactMe.service";
-import { useAlert } from "../hooks/useAlert.hook";
-import { AlertType } from "../components/enums/alerttype.enum";
-import { Button } from "../components/shared/button";
-import { useButtonState } from "../hooks/useButtonState.hook";
+import { ContactMeData } from "../../types/contactMeData";
+import ContactMeService from "../../services/contactMe.service";
+import { useAlert } from "../../hooks/useAlert.hook";
+import { AlertType } from "../../components/enums/alerttype.enum";
+import { Button } from "../../components/shared/button";
+import { useButtonState } from "../../hooks/useButtonState.hook";
+import { useRouter } from "next/router";
 
 export interface Props {}
 
@@ -29,6 +30,8 @@ export interface Props {}
 const ContactMe: NextPage = () => {
   const [disableContactReasonStringVal, setdisableContactReasonStringVal] =
     useState(true);
+
+  const { push } = useRouter();
 
   const schema = yup.object({
     name: yup.string().required("I need to know who contacted me"),
@@ -75,6 +78,7 @@ const ContactMe: NextPage = () => {
 
       await contactMeService.sendEmail(data);
       methods.reset();
+      await push("/contactMe/done");
     } catch (err) {
       toggle("Error", "Something went wrong", AlertType.Error);
 
