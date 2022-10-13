@@ -4,6 +4,7 @@ import programmingBackground from "../../../assets/radowan-nakif-rehan-cYyqhdbJ9
 import { Headline } from "../../shared/headline";
 import { HeadlineBody } from "../../shared/headline-body";
 import { ScrollDownIndicator } from "../../shared/scroll-down-indicator";
+import Link from "next/link";
 
 export interface Props {}
 
@@ -21,8 +22,19 @@ export const HeaderWithTwoSections: React.FC<Props> = () => {
           subheadline="I am a software developer"
         />
         <HeadlineBody>
-          I am a full-stack developer who is on fire for frontend development. I
-          am particularly familiar with the following technologies...
+          I am a{" "}
+          {
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+              href="https://transequality.org/issues/resources/frequently-asked-questions-about-transgender-people"
+            >
+              trans woman
+            </a>
+          }{" "}
+          and full-stack developer who is on fire for frontend development. I am
+          particularly familiar with the following technologies...
         </HeadlineBody>
         <ScrollDownIndicator />
       </Header>
