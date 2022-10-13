@@ -3,7 +3,7 @@ import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
 export interface Props {
-  className: string;
+  className?: string;
 }
 
 const ArrowDownIconMotionComponent = motion(ArrowDownIcon);
