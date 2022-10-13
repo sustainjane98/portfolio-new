@@ -31,14 +31,14 @@ const ContactMe: NextPage = () => {
     useState(true);
 
   const schema = yup.object({
-    name: yup.string().required("name is required"),
+    name: yup.string().required("I need to know who contacted me"),
     email: yup
       .string()
-      .required("email is required")
-      .email("email isn't valid"),
+      .required("I need your email to answer you")
+      .email("I need an valid email to answer you"),
     contactReasonString: disableContactReasonStringVal
       ? yup.string()
-      : yup.string().required("contact reason is required"),
+      : yup.string().required("I need a contact reason"),
   });
 
   const methods = useForm<ContactMeData>({
