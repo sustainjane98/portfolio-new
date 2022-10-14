@@ -11,6 +11,7 @@ import { devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
+  globalSetup: require.resolve("./src/globalSetup"),
   testDir: "./src",
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
@@ -95,7 +96,7 @@ const config: PlaywrightTestConfig = {
     },
   ],
   webServer: {
-    command: "yarn run build && yarn run start",
+    command: "yarn run build && yarn run start:test",
     port: 3000,
     cwd: "../../apps/portfolio",
   },

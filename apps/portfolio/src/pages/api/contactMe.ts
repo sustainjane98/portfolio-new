@@ -3,12 +3,12 @@ import { ContactMeData } from "../../types/contactMeData";
 import { createTransport, createTestAccount } from "nodemailer";
 import Mailgen from "mailgen";
 
-let testAccount = createTestAccount();
+const port = Number(process.env["EMAIL_PORT"]);
 
 let transporter = createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true, // true for 465, false for other ports
+  host: process.env["EMAIL_HOST"],
+  port,
+  secure: port === 465, // true for 465, false for other ports
   auth: {
     user: process.env["EMAIL_USERNAME"], // generated ethereal user
     pass: process.env["EMAIL_PASSWORD"], // generated ethereal password
@@ -56,7 +56,7 @@ const contactMeHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     });
     res.status(200).end();
   } catch (err) {
-    res.status(500).send("Something went wrong");
+    res.status(500).send(`Something went wrong, ${err}`);
   }
 };
 

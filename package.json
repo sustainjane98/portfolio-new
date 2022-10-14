@@ -6,5 +6,11 @@
   ],
   "name": "portfolio",
   "version": "1.0.0",
-  "author": "sustainjane98"
+  "author": "sustainjane98",
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "dependencies": {
+    "imap": "^0.8.19"
+  }
 }
