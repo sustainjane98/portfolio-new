@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderWithTwoSections } from "../components/bio/header-with-two-sections/header-with-two-sections";
+import { BiographyBody } from "../components/bio/biography-body";
 import { Header, Props as HeaderProps } from "../components/shared/header";
 import {
   Headline,
@@ -16,6 +16,7 @@ import { Footer } from "../components/shared/footer";
 import { MapPinIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import { globalAnimationVariants } from "../animations/global";
+import { ProfilePicture } from "../components/shared/profilePicture";
 
 export interface Props {
   header: {
@@ -24,6 +25,7 @@ export interface Props {
     buttons?: ButtonProps[];
   } & HeaderProps;
   skills?: SkillsProps;
+  githubProfileUrl?: string;
 }
 
 /**
@@ -34,6 +36,7 @@ export interface Props {
 export const SkillsTemplate: React.FC<Props> = ({
   header: { src, className, headline, body, buttons },
   skills,
+  githubProfileUrl,
 }) => {
   return (
     <motion.main
@@ -49,6 +52,13 @@ export const SkillsTemplate: React.FC<Props> = ({
         className={className}
         indicator={skills && <ScrollDownIndicator className="z-10" />}
       >
+        {githubProfileUrl && (
+          <ProfilePicture
+            alt="Github Profile Picture"
+            src={githubProfileUrl}
+            layout="fill"
+          />
+        )}
         <Headline {...headline} />
         {body && <HeadlineBody>{body}</HeadlineBody>}
         {buttons && (
