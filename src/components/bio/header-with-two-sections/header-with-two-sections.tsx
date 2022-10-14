@@ -24,7 +24,7 @@ export const HeaderWithTwoSections: React.FC<Props> = () => {
         <Header
           src={programmingBackground}
           className="bg-[#0c1116]"
-          indicator={<ScrollDownIndicator />}
+          indicator={<ScrollDownIndicator className="z-10" />}
         >
           <ProfilePicture
             alt="Github Profile Picture"

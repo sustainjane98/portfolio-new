@@ -47,7 +47,7 @@ export const SkillsTemplate: React.FC<Props> = ({
       <Header
         src={src}
         className={className}
-        indicator={skills && <ScrollDownIndicator />}
+        indicator={skills && <ScrollDownIndicator className="z-10" />}
       >
         <Headline {...headline} />
         {body && <HeadlineBody>{body}</HeadlineBody>}
