@@ -45,21 +45,50 @@ const config: PlaywrightTestConfig = {
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
+      name: "Desktop Chrome",
       use: {
         ...devices["Desktop Chrome"],
       },
     },
-
     {
-      name: "firefox",
+      name: "Desktop Chrome HiDPI",
+      use: {
+        ...devices["Desktop Chrome HiDPI"],
+      },
+    },
+    {
+      name: "iPad Pro 11",
+      use: {
+        ...devices["iPad Pro 11"],
+      },
+    },
+    {
+      name: "iPhone 12 Pro Max",
+      use: {
+        ...devices["iPhone 12 Pro Max"],
+      },
+    },
+    {
+      name: "iPhone 12 Mini",
+      use: {
+        ...devices["iPhone 12 Mini"],
+      },
+    },
+    {
+      name: "Desktop Firefox",
       use: {
         ...devices["Desktop Firefox"],
       },
     },
+    {
+      name: "Desktop Firefox HiDPI",
+      use: {
+        ...devices["Desktop Firefox HiDPI"],
+      },
+    },
 
     {
-      name: "webkit",
+      name: "Desktop Safari",
       use: {
         ...devices["Desktop Safari"],
       },
