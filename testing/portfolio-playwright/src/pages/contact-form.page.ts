@@ -12,7 +12,6 @@ export default class ContactFormPage {
   }
 
   public async checkStructure() {
-    await this.page.pause();
     await expect(this.page).toHaveScreenshot("contact-form-page.png", {
       fullPage: true,
     });
