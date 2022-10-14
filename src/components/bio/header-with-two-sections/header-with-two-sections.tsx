@@ -21,7 +21,11 @@ export const HeaderWithTwoSections: React.FC<Props> = () => {
   if (isFetched)
     return (
       <div>
-        <Header src={programmingBackground} className="bg-[#0c1116]">
+        <Header
+          src={programmingBackground}
+          className="bg-[#0c1116]"
+          indicator={<ScrollDownIndicator />}
+        >
           <ProfilePicture
             alt="Github Profile Picture"
             src={data?.avatar_url ?? ""}
@@ -47,7 +51,6 @@ export const HeaderWithTwoSections: React.FC<Props> = () => {
             am particularly familiar with the following technologies...
           </HeadlineBody>
         </Header>
-        <ScrollDownIndicator className="z-10" />
       </div>
     );
   return null;

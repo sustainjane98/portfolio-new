@@ -44,10 +44,13 @@ export const SkillsTemplate: React.FC<Props> = ({
       transition={{ type: "linear" }} // Set the transition to linear
       className=""
     >
-      <Header src={src} className={className}>
+      <Header
+        src={src}
+        className={className}
+        indicator={skills && <ScrollDownIndicator />}
+      >
         <Headline {...headline} />
         {body && <HeadlineBody>{body}</HeadlineBody>}
-        {skills && <ScrollDownIndicator />}
         {buttons && (
           <div className="mt-6 inline-flex">
             {buttons.map((button, index) => (

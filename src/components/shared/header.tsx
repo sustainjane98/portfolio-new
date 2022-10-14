@@ -7,6 +7,7 @@ export interface Props {
   src: StaticImageData;
   className?: string;
   multipleChildren?: boolean;
+  indicator?: React.ReactElement;
 }
 
 /**
@@ -19,6 +20,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
   src,
   className,
   multipleChildren,
+  indicator,
 }) => {
   return (
     <header className={`w-screen min-h-screen relative ${className} `}>
@@ -38,6 +40,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
             <div className="max-w-7xl relative">{children}</div>
           )}
         </div>
+        {indicator}
       </div>
     </header>
   );
