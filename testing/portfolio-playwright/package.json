@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-playwright",
+  "version": "1.0.0",
+  "author": "sustainjane98",
+  "devDependencies": {
+    "@playwright/test": "^1.27.1"
+  },
+  "scripts": {
+    "start": "playwright test",
+    "start:headed": "playwright test --headed",
+    "codegen": "playwright codegen http://localhost:3000"
+  }
+}

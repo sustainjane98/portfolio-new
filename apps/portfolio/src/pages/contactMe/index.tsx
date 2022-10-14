@@ -18,6 +18,7 @@ import { AlertType } from "../../components/enums/alerttype.enum";
 import { Button } from "../../components/shared/button";
 import { useButtonState } from "../../hooks/useButtonState.hook";
 import { useRouter } from "next/router";
+import { DataTestIds } from "@portfolio/shared-testing";
 
 export interface Props {}
 
@@ -95,6 +96,7 @@ const ContactMe: NextPage = () => {
           <FormContainer
             button={
               <Button
+                data-testid={DataTestIds.CONTACT_ME_SUBMIT_BUTTON}
                 isLoading={methods.formState.isSubmitting}
                 disabled={isError}
               >
@@ -108,13 +110,20 @@ const ContactMe: NextPage = () => {
             <div className="flex flex-col">
               <div className="relative flex xl:flex-row flex-col xl:gap-x-4">
                 <div className="xl:w-80">
-                  <Input autoComplete="on" required label="Name" name="name" />
+                  <Input
+                    autoComplete="on"
+                    required
+                    label="Name"
+                    name="name"
+                    data-testid={DataTestIds.CONTACT_ME_NAME_INPUT}
+                  />
                   <Input
                     autoComplete="on"
                     required
                     label="Email Address"
                     name="email"
                     type="email"
+                    data-testid={DataTestIds.CONTACT_ME_EMAIL_INPUT}
                   />
 
                   <Select
@@ -124,6 +133,7 @@ const ContactMe: NextPage = () => {
                       { value: "job_offer", displayValue: "Job offer" },
                       { value: "other", displayValue: "Other" },
                     ]}
+                    data-testid={DataTestIds.CONTACT_ME_CONTACT_REASON_SELECT}
                   />
                   {selectedContactReason === "job_offer" ? (
                     <>
@@ -131,6 +141,9 @@ const ContactMe: NextPage = () => {
                         autoComplete="on"
                         label="Job Advertisement"
                         name="jobAdvertisement"
+                        data-testid={
+                          DataTestIds.CONTACT_ME_JOB_ADVERTISEMENT_INPUT
+                        }
                       />
                       <Input label="Job Location" name="jobLocation" />
                     </>
@@ -140,11 +153,13 @@ const ContactMe: NextPage = () => {
                       label="Contact Reason (Value)"
                       name="contactReasonString"
                       required
+                      data-testid={DataTestIds.CONTACT_ME_CONTACT_REASON_INPUT}
                     />
                   )}
                 </div>
                 <div className="w-full xl:min-h-full">
                   <InputContainer
+                    data-testid={DataTestIds.CONTACT_ME_MESSAGE_TEXTAREA}
                     autoComplete="on"
                     label="Message"
                     name="message"
