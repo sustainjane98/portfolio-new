@@ -1,18 +1,18 @@
 import React from "react";
 import { SkillsTemplate } from "../../templates/skills.template";
-import processImage from "../../../assets/kaleidico-3V8xo5Gbusk-unsplash.webp";
+import processImage from "../../assets/kaleidico-3V8xo5Gbusk-unsplash.webp";
 import { UsersIcon } from "@heroicons/react/24/solid";
-import AtlassianIcon from "../../../assets/atlassian-1.svg";
-import JiraIcon from "../../../assets/jira-1.svg";
-import ConfluenceIcon from "../../../assets/confluence-1.svg";
-import BitbucketIcon from "../../../assets/bitbucket-icon.svg";
-import TeamsIcon from "../../../assets/microsoft-teams-1.svg";
-import MicrosoftIcon from "../../../assets/microsoft-5.svg";
-import OutlookIcon from "../../../assets/outlook-1.svg";
-import PowerpointIcon from "../../../assets/powerpoint-2.svg";
-import WordIcon from "../../../assets/word-1.svg";
-import ExcelIcon from "../../../assets/excel-4.svg";
-import SlackIcon from "../../../assets/slack-1.svg";
+import AtlassianIcon from "../../assets/atlassian-1.svg";
+import JiraIcon from "../../assets/jira-1.svg";
+import ConfluenceIcon from "../../assets/confluence-1.svg";
+import BitbucketIcon from "../../assets/bitbucket-icon.svg";
+import TeamsIcon from "../../assets/microsoft-teams-1.svg";
+import MicrosoftIcon from "../../assets/microsoft-5.svg";
+import OutlookIcon from "../../assets/outlook-1.svg";
+import PowerpointIcon from "../../assets/powerpoint-2.svg";
+import WordIcon from "../../assets/word-1.svg";
+import ExcelIcon from "../../assets/excel-4.svg";
+import SlackIcon from "../../assets/slack-1.svg";
 
 export interface Props {}
 

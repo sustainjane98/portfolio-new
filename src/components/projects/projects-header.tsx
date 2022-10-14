@@ -1,8 +1,7 @@
 import React from "react";
 import { SkillsTemplate } from "../../templates/skills.template";
-import projectsImage from "../assets/markus-winkler-Q2J2qQsoYH8-unsplash.jpg";
-import CreatokiaIcon from "../assets/creatokia.svg";
-import BookwireOSIcon from "../assets/bookwire-os.svg";
+import projectsImage from "../../assets/markus-winkler-Q2J2qQsoYH8-unsplash.jpg";
+import CreatokiaIcon from "../../assets/creatokia.svg";
 
 export interface Props {}
 

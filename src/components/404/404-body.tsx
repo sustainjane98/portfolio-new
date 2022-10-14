@@ -1,6 +1,6 @@
 import React from "react";
 import { SkillsTemplate } from "../../templates/skills.template";
-import errorImage from "../assets/elisa-ventur-bmJAXAz6ads-unsplash.webp";
+import errorImage from "../../assets/elisa-ventur-bmJAXAz6ads-unsplash.webp";
 
 export interface Props {}
 

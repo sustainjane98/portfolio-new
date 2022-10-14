@@ -1,16 +1,16 @@
 import React from "react";
-import GraphQlIcon from "../../../assets/graphql-logo-2.svg";
+import GraphQlIcon from "../../assets/graphql-logo-2.svg";
 import { ServerIcon } from "@heroicons/react/24/solid";
 import { SkillsTemplate } from "../../templates/skills.template";
-import serverImage from "../../../assets/adi-goldstein-EUsVwEOsblE-unsplash.webp";
-import GolangIcon from "../../../assets/golang-1.svg";
-import KotlinIcon from "../../../assets/kotlin-2.svg";
-import ElixirIcon from "../../../assets/elixir-1.svg";
-import JavaIcon from "../../../assets/java-14.svg";
-import GinIcon from "../../../assets/gin.svg";
-import GooseIcon from "../../../assets/goose_logo.svg";
-import HibenateIcon from "../../../assets/hibernate-icon.svg";
-import SpringIcon from "../../../assets/spring-3.svg";
+import serverImage from "../../assets/adi-goldstein-EUsVwEOsblE-unsplash.webp";
+import GolangIcon from "../../assets/golang-1.svg";
+import KotlinIcon from "../../assets/kotlin-2.svg";
+import ElixirIcon from "../../assets/elixir-1.svg";
+import JavaIcon from "../../assets/java-14.svg";
+import GinIcon from "../../assets/gin.svg";
+import GooseIcon from "../../assets/goose_logo.svg";
+import HibenateIcon from "../../assets/hibernate-icon.svg";
+import SpringIcon from "../../assets/spring-3.svg";
 
 export interface Props {}
 

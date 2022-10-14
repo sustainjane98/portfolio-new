@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import headerImage from "../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash.webp";
 import headerImagePrev from "../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash-1200x600.jpg";
-import { SkillsTemplate } from "../templates/skills.template";
+import { HomeBody } from "../components/home/home-body";
 
 const Home: NextPage = () => {
   return (
@@ -21,35 +20,7 @@ const Home: NextPage = () => {
           ],
         }}
       />
-      <SkillsTemplate
-        header={{
-          headline: {
-            headline: "I am the caterpillar that became a butterfly",
-            subheadline: "I build web pages with passion",
-          },
-          body: (
-            <>
-              I am a{" "}
-              {
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline"
-                  href="https://transequality.org/issues/resources/frequently-asked-questions-about-transgender-people"
-                >
-                  trans woman
-                </a>
-              }{" "}
-              and software developer, with the mission to produce beautiful and
-              functional web applications. If you like, we can get to know each
-              other better
-            </>
-          ),
-          src: headerImage,
-          className: "bg-navy-500",
-          buttons: [{ href: "/bio", children: "Get to know me" }],
-        }}
-      />
+      <HomeBody />
     </>
   );
 };
