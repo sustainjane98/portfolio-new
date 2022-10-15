@@ -12,7 +12,10 @@ export interface Props {}
 const Design: React.FC<Props> = () => {
   return (
     <>
-      <NextSeo title="Design Skills" />
+      <NextSeo
+        title="My UI/UX Design Skills"
+        description="I am a hobby User Experience Designer"
+      />
       <DesignBody />
     </>
   );

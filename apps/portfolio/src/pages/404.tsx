@@ -13,7 +13,7 @@ export interface Props {}
 const ErrorPage: React.FC<Props> = () => {
   return (
     <>
-      <NextSeo title="Something went wrong..." />
+      <NextSeo title="Something went wrong..." noindex />
       <NotFoundBody />
     </>
   );

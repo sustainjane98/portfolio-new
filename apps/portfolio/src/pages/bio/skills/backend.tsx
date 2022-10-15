@@ -12,7 +12,10 @@ export interface Props {}
 const Backend: React.FC<Props> = () => {
   return (
     <>
-      <NextSeo title="Backend Skills" />
+      <NextSeo
+        title="My backend Skill"
+        description="I am a backend developer"
+      />
       <BackendBody />
     </>
   );

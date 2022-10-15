@@ -1,15 +1,17 @@
 {
-  "name": "portfolio-playwright",
+  "name": "portfolio-testing-playwright",
   "version": "1.0.0",
   "author": "sustainjane98",
   "devDependencies": {
-    "@playwright/test": "^1.27.1"
+    "@playwright/test": "^1.27.1",
+    "axe-playwright": "^1.1.11"
   },
   "scripts": {
     "start": "playwright test",
     "start:headed": "playwright test --headed",
     "start-chrome:headed": "playwright test --headed --project=\"Desktop Chrome\"",
     "start-chrome": "playwright test --project=\"Desktop Chrome\"",
-    "codegen": "playwright codegen http://localhost:3000"
+    "codegen": "playwright codegen http://localhost:3000",
+    "report": "playwright show-report results"
   }
 }

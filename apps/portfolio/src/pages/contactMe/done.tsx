@@ -12,7 +12,7 @@ import { NextSeo } from "next-seo";
 const Done: NextPage = () => {
   return (
     <>
-      <NextSeo title="Contact Request Submitted" />
+      <NextSeo title="Contact Request Submitted" noindex />
       <SkillsTemplate
         header={{
           headline: {

@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
 import { BiographyBody } from "../../components/bio/biography-body";
-import { motion } from "framer-motion";
-import { globalAnimationVariants } from "../../animations/global";
 import { NextSeo } from "next-seo";
 import { GetStaticProps, NextPage } from "next";
 import GithubService from "../../services/github.service";
@@ -19,7 +17,10 @@ export interface StaticProps {
 const Biography: NextPage<StaticProps> = ({ avatarUrl }) => {
   return (
     <>
-      <NextSeo title="Who am I?" />
+      <NextSeo
+        title="Who am I?"
+        description="Hello I am Jane, I am a trans woman and software developer"
+      />
       <BiographyBody githubProfileUrl={avatarUrl} />
     </>
   );

@@ -26,7 +26,7 @@ export const ProcessModelBody: React.FC<Props> = () => {
     <SkillsTemplate
       header={{
         headline: {
-          headline: "My Project Management skills",
+          headline: "My Project Management Skills",
           subheadline: "I am Agile",
         },
         src: processImage,

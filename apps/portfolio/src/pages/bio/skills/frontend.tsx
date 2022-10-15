@@ -13,7 +13,10 @@ export interface Props {}
 const FrotendPage: React.FC<Props> = () => {
   return (
     <>
-      <NextSeo title="Frontend Skills" />
+      <NextSeo
+        title="My frontend Skills"
+        description="I am a frontend developer"
+      />
       <FrontendBody />
     </>
   );

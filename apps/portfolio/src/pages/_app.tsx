@@ -8,13 +8,26 @@ import { Footer } from "../components/shared/footer";
 import { AnimatePresence } from "framer-motion";
 import { AlertProvider } from "../provider/alert.provider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import headerImagePrev from "../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash-1200x600.jpg";
 
 const qc = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={qc}>
-      <DefaultSeo titleTemplate="%s | Jane Will" />
+      <DefaultSeo
+        titleTemplate="%s | Jane Will"
+        openGraph={{
+          images: [
+            {
+              url: headerImagePrev.src,
+              height: headerImagePrev.height,
+              width: headerImagePrev.width,
+              alt: "Person waving rainbow flag",
+            },
+          ],
+        }}
+      />
       <ColorSchemeProvider>
         <AlertProvider>
           <Navigation />

@@ -12,7 +12,10 @@ export interface Props {}
 const Projects: React.FC<Props> = () => {
   return (
     <>
-      <NextSeo title="Projects" />
+      <NextSeo
+        title="My Projects"
+        description="The Projects i developed and maintained"
+      />
       <ProjectsBody />
     </>
   );

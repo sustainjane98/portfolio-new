@@ -90,7 +90,10 @@ const ContactMe: NextPage = () => {
 
   return (
     <>
-      <NextSeo title="Contact Me" />
+      <NextSeo
+        title="Contact Me"
+        description="Contact me for job offerings or other scenarios"
+      />
       <Header multipleChildren src={contactImage} className="bg-[#8f908b]">
         <FormProvider {...methods}>
           <FormContainer

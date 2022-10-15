@@ -12,7 +12,7 @@ export interface Props {}
 const ProcessModel: React.FC<Props> = () => {
   return (
     <>
-      <NextSeo title="Project Management Skills" />
+      <NextSeo title="My Project Management Skills" description="I am Agile" />
       <ProcessModelBody />
     </>
   );
