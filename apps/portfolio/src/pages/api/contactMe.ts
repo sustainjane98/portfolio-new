@@ -8,7 +8,7 @@ const port = Number(process.env["EMAIL_PORT"]);
 let transporter = createTransport({
   host: process.env["EMAIL_HOST"],
   port,
-  secure: port === 465, // true for 465, false for other ports
+  secure: process.env["EMAIL_SECURITY"] === "TLS", // true for 465, false for other ports
   auth: {
     user: process.env["EMAIL_USERNAME"], // generated ethereal user
     pass: process.env["EMAIL_PASSWORD"], // generated ethereal password

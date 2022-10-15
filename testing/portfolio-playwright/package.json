@@ -8,6 +8,8 @@
   "scripts": {
     "start": "playwright test",
     "start:headed": "playwright test --headed",
+    "start-chrome:headed": "playwright test --headed --project=\"Desktop Chrome\"",
+    "start-chrome": "playwright test --project=\"Desktop Chrome\"",
     "codegen": "playwright codegen http://localhost:3000"
   }
 }
