@@ -36,13 +36,14 @@ export const Button: React.FC<Props> = ({
   if (href)
     return (
       <Link href={href}>
-        <a className={classes}>
+        <a aria-label={children} className={classes}>
           <span>{children}</span>
         </a>
       </Link>
     );
   return (
     <button
+      aria-label={children}
       onClick={onClick}
       {...buttonProps}
       disabled={isDisabled}

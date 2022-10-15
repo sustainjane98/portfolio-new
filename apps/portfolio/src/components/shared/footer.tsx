@@ -1,8 +1,8 @@
-import Link from "next/link";
 import React from "react";
 import { main } from "../../config/navigation-links";
 import GetInItLogo from "../../assets/get-in-it.svg";
 import GithubLogo from "../../assets/github-icon-transp.svg";
+import { Link } from "./link";
 
 export interface Props {}
 
@@ -20,39 +20,47 @@ export const Footer: React.FC<Props> = () => {
             <h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3">
               Main
             </h2>
-            <nav className="list-none mb-10">
+
+            <ul className="list-none mb-10">
               {main
                 ?.filter(({ subItems }) => !subItems)
                 .map(({ href, children }, index) => (
                   <li key={index}>
-                    <Link href={href}>
-                      <a className="text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300">
-                        {children}
-                      </a>
+                    <Link
+                      noUnderline
+                      href={href}
+                      aria-label={children}
+                      className="text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300"
+                    >
+                      {children}
                     </Link>
                   </li>
                 ))}
-            </nav>
+            </ul>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 dark:text-white">
               Skills
             </h2>
-            <nav className="list-none mb-10">
+
+            <ul className="list-none mb-10">
               {main
                 .find(({ children }) => {
                   return children === "Skills";
                 })
                 ?.subItems?.map(({ href, children }, index) => (
                   <li key={index}>
-                    <Link href={href}>
-                      <a className="text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300">
-                        {children}
-                      </a>
+                    <Link
+                      noUnderline
+                      href={href}
+                      aria-label={children}
+                      className="text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300"
+                    >
+                      {children}
                     </Link>
                   </li>
                 ))}
-            </nav>
+            </ul>
           </div>
         </div>
       </div>
@@ -60,39 +68,59 @@ export const Footer: React.FC<Props> = () => {
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 dark:text-gray-200 text-sm text-center sm:text-left">
             © 2022 Jane Will —
-            <a
+            <Link
+              external
+              noUnderline
               href="https://twitter.com/knyttneve"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-200 ml-1"
               target="_blank"
             >
               @sustainjane98
-            </a>
+            </Link>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a
+            <Link
+              external
+              aria-label="github logo"
               href={"https://github.com/jawil003"}
               target="_blank"
               rel="noreferrer"
             >
-              <GithubLogo className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200" />
-            </a>
-            <a
+              <GithubLogo
+                role="img"
+                title="Logo of GitHub a software development library"
+                className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200"
+              />
+            </Link>
+            <Link
+              noUnderline
+              external
+              aria-label="get in it logo"
               href={
                 "https://www.get-in-it.de/profil/XjtwpO5JPtgzOK9Ru5dT7ADDJHHc8NsW"
               }
               target="_blank"
               rel="noreferrer"
             >
-              <GetInItLogo className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200" />
-            </a>
-            <a
+              <GetInItLogo
+                role="img"
+                title="Logo of Get in IT a software development job search page"
+                className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200"
+              />
+            </Link>
+            <Link
+              external
+              aria-label="linkedin logo"
               className="ml-3 text-gray-500 dark:text-gray-200"
               href={"https://www.linkedin.com/in/jannik-will-450564182/"}
               target="_blank"
               rel="noreferrer"
             >
               <svg
+                role="img"
+                /*@ts-ignore */
+                title="Logo of LinkedIn a job search page"
                 fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
@@ -107,7 +135,7 @@ export const Footer: React.FC<Props> = () => {
                 ></path>
                 <circle cx="4" cy="4" r="2" stroke="none"></circle>
               </svg>
-            </a>
+            </Link>
           </span>
         </div>
       </div>

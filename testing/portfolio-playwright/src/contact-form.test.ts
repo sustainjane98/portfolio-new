@@ -1,19 +1,22 @@
 import test, { expect } from "@playwright/test";
+import A11yPage from "./pages/a11y.page";
 import ContactFormPage from "./pages/contact-form.page";
 import EmailService from "./service/email.service";
 
 test.describe("ContactForm", () => {
+  let a11y: A11yPage;
+  let p: ContactFormPage;
   let ms = new EmailService();
 
   test.beforeEach(async ({ page }) => {
+    a11y = new A11yPage(page);
     await ms.deleteAllEmails();
-    const p = new ContactFormPage(page);
+    p = new ContactFormPage(page);
     await p.goTo();
+    await a11y.inject();
   });
 
-  test("Full Complete Form", async ({ page }) => {
-    const p = new ContactFormPage(page);
-
+  test("Full Complete Form", async () => {
     await p.enterName("Maxine Testnutzerin");
     await p.enterEmail("maxine@testnutzerin.de");
     await p.enterJobAdvertisement("Testjob");
@@ -27,8 +30,9 @@ test.describe("ContactForm", () => {
   });
 
   test("Check visual stucture", async ({ page }) => {
-    const p = new ContactFormPage(page);
-
     await p.checkStructure();
+  });
+  test("Check a11y", async () => {
+    await a11y.check();
   });
 });

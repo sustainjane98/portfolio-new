@@ -1,6 +1,7 @@
 import React from "react";
 import { SkillsTemplate } from "../../templates/skills.template";
 import headerImage from "../../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash.webp";
+import { Link } from "../shared/link";
 
 export interface Props {}
 
@@ -21,14 +22,15 @@ export const HomeBody: React.FC<Props> = () => {
           <>
             I am a{" "}
             {
-              <a
+              <Link
+                aria-label="trans woman"
                 target="_blank"
                 rel="noreferrer"
                 className="underline"
                 href="https://transequality.org/issues/resources/frequently-asked-questions-about-transgender-people"
               >
                 trans woman
-              </a>
+              </Link>
             }{" "}
             and software developer, with the mission to produce beautiful and
             functional web applications. If you like, we can get to know each

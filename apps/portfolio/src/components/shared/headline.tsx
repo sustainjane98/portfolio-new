@@ -12,11 +12,11 @@ export interface Props {
  */
 export const Headline: React.FC<Props> = ({ headline, subheadline }) => {
   return (
-    <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+    <h1 className="text-3xl font-extrabold text-white sm:text-4xl">
       {headline && <span className="block">{headline}</span>}
       {subheadline && (
         <span className="block text-navy-200 border-black">{subheadline}</span>
       )}
-    </h2>
+    </h1>
   );
 };

@@ -11,6 +11,7 @@ export interface Props
   name: string;
   children: string | React.ReactElement;
   active?: boolean;
+  role?: string;
 }
 
 /**
@@ -22,10 +23,11 @@ export const Toggle: React.FC<Props> = ({
   children,
   name,
   active,
+  role,
   ...inputProps
 }) => {
   return (
-    <div className="mb-3">
+    <div className="mb-3" role={role}>
       <div className="relative inline-block w-10 mr-2 align-middle select-none">
         <input
           checked={active}

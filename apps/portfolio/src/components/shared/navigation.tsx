@@ -42,6 +42,7 @@ export const Navigation: React.FC<Props> = () => {
     <>
       <div className="fixed top-0 left-0 z-30 px-ios-3 pt-4 flex flex-row justify-between w-screen items-center">
         <button
+          aria-label="Navigation Button"
           onClick={() => {
             setOpen((prev) => !prev);
           }}
@@ -53,6 +54,8 @@ export const Navigation: React.FC<Props> = () => {
           )}
         </button>
         <Toggle
+          role="banner"
+          aria-label="Colorschema toggle"
           active={isDark}
           onChange={() => {
             changeColorScheme();
