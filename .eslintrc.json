@@ -1,9 +1,25 @@
 {
   "root": true,
+  "extends": ["plugin:compat/recommended"],
   "rules": {
     "no-console": "error",
     "unused-imports/no-unused-imports": "error",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "promise/always-return": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-native": "off",
+    "promise/no-nesting": "warn",
+    "promise/no-promise-in-callback": "warn",
+    "promise/no-callback-in-promise": "warn",
+    "promise/avoid-new": "warn",
+    "promise/no-new-statics": "error",
+    "promise/no-return-in-finally": "warn",
+    "promise/valid-params": "warn"
   },
-  "plugins": ["unused-imports", "prettier"]
+  "plugins": ["unused-imports", "prettier", "compat", "promise"],
+  "env": {
+    "browser": true
+  }
 }
