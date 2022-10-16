@@ -9,7 +9,6 @@ test.describe("Backend Page", () => {
     a11y = new A11yPage(page);
     p = new BackendPage(page);
     await p.goTo();
-    await a11y.inject();
   });
   test("Check visual stucture", async () => {
     await p.checkStructure();

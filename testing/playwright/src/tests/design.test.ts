@@ -8,7 +8,6 @@ test.describe("Design Page", () => {
     a11y = new A11yPage(page);
     p = new DesignPage(page);
     await p.goTo();
-    await a11y.inject();
   });
   test("Check visual stucture", async ({ page }) => {
     await p.checkStructure();

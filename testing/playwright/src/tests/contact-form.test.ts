@@ -13,7 +13,6 @@ test.describe("ContactForm", () => {
     await ms.deleteAllEmails();
     p = new ContactFormPage(page);
     await p.goTo();
-    await a11y.inject();
   });
 
   test("Full Complete Form", async () => {

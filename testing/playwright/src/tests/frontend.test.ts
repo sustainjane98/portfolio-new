@@ -9,7 +9,6 @@ test.describe("Frontend Page", () => {
     a11y = new A11yPage(page);
     p = new FrontendPage(page);
     await p.goTo();
-    await a11y.inject();
   });
   test("Check visual stucture", async ({ page }) => {
     await p.checkStructure();

@@ -10,7 +10,6 @@ test.describe("Index Page", () => {
     a11y = new A11yPage(page);
     p = new IndexPage(page);
     await p.goTo();
-    await a11y.inject();
   });
 
   test("Check visual stucture", async () => {
