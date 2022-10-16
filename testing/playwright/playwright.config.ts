@@ -12,7 +12,7 @@ import { devices } from "@playwright/test";
  */
 const config: PlaywrightTestConfig = {
   globalSetup: require.resolve("./src/globalSetup"),
-  testDir: "./src",
+  testDir: "./src/tests",
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {

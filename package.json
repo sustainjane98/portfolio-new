@@ -13,6 +13,7 @@
   "scripts": {
     "lint": "yarn workspaces run lint",
     "format": "yarn workspaces run format",
-    "postinstall": "yarn run husky install"
+    "postinstall": "yarn run husky install",
+    "test": "lerna run start --scope=@portfolio/playwright && lerna run start --scope=@portfolio/lighthouse"
   }
 }
