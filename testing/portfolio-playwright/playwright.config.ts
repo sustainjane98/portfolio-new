@@ -47,42 +47,58 @@ const config: PlaywrightTestConfig = {
   projects: [
     {
       name: "Desktop Chrome",
+      testMatch: /.*lighthouse.test.ts/,
+      use: {
+        ...devices["Desktop Chrome Headed"],
+        launchOptions: { args: ["--remote-debugging-port=9222"] },
+        headless: false,
+      },
+    },
+    {
+      name: "Desktop Chrome",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["Desktop Chrome"],
       },
     },
     {
       name: "Desktop Chrome HiDPI",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["Desktop Chrome HiDPI"],
       },
     },
     {
       name: "iPad Pro 11",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["iPad Pro 11"],
       },
     },
     {
       name: "iPhone 12 Pro Max",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["iPhone 12 Pro Max"],
       },
     },
     {
       name: "iPhone 12 Mini",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["iPhone 12 Mini"],
       },
     },
     {
       name: "Desktop Firefox",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["Desktop Firefox"],
       },
     },
     {
       name: "Desktop Firefox HiDPI",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["Desktop Firefox HiDPI"],
       },
@@ -90,6 +106,7 @@ const config: PlaywrightTestConfig = {
 
     {
       name: "Desktop Safari",
+      testIgnore: /.*lighthouse.test.ts/,
       use: {
         ...devices["Desktop Safari"],
       },

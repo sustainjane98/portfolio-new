@@ -1,6 +1,7 @@
 import test, { expect } from "@playwright/test";
 import A11yPage from "./pages/a11y.page";
 import ContactFormPage from "./pages/contact-form.page";
+import LighthousePage from "./pages/lighthouse.page";
 import EmailService from "./service/email.service";
 
 test.describe("ContactForm", () => {

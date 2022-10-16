@@ -2,6 +2,7 @@ import test from "@playwright/test";
 import A11yPage from "./pages/a11y.page";
 import BackendPage from "./pages/backend.page";
 import DesignPage from "./pages/design.page";
+import LighthousePage from "./pages/lighthouse.page";
 
 test.describe("Design Page", () => {
   let a11y: A11yPage;

@@ -1,4 +1,5 @@
 import test from "@playwright/test";
+import LighthousePage from "./pages/lighthouse.page";
 import ProcessModelPage from "./pages/processModel.page";
 
 test.describe("Process Model Page", () => {

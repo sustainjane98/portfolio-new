@@ -11,7 +11,7 @@ test.describe("Who Am I Page", () => {
     await p.goTo();
     await a11y.inject();
   });
-  test("Check visual stucture", async ({ page }) => {
+  test("Check visual stucture", async () => {
     await p.checkStructure();
   });
   test("Check a11y", async () => {
