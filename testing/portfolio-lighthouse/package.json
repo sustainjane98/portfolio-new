@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-lighthouse",
+  "name": "@portfolio/lighthouse",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -15,6 +15,11 @@
   "scripts": {
     "test": "ts-node src/index.lighthouse.ts",
     "start-server": "npm --prefix ../../apps/portfolio run build && npm --prefix ../../apps/portfolio run start",
-    "start": "start-server-and-test start-server http://localhost:3000 test"
+    "start": "start-server-and-test start-server http://localhost:3000 test",
+    "lint": "eslint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "eslint": "^8.25.0"
   }
 }

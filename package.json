@@ -14,5 +14,10 @@
   },
   "dependencies": {
     "imapflow": "^1.0.111"
+  },
+  "scripts": {
+    "lint": "yarn workspaces run lint",
+    "format": "yarn workspaces run format",
+    "postinstall": "yarn run husky install"
   }
 }

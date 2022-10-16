@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-testing-playwright",
+  "name": "@portfolio/playwright",
   "version": "1.0.0",
   "author": "sustainjane98",
   "devDependencies": {
@@ -13,6 +13,8 @@
     "start-chrome:headed": "playwright test --headed --project=\"Desktop Chrome\"",
     "start-chrome": "playwright test --project=\"Desktop Chrome\"",
     "codegen": "playwright codegen http://localhost:3000",
-    "report": "playwright show-report results"
+    "report": "playwright show-report results",
+    "lint": "eslint",
+    "format": "prettier --write ."
   }
 }
