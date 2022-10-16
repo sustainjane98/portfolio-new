@@ -34,6 +34,7 @@ export const DesignBody: React.FC<Props> = () => {
             href: "https://www.figma.com/",
             external: true,
             icon: <FigmaIcon className="w-6 h-6" />,
+            "aria-label": "Figma Link",
           },
           {
             title: "Adobe XD",
@@ -42,6 +43,7 @@ export const DesignBody: React.FC<Props> = () => {
             href: "https://www.adobe.com/products/xd.html",
             external: true,
             icon: <AdobeXDIcon className="w-8 h-8" />,
+            "aria-label": "Adobe XD Link",
           },
           {
             title: "Affinity Suite",
@@ -50,6 +52,7 @@ export const DesignBody: React.FC<Props> = () => {
             href: "https://affinity.serif.com/",
             external: true,
             icon: <AffinityIcon className="w-8 h-8 fill-white" />,
+            "aria-label": "Affinity Suite Link",
           },
           {
             title: "Designing User Interfaces",
@@ -58,6 +61,7 @@ export const DesignBody: React.FC<Props> = () => {
             href: "https://designingui.com/",
             external: true,
             icon: <BookOpenIcon className="w-8 h-8 fill-white" />,
+            "aria-label": "Designing User Interfaces Book Link",
           },
         ],
       }}

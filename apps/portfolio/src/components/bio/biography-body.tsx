@@ -60,6 +60,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
               "In my studies I found the access to web application development through the subject web technologies. Since I had my problems with JavaScript due to the missing typing, I first dealt with TypeScript and later with the React library. In my first job, I realized several React web applications and learned a lot about design systems and practical web development.",
             href: `${pathname}/skills/frontend`,
             icon: <ComputerDesktopIcon className="w-8 h-8" />,
+            "aria-label": "Frontend Skills Link",
           },
           {
             title: "Backend",
@@ -67,6 +68,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
               "In my studies I gained basic and advanced knowledge in the Java environment. In my spare time I also worked with Elixir and Golang. I also learned a lot about api design with rest and graphql.",
             href: `${pathname}/skills/backend`,
             icon: <ServerIcon className="w-8 h-8" />,
+            "aria-label": "Backend Skills Link",
           },
           {
             title: "Design",
@@ -74,6 +76,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
               "The field of user interface and user experience design has interested me a lot since my first experiences with web application development. Due to my practical experience in this field, I am very familiar with the implementation of design specifications. In addition, I have read renowned literature on the subject to be in the know.",
             href: `${pathname}/skills/design`,
             icon: <PencilIcon className="w-6 h-6" />,
+            "aria-label": "Design Skills Link",
           },
           {
             title: "Project Managements",
@@ -81,6 +84,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
               "Modern software development works with agile tools. In my practical experience, I have already worked with the Atlassian Suite. In addition, I am familiar with modern communication applications, such as Slack and Microsoft Teams.",
             href: `${pathname}/skills/process_model`,
             icon: <ArrowTrendingUpIcon className="w-8 h-8" />,
+            "aria-label": "Project Management Skills Link",
           },
         ],
       }}

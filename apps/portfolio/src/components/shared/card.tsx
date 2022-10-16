@@ -11,7 +11,13 @@ export interface Props {
   href?: string;
   external?: boolean;
   bubbles?: CardBubbleProps[];
-  links?: { description: string; href: string; external?: boolean }[];
+  links?: {
+    description: string;
+    href: string;
+    external?: boolean;
+    "aria-label"?: string;
+  }[];
+  "aria-label"?: string;
 }
 
 /**
@@ -27,6 +33,7 @@ export const Card: React.FC<Props> = ({
   external,
   bubbles,
   links,
+  "aria-label": ariaLabel,
 }) => {
   return (
     <motion.div
@@ -59,36 +66,47 @@ export const Card: React.FC<Props> = ({
       <div className="flex justify-center gap-4 flex-row">
         {href &&
           (external ? (
-            <a href={href} target={"_blank"} rel="noreferrer">
+            <a
+              aria-label={ariaLabel}
+              href={href}
+              target={"_blank"}
+              rel="noreferrer"
+            >
               <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-                Learn more
+                Get more information
               </span>
             </a>
           ) : (
             <Link href={href} passHref>
-              <a>
+              <a aria-label={ariaLabel}>
                 <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
                   Get more information
                 </span>
               </a>
             </Link>
           ))}
-        {links?.map(({ description, href, external }, index) =>
-          external ? (
-            <a href={href} target={"_blank"} rel="noreferrer">
-              <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-                {description}
-              </span>
-            </a>
-          ) : (
-            <Link href={href} passHref key={index}>
-              <a>
+        {links?.map(
+          ({ description, href, external, "aria-label": ariaLabel }, index) =>
+            external ? (
+              <a
+                aria-label={ariaLabel}
+                href={href}
+                target={"_blank"}
+                rel="noreferrer"
+              >
                 <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
                   {description}
                 </span>
               </a>
-            </Link>
-          )
+            ) : (
+              <Link href={href} passHref key={index}>
+                <a aria-label={ariaLabel}>
+                  <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
+                    {description}
+                  </span>
+                </a>
+              </Link>
+            )
         )}
       </div>
     </motion.div>

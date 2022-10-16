@@ -42,29 +42,31 @@ export const ProcessModelBody: React.FC<Props> = () => {
             icon: <UsersIcon className="w-6 h-6 fill-white" />,
             href: "https://www.scrum.org/resources/what-is-scrum",
             external: true,
+            "aria-label": "Scrum Link",
           },
           {
             title: "Atlassian Suite",
             description:
               "I practically used Atlassian Suite to have my development tasks clearly laid out. We used Jira to distribute tasks, Bitbucket for source code versioning and Confluence for notes and other documents.",
             icon: <AtlassianIcon className="w-8 h-8" />,
-            href: "https://www.atlassian.com/",
-            external: true,
             bubbles: [
               {
                 icon: <JiraIcon className="w-6 h-6" />,
                 href: "https://www.atlassian.com/jira",
                 external: true,
+                "aria-label": "Atlassian Jira Link",
               },
               {
                 icon: <BitbucketIcon className="w-6 h-6" />,
                 href: "https://www.atlassian.com/bitbucket",
                 external: true,
+                "aria-label": "Atlassian Bitbucket Link",
               },
               {
                 icon: <ConfluenceIcon className="w-6 h-6" />,
                 href: "https://www.atlassian.com/confluence",
                 external: true,
+                "aria-label": "Atlassian Confluence Link",
               },
             ],
           },
@@ -73,33 +75,36 @@ export const ProcessModelBody: React.FC<Props> = () => {
             description:
               "I used the Microsoft Office Suite in my practical work to hold video conferences and communicate with my team via Teams. In addition, I had to fill out my timesheet in Excel. In the course of my studies, I also created various presentations and documents in PowerPoint and Word, and I know my way around these as well.",
             icon: <MicrosoftIcon className="w-6 h-6" />,
-            href: "https://www.microsoft.com/",
-            external: true,
             bubbles: [
               {
                 icon: <TeamsIcon className="w-6 h-6" />,
                 href: "https://www.microsoft.com/teams",
                 external: true,
+                "aria-label": "Microsoft Teams Link",
               },
               {
                 icon: <WordIcon className="w-6 h-6" />,
                 href: "https://www.microsoft.com/word",
                 external: true,
+                "aria-label": "Microsoft Word Link",
               },
               {
                 icon: <OutlookIcon className="w-6 h-6" />,
                 href: "https://www.microsoft.com/outlook",
                 external: true,
+                "aria-label": "Microsoft Outlook Link",
               },
               {
                 icon: <PowerpointIcon className="w-6 h-6" />,
                 href: "https://www.microsoft.com/powerpoint",
                 external: true,
+                "aria-label": "Microsoft PowerPoint Link",
               },
               {
                 icon: <ExcelIcon className="w-6 h-6" />,
                 href: "https://www.microsoft.com/excel",
                 external: true,
+                "aria-label": "Microsoft Excel Link",
               },
             ],
           },
@@ -110,6 +115,7 @@ export const ProcessModelBody: React.FC<Props> = () => {
             icon: <SlackIcon className="w-6 h-6" />,
             href: "https://www.slack.com/",
             external: true,
+            "aria-label": "Slack Messenger Link",
           },
         ],
       }}

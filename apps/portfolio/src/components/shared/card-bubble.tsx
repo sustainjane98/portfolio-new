@@ -5,6 +5,7 @@ export interface Props {
   icon: React.ReactElement;
   href?: string;
   external?: boolean;
+  "aria-label"?: string;
 }
 
 /**
@@ -12,7 +13,12 @@ export interface Props {
  * @author Jane Will
  * @version 0.1
  */
-export const CardBubble: React.FC<Props> = ({ icon, external, href }) => {
+export const CardBubble: React.FC<Props> = ({
+  icon,
+  external,
+  href,
+  "aria-label": ariaLabel,
+}) => {
   const res = (
     <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-navy-500 text-white">
       {icon}
@@ -24,13 +30,13 @@ export const CardBubble: React.FC<Props> = ({ icon, external, href }) => {
   if (!external) {
     return (
       <Link href={href}>
-        <a>{res}</a>
+        <a aria-label={ariaLabel}>{res}</a>
       </Link>
     );
   }
 
   return (
-    <a href={href} target="_blank" rel="noreferrer">
+    <a aria-label={ariaLabel} href={href} target="_blank" rel="noreferrer">
       {res}
     </a>
   );

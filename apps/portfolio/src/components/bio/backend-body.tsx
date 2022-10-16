@@ -25,11 +25,13 @@ export const BackendBody: React.FC<Props> = () => {
       icon: <HibenateIcon className="w-6 h-6" />,
       href: "https://hibernate.org/",
       external: true,
+      "aria-label": "Hibernate Link",
     },
     {
       icon: <SpringIcon className="w-6 h-6" />,
       href: "https://spring.io/",
       external: true,
+      "aria-label": "Spring Link",
     },
     {
       icon: (
@@ -39,6 +41,7 @@ export const BackendBody: React.FC<Props> = () => {
       ),
       href: "https://projectlombok.org/",
       external: true,
+      "aria-label": "Project Lombok Link",
     },
   ];
 
@@ -63,16 +66,19 @@ export const BackendBody: React.FC<Props> = () => {
             href: "https://go.dev/",
             icon: <GolangIcon className="w-8 h-8" />,
             external: true,
+            "aria-label": "Golang Link",
             bubbles: [
               {
                 icon: <GinIcon className="w-7 h-7" />,
                 href: "https://github.com/gin-gonic/gin",
                 external: true,
+                "aria-label": "Gin Link",
               },
               {
                 icon: <GooseIcon className="w-8 h-8" />,
                 href: "https://github.com/pressly/goose",
                 external: true,
+                "aria-label": "Goose Link",
               },
             ],
           },
@@ -84,6 +90,7 @@ export const BackendBody: React.FC<Props> = () => {
             icon: <KotlinIcon className="w-6 h-6" />,
             external: true,
             bubbles: javaAndKotlin,
+            "aria-label": "Kotlin Link",
           },
           {
             title: "Elixir",
@@ -92,6 +99,7 @@ export const BackendBody: React.FC<Props> = () => {
             href: "https://elixir-lang.org/",
             icon: <ElixirIcon className="w-10 h-10" />,
             external: true,
+            "aria-label": "Elixir Link",
           },
           {
             title: "Java",
@@ -101,6 +109,7 @@ export const BackendBody: React.FC<Props> = () => {
             icon: <JavaIcon className="w-8 h-8" />,
             external: true,
             bubbles: javaAndKotlin,
+            "aria-label": "Java Link",
           },
           {
             title: "API Design",
@@ -115,12 +124,14 @@ export const BackendBody: React.FC<Props> = () => {
                   </div>
                 ),
                 external: true,
-                href: "https://graphql.org/",
+                href: "https://www.codecademy.com/article/what-is-rest",
+                "aria-label": "Representational State Transfer Link",
               },
               {
                 icon: <GraphQlIcon className="w-8 h-8" />,
                 external: true,
                 href: "https://graphql.org/",
+                "aria-label": "GraphQl Link",
               },
             ],
           },
