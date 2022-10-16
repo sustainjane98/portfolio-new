@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<svg aria-label="hibernate icon" width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <path d="M13.536,0L25.846,21.32L13.53,42.67L1.228,21.32L13.536,0Z" style="fill:rgb(180,207,219);fill-rule:nonzero;"/>
     <path d="M38.16,0.001L13.543,0.001L25.853,21.321L50.477,21.321L38.16,0.001Z" style="fill:white;fill-rule:nonzero;"/>
     <path d="M50.464,64L38.154,42.68L50.47,21.33L62.772,42.68L50.464,64Z" style="fill:rgb(180,207,219);fill-rule:nonzero;"/>

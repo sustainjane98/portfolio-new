@@ -66,7 +66,7 @@ export const Footer: React.FC<Props> = () => {
       </div>
       <div className="bg-gray-100 dark:bg-gray-700 pb-ios-4">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-500 dark:text-gray-200 text-sm text-center sm:text-left">
+          <p className="text-gray-700 dark:text-gray-100 text-sm text-center sm:text-left">
             © 2022 Jane Will —
             <Link
               external

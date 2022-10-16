@@ -27,7 +27,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
           src={src}
           alt="Man with Rainbow Flag"
           layout="fill"
-          className="object-cover"
+          className={`object-cover ${className}`}
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
