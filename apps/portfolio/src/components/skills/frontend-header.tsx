@@ -4,9 +4,6 @@ import { Headline } from "../shared/headline";
 import frontendImage from "../../assets/charlesdeluvio-pjAH2Ax4uWk-unsplash.jpg";
 import { HeadlineBody } from "../shared/headline-body";
 import { ScrollDownIndicator } from "../shared/scroll-down-indicator";
-import { CardContainer } from "../shared/card-container";
-import { Card } from "../shared/card";
-import { PlayIcon } from "@heroicons/react/20/solid";
 
 export interface Props {}
 

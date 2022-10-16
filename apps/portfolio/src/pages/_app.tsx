@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ],
         }}
       />
+
       <ColorSchemeProvider>
         <AlertProvider>
           <Navigation />

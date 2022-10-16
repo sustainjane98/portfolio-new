@@ -1,6 +1,5 @@
 import { NextSeo } from "next-seo";
 import React from "react";
-import { useRouter } from "next/router";
 import { FrontendBody } from "../../../components/bio/frontend-body";
 
 export interface Props {}

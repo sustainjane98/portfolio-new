@@ -4,7 +4,6 @@ import open from "open";
 const pages: string[] = [
   "/",
   "/projects",
-  "/notFound",
   "/bio",
   "/bio/skills/frontend",
   "/bio/skills/backend",

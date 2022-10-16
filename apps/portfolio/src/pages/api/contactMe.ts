@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { ContactMeData } from "../../types/contactMeData";
-import { createTransport, createTestAccount } from "nodemailer";
+import { createTransport } from "nodemailer";
 import Mailgen from "mailgen";
 
 const port = Number(process.env["EMAIL_PORT"]);

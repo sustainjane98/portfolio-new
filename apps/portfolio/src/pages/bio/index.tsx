@@ -1,6 +1,4 @@
-import { useRouter } from "next/router";
-import React from "react";
-import { BiographyBody } from "../../components/bio/biography-body";
+import React from "react";import { BiographyBody } from "../../components/bio/biography-body";
 import { NextSeo } from "next-seo";
 import { GetStaticProps, NextPage } from "next";
 import GithubService from "../../services/github.service";

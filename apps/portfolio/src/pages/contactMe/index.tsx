@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Header } from "../../components/shared/header";
 import contactImage from "../../assets/pavan-trikutam-71CjSSB83Wo-unsplash.webp";
 import { FormContainer } from "../../components/shared/form-container";

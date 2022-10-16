@@ -1,6 +1,5 @@
 import { Button } from "mailgen";
 import React, { PropsWithChildren } from "react";
-import { useFormContext } from "react-hook-form";
 
 export interface Props extends PropsWithChildren {
   title: string;

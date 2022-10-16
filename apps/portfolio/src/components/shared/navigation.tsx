@@ -1,19 +1,8 @@
 import React, { useEffect, useState } from "react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  InformationCircleIcon,
-  MoonIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon, MoonIcon } from "@heroicons/react/24/solid";
 import { NavigationItem } from "./navigation-item";
 import { main } from "../../config/navigation-links";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Toggle } from "./toggle";
 import { useColorscheme } from "../../hooks/useColorscheme.hook";
 import { navigationBarAnimationVariants } from "../../animations/navigation";

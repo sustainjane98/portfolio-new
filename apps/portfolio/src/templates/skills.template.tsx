@@ -1,19 +1,13 @@
 import React from "react";
-import { BiographyBody } from "../components/bio/biography-body";
 import { Header, Props as HeaderProps } from "../components/shared/header";
 import {
   Headline,
   Props as HeadlineProps,
 } from "../components/shared/headline";
-import {
-  HeadlineBody,
-  Props as HeadlineBodyProps,
-} from "../components/shared/headline-body";
+import { HeadlineBody } from "../components/shared/headline-body";
 import { ScrollDownIndicator } from "../components/shared/scroll-down-indicator";
 import { Skills, Props as SkillsProps } from "../components/shared/skills";
 import { Button, Props as ButtonProps } from "../components/shared/button";
-import { Footer } from "../components/shared/footer";
-import { MapPinIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import { globalAnimationVariants } from "../animations/global";
 import { ProfilePicture } from "../components/shared/profilePicture";
@@ -69,7 +63,11 @@ export const SkillsTemplate: React.FC<Props> = ({
           </div>
         )}
       </Header>
-      {skills && <Skills {...skills} />}
+      {skills && (
+        <div className="max-w-7xl mx-auto">
+          <Skills {...skills} />
+        </div>
+      )}
     </motion.main>
   );
 };

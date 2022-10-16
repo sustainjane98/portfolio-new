@@ -1,7 +1,5 @@
 import React, { PropsWithChildren } from "react";
 import Image, { StaticImageData } from "next/image";
-import classNames from "classnames";
-import { Navigation } from "./navigation";
 
 export interface Props {
   src: StaticImageData;
@@ -30,6 +28,9 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
           alt="Man with Rainbow Flag"
           layout="fill"
           className="object-cover"
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           priority
         ></Image>
         <div className="absolute bg-[#0c111663] top-0 left-0 w-full h-full z-10" />

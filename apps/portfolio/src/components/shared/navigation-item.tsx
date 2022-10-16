@@ -1,8 +1,8 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { usePath } from "../../hooks/usePath.hook";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
-import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   navigationContainerAnimationVariants,
   navigationItemAnimationVariants,

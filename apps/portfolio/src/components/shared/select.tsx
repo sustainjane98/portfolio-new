@@ -3,7 +3,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { useFormContext } from "../../hooks/useFormContext.hook";
 import { useWatch } from "react-hook-form";
 import { ErrorMessage } from "./error-message";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/solid";
+import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
 
 export interface Props {
   name: string;

@@ -68,7 +68,7 @@ export const Card: React.FC<Props> = ({
             <Link href={href} passHref>
               <a>
                 <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-                  Learn more
+                  Get more information
                 </span>
               </a>
             </Link>
