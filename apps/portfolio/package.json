@@ -52,6 +52,7 @@
     "mailwind": "^2.0.3",
     "postcss": "^8.4.16",
     "sass": "^1.55.0",
+    "sharp": "^0.31.1",
     "tailwindcss": "^3.1.8",
     "typescript": "4.8.3"
   }
