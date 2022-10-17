@@ -42,6 +42,10 @@ export const FrontendBody: React.FC<Props> = () => {
         },
         body: " I burn for frontend development. I am particularly familiar with the following technologies in this area...",
         src: frontendImage,
+        source: {
+          href: "https://unsplash.com/@charlesdeluvio",
+          copyright: "charlesdeluvio",
+        },
       }}
       skills={{
         title: "Frontend Skills",

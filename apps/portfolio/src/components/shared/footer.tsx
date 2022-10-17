@@ -17,7 +17,7 @@ export const Footer: React.FC<Props> = () => {
       <div className="container py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-6 mx-4">
+            <h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-6">
               Main
             </h2>
 
@@ -30,7 +30,7 @@ export const Footer: React.FC<Props> = () => {
                       noUnderline
                       href={href}
                       aria-label={children}
-                      className="text-gray-600 inline-block hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300 min-w-[48px] p-4"
+                      className="text-gray-600 inline-block hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300 min-w-[48px]"
                     >
                       {children}
                     </Link>
@@ -39,7 +39,7 @@ export const Footer: React.FC<Props> = () => {
             </ul>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-6 dark:text-white mx-4">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-6 dark:text-white">
               Skills
             </h2>
 
@@ -54,7 +54,7 @@ export const Footer: React.FC<Props> = () => {
                       noUnderline
                       href={href}
                       aria-label={children}
-                      className="text-gray-600 inline-block hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300 p-4"
+                      className="text-gray-600 inline-block hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300"
                     >
                       {children}
                     </Link>

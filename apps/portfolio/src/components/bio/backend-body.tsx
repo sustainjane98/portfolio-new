@@ -55,6 +55,10 @@ export const BackendBody: React.FC<Props> = () => {
         body: "The backend is the part of an IT system that deals with data processing in the background - the data layer. The term is used to subdivide more complex software structures.",
         src: serverImage,
         className: "bg-[#070b0e]",
+        source: {
+          href: "https://unsplash.com/@adigold1",
+          copyright: "Adi Goldstein",
+        },
       }}
       skills={{
         title: "Backend Skills",

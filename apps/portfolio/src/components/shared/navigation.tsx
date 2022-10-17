@@ -55,7 +55,7 @@ export const Navigation: React.FC<Props> = () => {
       </div>
       <AnimatePresence>
         {open && (
-          <div className="fixed top-0 left-0 w-full h-full z-30 flex">
+          <div className="fixed top-0 left-0 w-full h-full z-40 flex">
             <div
               className="h-full w-full bg-black/[0.50] cursor-pointer"
               onClick={() => setOpen((prev) => !prev)}

@@ -18,6 +18,10 @@ export const HomeBody: React.FC<Props> = () => {
           headline: "I am the caterpillar that became a butterfly",
           subheadline: "I build web pages with passion",
         },
+        source: {
+          href: "https://unsplash.com/@stavrialena",
+          copyright: "Stavrialena Gontzou",
+        },
         body: (
           <>
             I am a{" "}

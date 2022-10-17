@@ -31,6 +31,10 @@ export const ProcessModelBody: React.FC<Props> = () => {
         },
         src: processImage,
         className: "bg-[#7e7e80]",
+        source: {
+          href: "https://unsplash.com/@kaleidico",
+          copyright: "Kaleidico",
+        },
       }}
       skills={{
         title: "Project Management Skills",

@@ -28,7 +28,7 @@ export interface Props {
  * @version 0.1
  */
 export const SkillsTemplate: React.FC<Props> = ({
-  header: { src, className, headline, body, buttons },
+  header: { src, className, headline, body, buttons, source },
   skills,
   githubProfileUrl,
 }) => {
@@ -45,6 +45,7 @@ export const SkillsTemplate: React.FC<Props> = ({
         src={src}
         className={className}
         indicator={skills && <ScrollDownIndicator className="z-10" />}
+        source={source}
       >
         {githubProfileUrl && (
           <ProfilePicture

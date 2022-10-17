@@ -19,6 +19,10 @@ export const ProjectsBody: React.FC<Props> = () => {
           subheadline: "The Projects i developed and maintained",
         },
         src: projectsImage,
+        source: {
+          copyright: "Markus Winkler",
+          href: "https://unsplash.com/@markuswinkler",
+        },
       }}
       skills={{
         title: "Projects",

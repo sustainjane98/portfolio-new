@@ -94,7 +94,15 @@ const ContactMe: NextPage = () => {
         title="Contact Me"
         description="Contact me for job offerings or other scenarios"
       />
-      <Header multipleChildren src={contactImage} className="bg-[#8f908b]">
+      <Header
+        multipleChildren
+        src={contactImage}
+        className="bg-[#8f908b]"
+        source={{
+          copyright: "Pavan Trikutam",
+          href: "https://unsplash.com/@ptrikutam",
+        }}
+      >
         <FormProvider {...methods}>
           <FormContainer
             button={

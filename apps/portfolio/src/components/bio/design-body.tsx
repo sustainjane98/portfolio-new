@@ -23,6 +23,10 @@ export const DesignBody: React.FC<Props> = () => {
         },
         src: uiImage,
         className: "bg-[#949694]",
+        source: {
+          href: "https://unsplash.com/@uxindo",
+          copyright: "UX Indonesia",
+        },
       }}
       skills={{
         title: "Design Skills",

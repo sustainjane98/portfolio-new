@@ -20,6 +20,10 @@ export const NotFoundBody: React.FC<Props> = () => {
         buttons: [{ href: "/", children: "Go Back" }],
         src: errorImage,
         className: "bg-[#707476]",
+        source: {
+          copyright: "Elisa Ventur",
+          href: "https://unsplash.com/@elisa_ventur",
+        },
       }}
     />
   );
