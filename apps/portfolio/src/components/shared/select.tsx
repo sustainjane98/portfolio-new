@@ -44,7 +44,7 @@ export const Select: React.FC<Props> = ({
     <div className={`mb-6 ${className}`}>
       <div>
         <label
-          htmlFor="email"
+          htmlFor={name}
           className={`block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300`}
         >
           {label}

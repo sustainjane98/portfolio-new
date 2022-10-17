@@ -21,7 +21,10 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
   indicator,
 }) => {
   return (
-    <header className={`w-screen min-h-screen relative ${className} `}>
+    <header
+      role="banner"
+      className={`w-screen min-h-screen relative ${className} `}
+    >
       <div className="relative w-[100vw_+_env(safe-area-inset-left)] min-h-screen">
         <Image
           src={src}

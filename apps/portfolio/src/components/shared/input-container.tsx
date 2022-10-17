@@ -32,13 +32,14 @@ export const InputContainer: React.FC<Props> = ({
     <div className={`mb-6 ${className} w-full h-full relative`}>
       <div className="w-full h-full relative flex flex-col">
         <label
-          htmlFor="email"
+          htmlFor={inputProps.name}
           className={`block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300`}
         >
           {label}
           {inputProps.required ? "*" : ""}
         </label>
         <textarea
+          id={inputProps.name}
           {...inputProps}
           {...register(inputProps.name)}
           className={`resize-none w-full flex-1 xl:mb-6 bg-gray-50 border focus:ring-2 outline-none focus:border-navy-500 focus:ring-navy-500 ${

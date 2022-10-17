@@ -27,9 +27,9 @@ export const FormContainer: React.FC<Props> = ({
       onSubmit={onSubmit}
     >
       <div className="relative w-full p-10 m-auto mt-10 bg-white rounded-md shadow dark:bg-gray-800">
-        <div className="mb-6 text-2xl font-medium text-center text-gray-800 dark:text-white">
+        <h1 className="mb-6 text-2xl font-medium text-center text-gray-800 dark:text-white">
           {title}
-        </div>
+        </h1>
         <div className={`m-auto`}>
           {children}
           <div className="col-span-2 text-right">{button}</div>

@@ -180,6 +180,7 @@ const ContactMe: NextPage = () => {
           </FormContainer>
         </FormProvider>
       </Header>
+      <main></main>
     </>
   );
 };

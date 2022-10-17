@@ -28,7 +28,7 @@ export const Navigation: React.FC<Props> = () => {
   const { isDark, changeColorScheme } = useColorscheme();
 
   return (
-    <>
+    <nav role="navigation">
       <div className="fixed top-0 left-0 z-30 px-ios-3 pt-4 flex flex-row justify-between w-screen items-center">
         <button
           aria-label="Navigation Button"
@@ -43,7 +43,6 @@ export const Navigation: React.FC<Props> = () => {
           )}
         </button>
         <Toggle
-          role="banner"
           aria-label="Colorschema toggle"
           active={isDark}
           onChange={() => {
@@ -61,7 +60,7 @@ export const Navigation: React.FC<Props> = () => {
               className="h-full w-full bg-black/[0.50] cursor-pointer"
               onClick={() => setOpen((prev) => !prev)}
             />
-            <motion.nav
+            <motion.div
               variants={navigationBarAnimationVariants}
               initial="hidden"
               animate="show"
@@ -79,10 +78,10 @@ export const Navigation: React.FC<Props> = () => {
                   }))}
                 />
               ))}
-            </motion.nav>
+            </motion.div>
           </div>
         )}
       </AnimatePresence>
-    </>
+    </nav>
   );
 };

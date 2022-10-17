@@ -14,6 +14,9 @@
     "lint": "yarn workspaces run lint",
     "format": "yarn workspaces run format",
     "postinstall": "yarn run husky install",
-    "test": "lerna run start --scope=@portfolio/playwright && lerna run start --scope=@portfolio/lighthouse"
+    "test:playwright": "lerna run start --scope=@portfolio/playwright",
+    "test:playwright-open-report": "lerna run report --scope=@portfolio/playwright",
+    "test:lighthouse": "lerna run start --scope=@portfolio/lighthouse",
+    "test": "npm-run-all test:playwright test:lighthouse test:playwright-open-report -c -n"
   }
 }

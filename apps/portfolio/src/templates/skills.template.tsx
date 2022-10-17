@@ -33,7 +33,7 @@ export const SkillsTemplate: React.FC<Props> = ({
   githubProfileUrl,
 }) => {
   return (
-    <motion.main
+    <motion.div
       variants={globalAnimationVariants}
       initial="hidden" // Set the initial state to variants.hidden
       animate="enter" // Animated state to variants.enter
@@ -63,11 +63,13 @@ export const SkillsTemplate: React.FC<Props> = ({
           </div>
         )}
       </Header>
-      {skills && (
-        <div className="max-w-7xl mx-auto">
-          <Skills {...skills} />
-        </div>
-      )}
-    </motion.main>
+      <main>
+        {skills && (
+          <div className="max-w-7xl mx-auto">
+            <Skills {...skills} />
+          </div>
+        )}
+      </main>
+    </motion.div>
   );
 };

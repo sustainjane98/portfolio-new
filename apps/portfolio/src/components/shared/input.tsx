@@ -28,13 +28,14 @@ export const Input: React.FC<Props> = ({ label, className, ...inputprops }) => {
     <div className={`mb-6 ${className}`}>
       <div>
         <label
-          htmlFor="email"
+          htmlFor={inputprops.name}
           className={`block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300`}
         >
           {label}
           {inputprops.required ? "*" : ""}
         </label>
         <input
+          id={inputprops.name}
           {...inputprops}
           {...register(inputprops.name)}
           className={`bg-gray-50 border focus:ring-2 outline-none focus:border-navy-500 focus:ring-navy-500 ${
