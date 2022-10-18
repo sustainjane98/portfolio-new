@@ -8,5 +8,8 @@
     "backend": "Backend",
     "design": "Design",
     "projectManagement": "Project Management"
-  }
+  },
+  "main": "Main pages",
+  "skills": "Skills",
+  "getMoreInformation": "Get more Information"
 }

@@ -1,1 +1,31 @@
-{}
+{
+  "seo": {
+    "title": "Wer bin ich?",
+    "description": "Hallo, ich bin Jane, ich bin eine Transfrau und Softwareentwicklerin"
+  },
+  "headline": "Ich bin Jane",
+  "subheadline": "Ich bin Softwareentwicklerin",
+  "body": [
+    "Ich bin eine",
+    "trans Frau",
+    "und Full-Stack-Entwicklerin, die für die Frontend-Entwicklung brennt. Ich bin besonders vertraut mit den folgenden Technologien..."
+  ],
+  "skills": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "In meinem Studium habe ich den Zugang zur Webanwendungsentwicklung über das Fach Webtechnologien gefunden. Da ich mit JavaScript aufgrund der fehlenden Typisierung meine Probleme hatte, habe ich mich zunächst mit TypeScript und später mit der React-Bibliothek beschäftigt. In meinem ersten Job habe ich mehrere React-Webanwendungen realisiert und dabei viel über Designsysteme und praktische Webentwicklung gelernt."
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "In meinem Studium habe ich grundlegende und fortgeschrittene Kenntnisse im Java-Umfeld erworben. In meiner Freizeit habe ich auch mit Elixir und Golang gearbeitet. Außerdem habe ich viel über Api-Design mit Rest und Graphql gelernt."
+    },
+    "design": {
+      "title": "Design",
+      "description": "Der Bereich User Interface und User Experience Design hat mich seit meinen ersten Erfahrungen mit der Entwicklung von Webanwendungen sehr interessiert. Durch meine praktischen Erfahrungen in diesem Bereich bin ich mit der Umsetzung von Designvorgaben sehr vertraut. Darüber hinaus habe ich renommierte Literatur zu diesem Thema gelesen, um auf dem neuesten Stand zu sein."
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "description": "Moderne Softwareentwicklung arbeitet mit agilen Werkzeugen. In meiner Praxiserfahrung habe ich bereits mit der Atlassian Suite gearbeitet. Darüber hinaus bin ich mit modernen Kommunikationsanwendungen wie Slack und Microsoft Teams vertraut."
+    }
+  }
+}

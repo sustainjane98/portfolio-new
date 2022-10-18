@@ -1,1 +1,15 @@
-{}
+{
+  "headline": "Betreute Projekte",
+  "subheadline": "Die von mir entwickelten und betreuten Projekte",
+  "bodyTitle": "Betreute Projekte",
+  "projects": {
+    "creatokia": {
+      "title": "Creatokia",
+      "description": "Creatokia ist ein NFT-Marktplatz für digitale Medien. Er wird mit Next.js und React entwickelt. Ich habe ein komplettes Designsystem entwickelt, das auf Designvorgaben basiert."
+    },
+    "bookwireOS": {
+      "title": "Bookwire OS",
+      "description": "Ich habe neue Funktionen im bestehenden Bookwire OS System mit React im Frontend entwickelt. Ich habe die Technologie auf SPA übertragen."
+    }
+  }
+}

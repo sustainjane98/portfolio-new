@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CardBubble, Props as CardBubbleProps } from "./card-bubble";
 import { CardRect } from "./card-rect";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 
 export interface Props {
   icon: React.ReactNode;
@@ -35,6 +36,8 @@ export const Card: React.FC<Props> = ({
   links,
   "aria-label": ariaLabel,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -73,14 +76,14 @@ export const Card: React.FC<Props> = ({
               rel="noreferrer"
             >
               <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-                Get more information
+                {t("getMoreInformation")}
               </span>
             </a>
           ) : (
             <Link href={href} passHref>
               <a aria-label={ariaLabel}>
                 <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-                  Get more information
+                  {t("getMoreInformation")}
                 </span>
               </a>
             </Link>

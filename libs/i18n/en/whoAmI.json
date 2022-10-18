@@ -1,1 +1,31 @@
-{}
+{
+  "seo": {
+    "title": "Who am I?",
+    "description": "Hello I am Jane, I am a trans woman and software developer"
+  },
+  "headline": "I am Jane",
+  "subheadline": "I am a software developer",
+  "body": [
+    "I am a",
+    "trans woman",
+    "and full-stack developer who is on fire for frontend development. I am particularly familiar with the following technologies..."
+  ],
+  "skills": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "In my studies I found the access to web application development through the subject web technologies. Since I had my problems with JavaScript due to the missing typing, I first dealt with TypeScript and later with the React library. In my first job, I realized several React web applications and learned a lot about design systems and practical web development."
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "In my studies I gained basic and advanced knowledge in the Java environment. In my spare time I also worked with Elixir and Golang. I also learned a lot about api design with rest and graphql."
+    },
+    "design": {
+      "title": "Design",
+      "description": "The field of user interface and user experience design has interested me a lot since my first experiences with web application development. Due to my practical experience in this field, I am very familiar with the implementation of design specifications. In addition, I have read renowned literature on the subject to be in the know."
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "description": "Modern software development works with agile tools. In my practical experience, I have already worked with the Atlassian Suite. In addition, I am familiar with modern communication applications, such as Slack and Microsoft Teams."
+    }
+  }
+}

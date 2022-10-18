@@ -9,6 +9,7 @@ import {
   ArrowTrendingUpIcon,
 } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 export interface Props {
   githubProfileUrl: string;
@@ -21,13 +22,13 @@ export interface Props {
  */
 export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
   const { pathname } = useRouter();
-
+  const { t } = useTranslation(["whoAmI"]);
   return (
     <SkillsTemplate
       header={{
         headline: {
-          headline: "I am Jane",
-          subheadline: "I am a software developer",
+          headline: t("headline"),
+          subheadline: t("subheadline"),
         },
         src: programmingBackground,
         source: {
@@ -36,7 +37,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
         },
         body: (
           <>
-            I am a{" "}
+            {t("body", { returnObjects: true })[0]}{" "}
             {
               <a
                 target="_blank"
@@ -44,11 +45,10 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
                 className="underline"
                 href="https://transequality.org/issues/resources/frequently-asked-questions-about-transgender-people"
               >
-                trans woman
+                {t("body", { returnObjects: true })[1]}
               </a>
             }{" "}
-            and full-stack developer who is on fire for frontend development. I
-            am particularly familiar with the following technologies...
+            {t("body", { returnObjects: true })[2]}
           </>
         ),
         indicator: <ScrollDownIndicator className="z-10" />,
@@ -59,33 +59,29 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
         title: "Skills",
         skills: [
           {
-            title: "Frontend",
-            description:
-              "In my studies I found the access to web application development through the subject web technologies. Since I had my problems with JavaScript due to the missing typing, I first dealt with TypeScript and later with the React library. In my first job, I realized several React web applications and learned a lot about design systems and practical web development.",
+            title: t("skills.frontend.title"),
+            description: t("skills.frontend.description"),
             href: `${pathname}/skills/frontend`,
             icon: <ComputerDesktopIcon className="w-8 h-8" />,
             "aria-label": "Frontend Skills Link",
           },
           {
-            title: "Backend",
-            description:
-              "In my studies I gained basic and advanced knowledge in the Java environment. In my spare time I also worked with Elixir and Golang. I also learned a lot about api design with rest and graphql.",
+            title: t("skills.backend.title"),
+            description: t("skills.backend.description"),
             href: `${pathname}/skills/backend`,
             icon: <ServerIcon className="w-8 h-8" />,
             "aria-label": "Backend Skills Link",
           },
           {
-            title: "Design",
-            description:
-              "The field of user interface and user experience design has interested me a lot since my first experiences with web application development. Due to my practical experience in this field, I am very familiar with the implementation of design specifications. In addition, I have read renowned literature on the subject to be in the know.",
+            title: t("skills.design.title"),
+            description: t("skills.design.description"),
             href: `${pathname}/skills/design`,
             icon: <PencilIcon className="w-6 h-6" />,
             "aria-label": "Design Skills Link",
           },
           {
-            title: "Project Managements",
-            description:
-              "Modern software development works with agile tools. In my practical experience, I have already worked with the Atlassian Suite. In addition, I am familiar with modern communication applications, such as Slack and Microsoft Teams.",
+            title: t("skills.projectManagement.title"),
+            description: t("skills.projectManagement.description"),
             href: `${pathname}/skills/process_model`,
             icon: <ArrowTrendingUpIcon className="w-8 h-8" />,
             "aria-label": "Project Management Skills Link",

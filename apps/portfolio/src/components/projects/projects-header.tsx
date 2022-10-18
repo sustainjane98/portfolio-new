@@ -2,6 +2,7 @@ import React from "react";
 import { SkillsTemplate } from "../../templates/skills.template";
 import projectsImage from "../../assets/markus-winkler-Q2J2qQsoYH8-unsplash.jpg";
 import CreatokiaIcon from "../../assets/creatokia.svg";
+import { useTranslation } from "next-i18next";
 
 export interface Props {}
 
@@ -11,12 +12,13 @@ export interface Props {}
  * @version 0.1
  */
 export const ProjectsBody: React.FC<Props> = () => {
+  const { t } = useTranslation(["projects"]);
   return (
     <SkillsTemplate
       header={{
         headline: {
-          headline: "My Projects",
-          subheadline: "The Projects i developed and maintained",
+          headline: t("headline"),
+          subheadline: t("subheadline"),
         },
         src: projectsImage,
         source: {
@@ -25,13 +27,12 @@ export const ProjectsBody: React.FC<Props> = () => {
         },
       }}
       skills={{
-        title: "Projects",
+        title: t("bodyTitle"),
         skills: [
           {
             icon: <CreatokiaIcon className="w-8 h-8 fill-white" />,
-            description:
-              "Creatokia is an NFT Marketplace for digital media. It is developed with Next.js and React. I developed an entire design system based on design specifications.",
-            title: "Creatokia",
+            description: t("projects.creatokia.description"),
+            title: t("projects.creatokia.title"),
             href: "https://www.creatokia.com/",
             external: true,
           },
@@ -41,9 +42,8 @@ export const ProjectsBody: React.FC<Props> = () => {
                 <span>OS</span>
               </div>
             ),
-            description:
-              "I developed new features in the existent Bookwire OS System with React in Frontend. I transferred the technology to SPA.",
-            title: "Bookwire OS",
+            description: t("projects.bookwireOS.description"),
+            title: t("projects.bookwireOS.title"),
             href: "https://www.bookwire.de/bookwire-os/",
             external: true,
           },
