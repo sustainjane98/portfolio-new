@@ -1,1 +1,27 @@
-{}
+{
+  "seo": {
+    "title": "Meine Projektmanagement Fähigkeiten",
+    "description": "Meine Fähigkeiten auf dem Gebiet des Projektmanagements. Ich bin agil"
+  },
+  "headline": "Meine Projektmanagement Fähigkeiten",
+  "subheadline": "Ich bin agil",
+  "bodyTitle": "Projektmanagement Fähigkeiten",
+  "skills": {
+    "scrum": {
+      "title": "Scrum",
+      "description": "Ich habe Scrum bei meinen letzten Tätigkeiten praktisch eingesetzt. Obwohl es sich um eine modifizierte Version aufgrund der Verwendung von Atlassian Jira handelte, habe ich dennoch gute Erfahrungen mit agilem Arbeiten gemacht."
+    },
+    "atlassian": {
+      "title": "Atlassian Suite",
+      "description": "Ich habe Atlassian Suite praktisch eingesetzt, um meine Entwicklungsaufgaben übersichtlich zu gestalten. Wir nutzten Jira für die Verteilung von Aufgaben, Bitbucket für die Versionierung des Quellcodes und Confluence für Notizen und andere Dokumente."
+    },
+    "office": {
+      "title": "Microsoft Office",
+      "description": "Ich nutzte die Microsoft Office Suite in meiner praktischen Arbeit, um Videokonferenzen abzuhalten und mit meinem Team über Teams zu kommunizieren. Außerdem musste ich meinen Stundenzettel in Excel ausfüllen. Im Laufe meines Studiums habe ich außerdem verschiedene Präsentationen und Dokumente in PowerPoint und Word erstellt, mit denen ich mich ebenfalls gut auskenne."
+    },
+    "slack": {
+      "title": "Slack",
+      "description": "Ich habe die Messaging-App Slack in meinem Job verwendet, um mit meinem Team und dem Unternehmen in Kontakt zu bleiben. Dabei habe ich gelernt, wie diese Anwendung funktioniert und wie man sie effektiv für die Teamkommunikation nutzt."
+    }
+  }
+}

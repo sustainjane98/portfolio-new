@@ -13,6 +13,7 @@ import PowerpointIcon from "../../assets/powerpoint-2.svg";
 import WordIcon from "../../assets/word-1.svg";
 import ExcelIcon from "../../assets/excel-4.svg";
 import SlackIcon from "../../assets/slack-1.svg";
+import { useTranslation } from "next-i18next";
 
 export interface Props {}
 
@@ -22,12 +23,13 @@ export interface Props {}
  * @version 0.1
  */
 export const ProcessModelBody: React.FC<Props> = () => {
+  const { t } = useTranslation(["processModel"]);
   return (
     <SkillsTemplate
       header={{
         headline: {
-          headline: "My Project Management Skills",
-          subheadline: "I am Agile",
+          headline: t("headline"),
+          subheadline: t("subheadline"),
         },
         src: processImage,
         className: "bg-[#7e7e80]",
@@ -37,21 +39,19 @@ export const ProcessModelBody: React.FC<Props> = () => {
         },
       }}
       skills={{
-        title: "Project Management Skills",
+        title: t("bodyTitle"),
         skills: [
           {
-            title: "Scrum",
-            description:
-              "I have used Scrum practically in my last activities. Although it was a modified version due to the use of Atlassian Jira, I still had good experiences with agile working.",
+            title: t("skills.scrum.title"),
+            description: t("skills.scrum.description"),
             icon: <UsersIcon className="w-6 h-6 fill-white" />,
             href: "https://www.scrum.org/resources/what-is-scrum",
             external: true,
             "aria-label": "Scrum Link",
           },
           {
-            title: "Atlassian Suite",
-            description:
-              "I practically used Atlassian Suite to have my development tasks clearly laid out. We used Jira to distribute tasks, Bitbucket for source code versioning and Confluence for notes and other documents.",
+            title: t("skills.atlassian.title"),
+            description: t("skills.atlassian.description"),
             icon: <AtlassianIcon className="w-8 h-8" />,
             bubbles: [
               {
@@ -75,9 +75,8 @@ export const ProcessModelBody: React.FC<Props> = () => {
             ],
           },
           {
-            title: "Microsoft Office",
-            description:
-              "I used the Microsoft Office Suite in my practical work to hold video conferences and communicate with my team via Teams. In addition, I had to fill out my timesheet in Excel. In the course of my studies, I also created various presentations and documents in PowerPoint and Word, and I know my way around these as well.",
+            title: t("skills.office.title"),
+            description: t("skills.office.description"),
             icon: <MicrosoftIcon className="w-6 h-6" />,
             bubbles: [
               {
@@ -113,9 +112,8 @@ export const ProcessModelBody: React.FC<Props> = () => {
             ],
           },
           {
-            title: "Slack",
-            description:
-              "I used the Slack messaging app in my job to keep in touch with my team and the company. In the process, I learned how this application works and how to use it effectively for team communication.",
+            title: t("skills.slack.title"),
+            description: t("skills.slack.description"),
             icon: <SlackIcon className="w-6 h-6" />,
             href: "https://www.slack.com/",
             external: true,

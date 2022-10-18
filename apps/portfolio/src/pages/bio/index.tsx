@@ -38,6 +38,6 @@ export const getStaticProps: GetStaticProps<StaticProps> = async ({
     props: {
       avatarUrl: avatar_url,
       ...(await serverSideTranslations(locale, ["common", "whoAmI"])),
-    }, // will be passed to the page component as props
+    },
   };
 };

@@ -1,1 +1,9 @@
-{}
+{
+  "seo": {
+    "title": "Etwas lief schief...",
+    "description": "Scheint, als würde die Seite nicht existieren."
+  },
+  "headline": "Etwas ist schief gelaufen",
+  "subheadline": "Möchten Sie zur Hauptseite zurückkehren?",
+  "buttonTitle": "Zurück zur Startseite"
+}

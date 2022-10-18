@@ -1,1 +1,9 @@
-{}
+{
+  "seo": {
+    "title": "Something went wrong...",
+    "description": "Seems like the page does not exist."
+  },
+  "headline": "Something went wrong",
+  "subheadline": "Wanna go back to main page?",
+  "buttonTitle": "Go Back"
+}

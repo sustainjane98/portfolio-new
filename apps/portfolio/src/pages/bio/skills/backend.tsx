@@ -30,7 +30,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common", "backend"])),
-      // Will be passed to the page component as props
     },
   };
 };
