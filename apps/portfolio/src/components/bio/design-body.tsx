@@ -5,6 +5,7 @@ import FigmaIcon from "../../assets/figma-1.svg";
 import AdobeXDIcon from "../../assets/adobe-xd-1.svg";
 import AffinityIcon from "../../assets/affinity-1.svg";
 import { BookOpenIcon } from "@heroicons/react/24/solid";
+import { useTranslation } from "next-i18next";
 
 export interface Props {}
 
@@ -14,12 +15,13 @@ export interface Props {}
  * @version 0.1
  */
 export const DesignBody: React.FC<Props> = () => {
+  const { t } = useTranslation(["design"]);
   return (
     <SkillsTemplate
       header={{
         headline: {
-          headline: "My UI/UX Design Skills",
-          subheadline: "I am a hobby User Experience Designer",
+          headline: t("headline"),
+          subheadline: t("subheadline"),
         },
         src: uiImage,
         className: "bg-[#949694]",
@@ -29,39 +31,35 @@ export const DesignBody: React.FC<Props> = () => {
         },
       }}
       skills={{
-        title: "Design Skills",
+        title: t("bodyTitle"),
         skills: [
           {
-            title: "Figma",
-            description:
-              "In my spare time, I exclusively use Figma to design new interfaces for web applications. I am therefore now very familiar with this tool and can realize UI/UX designs in it.",
+            title: t("skills.figma.title"),
+            description: t("skills.figma.description"),
             href: "https://www.figma.com/",
             external: true,
             icon: <FigmaIcon className="w-6 h-6" />,
             "aria-label": "Figma Link",
           },
           {
-            title: "Adobe XD",
-            description:
-              "In a large frontend project where I worked as a frontend developer, Adobe XD was used as a tool for the design drafts for the custom design system. Therefore I know the web interface of this tool very well, even if the styles are not always ideally output there, I could work with it.",
+            title: t("skills.adobeXd.title"),
+            description: t("skills.adobeXd.description"),
             href: "https://www.adobe.com/products/xd.html",
             external: true,
             icon: <AdobeXDIcon className="w-8 h-8" />,
             "aria-label": "Adobe XD Link",
           },
           {
-            title: "Affinity Suite",
-            description:
-              "In my spare time projects I use Affinity to edit photos fund to modify vector graphics for my web applications. In addition, I am also able to crop elements from photos to use them without a background, for example.",
+            title: t("skills.affinity.title"),
+            description: t("skills.affinity.description"),
             href: "https://affinity.serif.com/",
             external: true,
             icon: <AffinityIcon className="w-8 h-8 fill-white" />,
             "aria-label": "Affinity Suite Link",
           },
           {
-            title: "Designing User Interfaces",
-            description:
-              "I have long had an interest in learning how to make a web application beautiful and functional. Before reading this book, however, I could only do so by gfeel and the results were mixed. This book by two renowned UI/UX designers, has given it all a firm structure for me to follow. It has greatly improved my skills in this area. Unfortunately, I haven't had the opportunity to use these skills in a job yet, but would be very interested in doing so.",
+            title: t("skills.dui.title"),
+            description: t("skills.dui.description"),
             href: "https://designingui.com/",
             external: true,
             icon: <BookOpenIcon className="w-8 h-8 fill-white" />,

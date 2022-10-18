@@ -1,1 +1,27 @@
-{}
+{
+  "seo": {
+    "title": "My UI/UX Design Skills",
+    "description": "I am a hobby User Experience Designer"
+  },
+  "headline": "My UI/UX Design Skills",
+  "subheadline": "I am a hobby User Experience Designer",
+  "bodyTitle": "Design Skills",
+  "skills": {
+    "figma": {
+      "title": "Figma",
+      "description": "In my spare time, I exclusively use Figma to design new interfaces for web applications. I am therefore now very familiar with this tool and can realize UI/UX designs in it."
+    },
+    "adobeXd": {
+      "title": "Adobe XD",
+      "description": "In a large frontend project where I worked as a frontend developer, Adobe XD was used as a tool for the design drafts for the custom design system. Therefore I know the web interface of this tool very well, even if the styles are not always ideally output there, I could work with it."
+    },
+    "affinity": {
+      "title": "Affinity Suite",
+      "description": "In my spare time projects I use Affinity to edit photos fund to modify vector graphics for my web applications. In addition, I am also able to crop elements from photos to use them without a background, for example."
+    },
+    "dui": {
+      "title": "Designing User Interfaces",
+      "description": "I have long had an interest in learning how to make a web application beautiful and functional. Before reading this book, however, I could only do so by gfeel and the results were mixed. This book by two renowned UI/UX designers, has given it all a firm structure for me to follow. It has greatly improved my skills in this area. Unfortunately, I haven't had the opportunity to use these skills in a job yet, but would be very interested in doing so."
+    }
+  }
+}
