@@ -4,7 +4,7 @@
     "description": "I am a frontend developer"
   },
   "headline": "My frontend skills",
-  "subtitle": "I am a frontend developer",
+  "subheadline": "I am a frontend developer",
   "body": "I burn for frontend development. I am particularly familiar with the following technologies in this area...",
   "skillTitle": "Frontend Skills",
   "skills": {

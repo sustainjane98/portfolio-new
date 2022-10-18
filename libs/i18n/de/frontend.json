@@ -3,8 +3,8 @@
     "title": "Meine Frontend Fähigkeiten",
     "description": "Ich bin ein Frontend-Entwickler"
   },
-  "Überschrift": "Meine Frontend Fähigkeiten",
-  "subtitle": "Ich bin eine Frontend Entwicklerin",
+  "headline": "Meine Frontend Fähigkeiten",
+  "subheadline": "Ich bin eine Frontend Entwicklerin",
   "body": "Ich brenne für Frontendentwicklung. In diesem Bereich bin ich vor allem mit den folgenden Technologien vertraut...",
   "skillTitle": "Frontend Skills",
   "skills": {
