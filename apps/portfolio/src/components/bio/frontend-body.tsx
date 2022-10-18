@@ -24,6 +24,7 @@ import SwiftIcon from "../../assets/swift-15.svg";
 import { DocumentDuplicateIcon } from "@heroicons/react/24/solid";
 import { SkillsTemplate } from "../../templates/skills.template";
 import frontendImage from "../../assets/charlesdeluvio-pjAH2Ax4uWk-unsplash.webp";
+import { useTranslation } from "next-i18next";
 
 export interface Props {}
 
@@ -33,14 +34,15 @@ export interface Props {}
  * @version 0.1
  */
 export const FrontendBody: React.FC<Props> = () => {
+  const { t } = useTranslation(["frontend"]);
   return (
     <SkillsTemplate
       header={{
         headline: {
-          headline: "My frontend Skills",
-          subheadline: "I am a frontend developer",
+          headline: t("headline"),
+          subheadline: t("subheadline"),
         },
-        body: " I burn for frontend development. I am particularly familiar with the following technologies in this area...",
+        body: t("body"),
         src: frontendImage,
         source: {
           href: "https://unsplash.com/@charlesdeluvio",
@@ -48,12 +50,11 @@ export const FrontendBody: React.FC<Props> = () => {
         },
       }}
       skills={{
-        title: "Frontend Skills",
+        title: t("skillTitle"),
         skills: [
           {
-            title: "Monorepo + Package Manager",
-            description:
-              "In my activities I use both the npm and the yarn package manager, for adding external dependencies. In larger projects I have already used the nrwl nx monorepo manager.",
+            title: t("skills.monorepo.title"),
+            description: t("skills.monorepo.description"),
             icon: <DocumentDuplicateIcon className="w-6 h-6" />,
             bubbles: [
               {
@@ -77,9 +78,8 @@ export const FrontendBody: React.FC<Props> = () => {
             ],
           },
           {
-            title: "React (Native)",
-            description:
-              "In my practical work, I have gained extensive knowledge of the React library. I use only modern techniques, such as hooks and functional components. I also have knowledge about common libraries in the React cosmos.",
+            title: t("skills.react.title"),
+            description: t("skills.react.description"),
             href: "https://reactjs.org/",
             icon: <ReactIcon className="w-6 h-6" />,
             bubbles: [
@@ -138,7 +138,7 @@ export const FrontendBody: React.FC<Props> = () => {
             ],
             links: [
               {
-                description: "Example",
+                description: t("skills.react.links.example"),
                 href: "https://github.com/jawil003/example-app",
                 external: true,
                 "aria-label": "My Example React App Link",
@@ -146,18 +146,16 @@ export const FrontendBody: React.FC<Props> = () => {
             ],
           },
           {
-            title: "Swift",
-            description:
-              "I have been exposed to the Swift programming language mainly in the area of native app development and used it in a private project. However, the language is also very suitable for the development of backend applications.",
+            title: t("skills.swift.title"),
+            description: t("skills.swift.description"),
             href: "https://swift.org",
             icon: <SwiftIcon className="w-10 h-10" />,
             external: true,
             "aria-label": "Apple Swift Link",
           },
           {
-            title: "Angular",
-            description:
-              "Besides my knowledge of React, I also gained knowledge of Angular Framework for employment and actively used it.",
+            title: t("skills.angular.title"),
+            description: t("skills.angular.description"),
             href: "https://angular.io/",
             external: true,
             icon: <AngularIcon className="w-6 h-6" />,
@@ -171,9 +169,8 @@ export const FrontendBody: React.FC<Props> = () => {
             ],
           },
           {
-            title: "TypeScript",
-            description:
-              "I got involved with TypeScript because JavaScript didn't appeal to me due to the lack of typing. I have used TypeScript in various web applications privately and in employment. So I have a lot of experience and prefer it as a programming language for frontend applications.",
+            title: t("skills.typescript.title"),
+            description: t("skills.typescript.description"),
             href: "https://www.typescriptlang.org/",
             external: true,
             icon: <TypescriptIcon className="w-6 h-6" />,
@@ -202,9 +199,8 @@ export const FrontendBody: React.FC<Props> = () => {
             ],
           },
           {
-            title: "HTML5",
-            description:
-              "The language for the structural design of web applications is HTML. So I use this for all my applications and prefer the modern HTML5 standard. I am also familiar with various template engines.",
+            title: t("skills.html5.title"),
+            description: t("skills.html5.description"),
             href: "https://html5.org/",
             external: true,
             icon: <HTML5Icon className="w-6 h-6" />,
@@ -222,9 +218,8 @@ export const FrontendBody: React.FC<Props> = () => {
             ],
           },
           {
-            title: "CSS3",
-            description:
-              "For the implementation of design specifications I use CSS. This allows in the specification CSS3 a precise implementation of different user interface designs. In addition, I am familiar with various tools that allow better style structuring",
+            title: t("skills.css3.title"),
+            description: t("skills.css3.description"),
             href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
             external: true,
             icon: <CSS3Icon className="w-6 h-6" />,

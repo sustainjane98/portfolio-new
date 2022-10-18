@@ -1,3 +1,6 @@
+import { GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextSeo } from "next-seo";
 import React from "react";
 import { FrontendBody } from "../../../components/bio/frontend-body";
@@ -10,15 +13,24 @@ export interface Props {}
  * @version 0.1
  */
 const FrotendPage: React.FC<Props> = () => {
+  const { t } = useTranslation(["frontend"]);
   return (
     <>
-      <NextSeo
-        title="My frontend Skills"
-        description="I am a frontend developer"
-      />
+      <NextSeo title={t("seo.title")} description={t("seo.description")} />
       <FrontendBody />
     </>
   );
 };
 
 export default FrotendPage;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  locale = locale ?? "en";
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "frontend"])),
+      // Will be passed to the page component as props
+    },
+  };
+};

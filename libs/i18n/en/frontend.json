@@ -1,1 +1,43 @@
-{}
+{
+  "seo": {
+    "title": "My frontend skills",
+    "description": "I am a frontend developer"
+  },
+  "headline": "My frontend skills",
+  "subtitle": "I am a frontend developer",
+  "body": "I burn for frontend development. I am particularly familiar with the following technologies in this area...",
+  "skillTitle": "Frontend Skills",
+  "skills": {
+    "monorepo": {
+      "title": "Monorepo + Package Manager",
+      "description": "In my activities I use both the npm and the yarn package manager, for adding external dependencies. In larger projects I have already used the nrwl nx monorepo manager."
+    },
+    "react": {
+      "title": "React (Native)",
+      "description": "In my practical work, I have gained extensive knowledge of the React library. I use only modern techniques, such as hooks and functional components. I also have knowledge about common libraries in the React cosmos.",
+      "links": {
+        "example": "Example"
+      }
+    },
+    "swift": {
+      "title": "Swift",
+      "description": "I have been exposed to the Swift programming language mainly in the area of native app development and used it in a private project. However, the language is also very suitable for the development of backend applications."
+    },
+    "angular": {
+      "title": "Angular",
+      "description": "Besides my knowledge of React, I also gained knowledge of Angular Framework for employment and actively used it."
+    },
+    "typescript": {
+      "title": "TypeScript",
+      "description": "I got involved with TypeScript because JavaScript didn't appeal to me due to the lack of typing. I have used TypeScript in various web applications privately and in employment. So I have a lot of experience and prefer it as a programming language for frontend applications."
+    },
+    "html5": {
+      "title": "HTML5",
+      "description": "The language for the structural design of web applications is HTML. So I use this for all my applications and prefer the modern HTML5 standard. I am also familiar with various template engines."
+    },
+    "css3": {
+      "title": "CSS3",
+      "description": "For the implementation of design specifications I use CSS. This allows in the specification CSS3 a precise implementation of different user interface designs. In addition, I am familiar with various tools that allow better style structuring"
+    }
+  }
+}

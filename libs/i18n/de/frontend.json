@@ -1,1 +1,43 @@
-{}
+{
+  "seo": {
+    "title": "Meine Frontend Fähigkeiten",
+    "description": "Ich bin ein Frontend-Entwickler"
+  },
+  "Überschrift": "Meine Frontend Fähigkeiten",
+  "subtitle": "Ich bin eine Frontend Entwicklerin",
+  "body": "Ich brenne für Frontendentwicklung. In diesem Bereich bin ich vor allem mit den folgenden Technologien vertraut...",
+  "skillTitle": "Frontend Skills",
+  "skills": {
+    "monorepo": {
+      "title": "Monorepo + Paketmanager",
+      "description": "In meinen Tätigkeiten verwende ich sowohl den npm als auch den yarn Paketmanager, um externe Abhängigkeiten hinzuzufügen. In größeren Projekten habe ich bereits den nrwl nx monorepo manager verwendet."
+    },
+    "react": {
+      "title": "React (Native)",
+      "description": "In meiner praktischen Arbeit habe ich umfangreiche Kenntnisse über die React-Bibliothek erworben. Ich verwende ausschließlich moderne Techniken, wie Hooks und funktionale Komponenten. Außerdem verfüge ich über Kenntnisse der gängigen Bibliotheken im React-Kosmos.",
+      "links": {
+        "example": "Beispiel"
+      }
+    },
+    "swift": {
+      "title": "Swift",
+      "description": "Ich habe die Programmiersprache Swift hauptsächlich im Bereich der nativen App-Entwicklung kennengelernt und in einem privaten Projekt eingesetzt. Die Sprache eignet sich aber auch sehr gut für die Entwicklung von Backend-Anwendungen."
+    },
+    "angular": {
+      "title": "Angular",
+      "description": "Neben meinen Kenntnissen über React habe ich mir auch Kenntnisse über das Angular Framework für eine Anstellung angeeignet und es aktiv genutzt."
+    },
+    "typescript": {
+      "title": "TypeScript",
+      "description": "Ich habe mich mit TypeScript beschäftigt, weil mir JavaScript aufgrund der fehlenden Typisierung nicht zusagte. Ich habe TypeScript in verschiedenen Webanwendungen privat und beruflich eingesetzt. Ich habe also eine Menge Erfahrung und bevorzuge es als Programmiersprache für Frontend-Anwendungen."
+    },
+    "html5": {
+      "title": "HTML5",
+      "description": "Die Sprache für die strukturelle Gestaltung von Webanwendungen ist HTML. Daher verwende ich diese Sprache für alle meine Anwendungen und bevorzuge den modernen HTML5-Standard. Außerdem bin ich mit verschiedenen Template-Engines vertraut."
+    },
+    "css3": {
+      "title": "CSS3",
+      "description": "Für die Umsetzung von Designvorgaben verwende ich CSS. Dies ermöglicht in der Spezifikation CSS3 eine präzise Umsetzung von verschiedenen User Interface Designs. Darüber hinaus bin ich mit verschiedenen Tools vertraut, die eine bessere Stilstrukturierung ermöglichen"
+    }
+  }
+}
