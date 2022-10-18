@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import { AlertProvider } from "../provider/alert.provider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import headerImagePrev from "../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash-1200x600.jpg";
+import { appWithTranslation } from "next-i18next";
 
 const qc = new QueryClient();
 
@@ -52,4 +53,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
