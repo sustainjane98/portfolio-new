@@ -1,1 +1,15 @@
-{}
+{
+  "navigation": {
+    "home": "Einleitung",
+    "whoAmI": "Wer ich bin",
+    "myProjects": "Meine Projekte",
+    "contactMe": "Kontakt",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Design",
+    "projectManagement": "Project Management",
+    "skills": "Fähigkeiten"
+  },
+  "main": "Hauptseiten",
+  "skills": "Fähigkeiten"
+}

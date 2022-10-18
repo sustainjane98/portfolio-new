@@ -7,6 +7,7 @@ import {
   navigationContainerAnimationVariants,
   navigationItemAnimationVariants,
 } from "../../animations/navigation";
+import { useTranslation } from "next-i18next";
 
 export interface Props {
   href: string;
@@ -32,6 +33,8 @@ export const NavigationItem: React.FC<Props> = ({
   external,
   download,
 }) => {
+  const { t } = useTranslation();
+
   const isActive = usePath(
     subItems ? subItems.map(({ href }) => href) : [href]
   );
@@ -51,7 +54,13 @@ export const NavigationItem: React.FC<Props> = ({
           isActive ? " text-navy-200" : ""
         }  md:p-0 flex flex-row gap-x-2 items-center`}
       >
-        <span className="font-semibold text-2xl text-right">{children}</span>
+        <span className="font-semibold text-2xl text-right">
+          {
+            (
+              t("navigation", { returnObjects: true }) as Record<string, string>
+            )[children]
+          }
+        </span>
         {subItems ? (
           show ? (
             <ChevronUpIcon className="w-6 h-6" />

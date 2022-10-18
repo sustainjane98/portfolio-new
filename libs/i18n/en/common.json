@@ -1,1 +1,12 @@
-{}
+{
+  "navigation": {
+    "home": "Home",
+    "whoAmI": "Wer ich bin",
+    "myProjects": "Who Am I",
+    "contactMe": "Contact",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Design",
+    "projectManagement": "Project Management"
+  }
+}

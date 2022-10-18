@@ -3,6 +3,7 @@ import { main } from "../../config/navigation-links";
 import GetInItLogo from "../../assets/get-in-it.svg";
 import GithubLogo from "../../assets/github-icon-transp.svg";
 import { Link } from "./link";
+import { useTranslation } from "next-i18next";
 
 export interface Props {}
 
@@ -12,13 +13,15 @@ export interface Props {}
  * @version 0.1
  */
 export const Footer: React.FC<Props> = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="text-gray-600 dark:text-white body-font">
       <div className="container py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-6">
-              Main
+              {t("main")}
             </h2>
 
             <ul className="list-none mb-10">
@@ -32,7 +35,14 @@ export const Footer: React.FC<Props> = () => {
                       aria-label={children}
                       className="text-gray-600 inline-block hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300 min-w-[48px]"
                     >
-                      {children}
+                      {
+                        (
+                          t("navigation", { returnObjects: true }) as Record<
+                            string,
+                            string
+                          >
+                        )[children]
+                      }
                     </Link>
                   </li>
                 ))}
@@ -40,13 +50,13 @@ export const Footer: React.FC<Props> = () => {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-6 dark:text-white">
-              Skills
+              {t("skills")}
             </h2>
 
             <ul className="list-none mb-10">
               {main
                 .find(({ children }) => {
-                  return children === "Skills";
+                  return children === "skills";
                 })
                 ?.subItems?.map(({ href, children }, index) => (
                   <li key={index}>
@@ -56,7 +66,14 @@ export const Footer: React.FC<Props> = () => {
                       aria-label={children}
                       className="text-gray-600 inline-block hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300"
                     >
-                      {children}
+                      {
+                        (
+                          t("navigation", { returnObjects: true }) as Record<
+                            string,
+                            string
+                          >
+                        )[children]
+                      }
                     </Link>
                   </li>
                 ))}

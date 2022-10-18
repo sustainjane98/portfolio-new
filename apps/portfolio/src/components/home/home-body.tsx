@@ -2,6 +2,7 @@ import React from "react";
 import { SkillsTemplate } from "../../templates/skills.template";
 import headerImage from "../../assets/stavrialena-gontzou-68y-oRxeY_Y-unsplash.webp";
 import { Link } from "../shared/link";
+import { useTranslation } from "next-i18next";
 
 export interface Props {}
 
@@ -11,12 +12,13 @@ export interface Props {}
  * @version 0.1
  */
 export const HomeBody: React.FC<Props> = () => {
+  const { t } = useTranslation(["home"]);
   return (
     <SkillsTemplate
       header={{
         headline: {
-          headline: "I am the caterpillar that became a butterfly",
-          subheadline: "I build web pages with passion",
+          headline: t("headline"),
+          subheadline: t("subheadline"),
         },
         source: {
           href: "https://unsplash.com/@stavrialena",
@@ -24,7 +26,7 @@ export const HomeBody: React.FC<Props> = () => {
         },
         body: (
           <>
-            I am a{" "}
+            {t("body1")}{" "}
             {
               <Link
                 aria-label="trans woman"
@@ -33,17 +35,15 @@ export const HomeBody: React.FC<Props> = () => {
                 className="underline"
                 href="https://transequality.org/issues/resources/frequently-asked-questions-about-transgender-people"
               >
-                trans woman
+                {t("body2")}
               </Link>
             }{" "}
-            and software developer, with the mission to produce beautiful and
-            functional web applications. If you like, we can get to know each
-            other better
+            {t("body3")}
           </>
         ),
         src: headerImage,
         className: "bg-navy-500",
-        buttons: [{ href: "/bio", children: "Get to know me" }],
+        buttons: [{ href: "/bio", children: t("ctaButton") }],
       }}
     />
   );
