@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+import { Link } from "../shared/link";
 
 export interface Props {
   githubProfileUrl: string;
@@ -39,14 +40,15 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
           <>
             {t("body", { returnObjects: true })[0]}{" "}
             {
-              <a
+              <Link
+                external
                 target="_blank"
                 rel="noreferrer"
                 className="underline"
                 href="https://transequality.org/issues/resources/frequently-asked-questions-about-transgender-people"
               >
                 {t("body", { returnObjects: true })[1]}
-              </a>
+              </Link>
             }{" "}
             {t("body", { returnObjects: true })[2]}
           </>

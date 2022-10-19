@@ -29,6 +29,7 @@ export const HomeBody: React.FC<Props> = () => {
             {t("body1")}{" "}
             {
               <Link
+                external
                 aria-label="trans woman"
                 target="_blank"
                 rel="noreferrer"

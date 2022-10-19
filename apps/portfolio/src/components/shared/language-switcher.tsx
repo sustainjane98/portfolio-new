@@ -19,26 +19,26 @@ export const LanguageSwitcher: React.FC<Props> = ({ onClick }) => {
       <button
         aria-label="german language button"
         onClick={async () => {
-          await push(pathname, undefined, { locale: "de" });
           onClick();
+          await push(pathname, undefined, { locale: "de" });
         }}
       >
         <DE
-          className={`w-12 ${
-            locale?.includes("de") ? "ring-2 ring-navy-300" : ""
+          className={`${locale?.includes("de") ? "w-12" : "w-14"} rounded-md ${
+            locale?.includes("de") ? "ring ring-navy-300 ring-offset-2" : ""
           }`}
         />
       </button>
       <button
         aria-label="english language button"
         onClick={async () => {
-          await push(pathname, undefined, { locale: "en" });
           onClick();
+          await push(pathname, undefined, { locale: "en" });
         }}
       >
         <US
-          className={`w-12 ${
-            locale?.includes("en") ? "ring-2 ring-navy-300" : ""
+          className={`${locale?.includes("en") ? "w-12" : "w-14"} rounded-md ${
+            locale?.includes("en") ? "ring ring-navy-300 ring-offset-2" : ""
           }`}
         />
       </button>

@@ -68,7 +68,7 @@ export const Navigation: React.FC<Props> = () => {
               exit="hidden"
               className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
             >
-              <Logo className="w-24 mb-6" />
+              <Logo className="min-w-14 min-h-14 mb-6" />
               {main.map((props, index) => (
                 <NavigationItem
                   {...props}
