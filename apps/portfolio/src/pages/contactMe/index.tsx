@@ -19,6 +19,7 @@ import { Button } from "../../components/shared/button";
 import { useButtonState } from "../../hooks/useButtonState.hook";
 import { useRouter } from "next/router";
 import { DataTestIds } from "@portfolio/shared-testing";
+import { useTranslation } from "next-i18next";
 
 export interface Props {}
 
@@ -30,6 +31,8 @@ export interface Props {}
 const ContactMe: NextPage = () => {
   const [disableContactReasonStringVal, setdisableContactReasonStringVal] =
     useState(true);
+
+  const { t } = useTranslation(["contact"]);
 
   const { push } = useRouter();
 
@@ -90,10 +93,7 @@ const ContactMe: NextPage = () => {
 
   return (
     <>
-      <NextSeo
-        title="Contact Me"
-        description="Contact me for job offerings or other scenarios"
-      />
+      <NextSeo title={t("seo.title")} description={t("seo.description")} />
       <Header
         multipleChildren
         src={contactImage}
@@ -111,12 +111,12 @@ const ContactMe: NextPage = () => {
                 isLoading={methods.formState.isSubmitting}
                 disabled={isError}
               >
-                Send
+                {t("form.button")}
               </Button>
             }
             onSubmit={methods.handleSubmit(onSubmit)}
             className="flex-1 mx-auto"
-            title="Contact Me"
+            title={t("form.title")}
           >
             <div className="flex flex-col">
               <div className="relative flex xl:flex-row flex-col xl:gap-x-4">
@@ -124,25 +124,31 @@ const ContactMe: NextPage = () => {
                   <Input
                     autoComplete="on"
                     required
-                    label="Name"
+                    label={t("form.nameInput")}
                     name="name"
                     data-testid={DataTestIds.CONTACT_ME_NAME_INPUT}
                   />
                   <Input
                     autoComplete="on"
                     required
-                    label="Email Address"
+                    label={t("form.emailInput")}
                     name="email"
                     type="email"
                     data-testid={DataTestIds.CONTACT_ME_EMAIL_INPUT}
                   />
 
                   <Select
-                    label="Contact Reason"
+                    label={t("form.contactReasonSelect")}
                     name="contactReason"
                     values={[
-                      { value: "job_offer", displayValue: "Job offer" },
-                      { value: "other", displayValue: "Other" },
+                      {
+                        value: "job_offer",
+                        displayValue: t("form.contactReasonValues.jobOffer"),
+                      },
+                      {
+                        value: "other",
+                        displayValue: t("form.contactReasonValues.other"),
+                      },
                     ]}
                     data-testid={DataTestIds.CONTACT_ME_CONTACT_REASON_SELECT}
                   />

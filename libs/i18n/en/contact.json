@@ -1,0 +1,17 @@
+{
+  "seo": {
+    "title": "Contact Me",
+    "description": "Contact me for job offerings or other scenarios"
+  },
+  "form": {
+    "button": "Send",
+    "nameInput": "Name",
+    "title": "Contact Me",
+    "emailInput": "Email Address",
+    "contactReasonSelect": "Contact Reason",
+    "contactReasonValues": {
+      "jobOffer": "Job offer",
+      "other": "Other"
+    }
+  }
+}
