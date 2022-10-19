@@ -7,6 +7,7 @@ import { Toggle } from "./toggle";
 import { useColorscheme } from "../../hooks/useColorscheme.hook";
 import { navigationBarAnimationVariants } from "../../animations/navigation";
 import Logo from "../../assets/logo.svg";
+import { LanguageSwitcher } from "./language-switcher";
 export interface Props {}
 
 /**
@@ -79,6 +80,8 @@ export const Navigation: React.FC<Props> = () => {
                   }))}
                 />
               ))}
+              <div className="h-full" />
+              <LanguageSwitcher onClick={() => setOpen((prev) => !prev)} />
             </motion.div>
           </div>
         )}
