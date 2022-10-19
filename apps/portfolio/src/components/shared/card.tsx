@@ -4,6 +4,8 @@ import { CardBubble, Props as CardBubbleProps } from "./card-bubble";
 import { CardRect } from "./card-rect";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import { StarIcon } from "@heroicons/react/24/outline";
+import { StarIcon as StarFilledIcon } from "@heroicons/react/24/solid";
 
 export interface Props {
   icon: React.ReactNode;
@@ -19,6 +21,7 @@ export interface Props {
     "aria-label"?: string;
   }[];
   "aria-label"?: string;
+  stars?: number;
 }
 
 /**
@@ -34,6 +37,7 @@ export const Card: React.FC<Props> = ({
   external,
   bubbles,
   links,
+  stars,
   "aria-label": ariaLabel,
 }) => {
   const { t } = useTranslation();
@@ -55,6 +59,26 @@ export const Card: React.FC<Props> = ({
       <h3 className="text-2xl sm:text-xl text-gray-700 dark:text-gray-300 font-semibold py-4">
         {title}
       </h3>
+      {stars && (
+        <div className="flex justify-center items-center">
+          {(() => {
+            const res = [];
+
+            for (let i = 0; i < 5; i++) {
+              res.push(
+                stars <= i ? (
+                  <StarIcon className="w-6 h-6 text-yellow-600" />
+                ) : (
+                  <StarFilledIcon className="w-6 h-6 text-yellow-600" />
+                )
+              );
+            }
+
+            return res;
+          })()}
+          <span className="ml-4 text-xs">{stars}/5</span>
+        </div>
+      )}
       <p className="text-md  text-gray-500 dark:text-gray-200 py-4 text-start">
         {description}
       </p>
