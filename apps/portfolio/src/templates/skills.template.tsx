@@ -8,9 +8,10 @@ import { HeadlineBody } from "../components/shared/headline-body";
 import { ScrollDownIndicator } from "../components/shared/scroll-down-indicator";
 import { Skills, Props as SkillsProps } from "../components/shared/skills";
 import { Button, Props as ButtonProps } from "../components/shared/button";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { globalAnimationVariants } from "../animations/global";
 import { ProfilePicture } from "../components/shared/profilePicture";
+import { headlineShowUpAnimation } from "../animations/headlines";
 
 export interface Props {
   header: {
@@ -21,6 +22,9 @@ export interface Props {
   skills?: SkillsProps;
   githubProfileUrl?: string;
 }
+
+const MotionHeadline = motion(Headline, { forwardMotionProps: true });
+const MotionBody = motion(HeadlineBody, { forwardMotionProps: true });
 
 /**
  * An SkillsTemplate React Component.
@@ -33,44 +37,58 @@ export const SkillsTemplate: React.FC<Props> = ({
   githubProfileUrl,
 }) => {
   return (
-    <motion.div
-      variants={globalAnimationVariants}
-      initial="hidden" // Set the initial state to variants.hidden
-      animate="enter" // Animated state to variants.enter
-      exit="exit" // Exit state (used later) to variants.exit
-      transition={{ type: "linear" }} // Set the transition to linear
-      className=""
-    >
-      <Header
-        src={src}
-        className={className}
-        indicator={skills && <ScrollDownIndicator className="z-10" />}
-        source={source}
+    <AnimatePresence>
+      <motion.div
+        variants={globalAnimationVariants}
+        initial="hidden" // Set the initial state to variants.hidden
+        animate="enter" // Animated state to variants.enter
+        exit="exit" // Exit state (used later) to variants.exit
+        transition={{ type: "linear" }} // Set the transition to linear
       >
-        {githubProfileUrl && (
-          <ProfilePicture
-            alt="Github Profile Picture"
-            src={githubProfileUrl}
-            layout="fill"
+        <Header
+          src={src}
+          className={className}
+          indicator={skills && <ScrollDownIndicator className="z-10" />}
+          source={source}
+        >
+          {githubProfileUrl && (
+            <ProfilePicture
+              alt="Github Profile Picture"
+              src={githubProfileUrl}
+              layout="fill"
+            />
+          )}
+          <MotionHeadline
+            {...headline}
+            variants={headlineShowUpAnimation}
+            initial="hidden"
+            animate="enter"
           />
-        )}
-        <Headline {...headline} />
-        {body && <HeadlineBody>{body}</HeadlineBody>}
-        {buttons && (
-          <div className="mt-6 inline-flex">
-            {buttons.map((button, index) => (
-              <Button key={index} {...button} />
-            ))}
-          </div>
-        )}
-      </Header>
-      <main>
-        {skills && (
-          <div className="max-w-7xl mx-auto">
-            <Skills {...skills} />
-          </div>
-        )}
-      </main>
-    </motion.div>
+          {body && (
+            <MotionBody
+              variants={headlineShowUpAnimation}
+              initial="hidden"
+              animate="enter"
+            >
+              {body}
+            </MotionBody>
+          )}
+          {buttons && (
+            <div className="mt-6 inline-flex">
+              {buttons.map((button, index) => (
+                <Button key={index} {...button} />
+              ))}
+            </div>
+          )}
+        </Header>
+        <main>
+          {skills && (
+            <div className="max-w-7xl mx-auto">
+              <Skills {...skills} />
+            </div>
+          )}
+        </main>
+      </motion.div>
+    </AnimatePresence>
   );
 };
