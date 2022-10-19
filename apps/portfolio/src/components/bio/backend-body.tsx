@@ -67,6 +67,7 @@ export const BackendBody: React.FC<Props> = () => {
         skills: [
           {
             title: t("skills.golang.title"),
+            stars: 4,
             description: t("skills.golang.description"),
             href: "https://go.dev/",
             icon: <GolangIcon className="w-8 h-8" />,
@@ -89,6 +90,7 @@ export const BackendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.kotlin.title"),
+            stars: 1,
             description: t("skills.kotlin.description"),
             href: "https://kotlinlang.org/",
             icon: <KotlinIcon className="w-6 h-6" />,
@@ -98,6 +100,7 @@ export const BackendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.elixir.title"),
+            stars: 3,
             description: t("skills.elixir.description"),
             href: "https://elixir-lang.org/",
             icon: <ElixirIcon className="w-10 h-10" />,
@@ -106,6 +109,7 @@ export const BackendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.java.title"),
+            stars: 4,
             description: t("skills.java.description"),
             href: "https://www.java.com/download/manual.jsp",
             icon: <JavaIcon className="w-8 h-8" />,
@@ -115,6 +119,7 @@ export const BackendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.apiDesign.title"),
+            stars: 4,
             description: t("skills.apiDesign.description"),
             icon: <ServerIcon className="w-8 h-8" />,
             bubbles: [

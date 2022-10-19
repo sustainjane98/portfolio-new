@@ -47,11 +47,16 @@ export const Card: React.FC<Props> = ({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className={`inline-grid ${
-        bubbles
-          ? "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]"
-          : "grid-rows-[auto_auto_minmax(auto,_100%)_auto]"
-      } w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-white dark:bg-gray-800 mt-6  shadow-lg rounded-lg`}
+      className={`inline-grid ${(() => {
+        if (bubbles && stars)
+          return "grid-rows-[auto_auto_auto_auto_minmax(auto,_100%)_auto]";
+        else if (bubbles) {
+          return "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]";
+        } else if (stars) {
+          return "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]";
+        }
+        return "grid-rows-[auto_auto_minmax(auto,_100%)_auto]";
+      })()} w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-white dark:bg-gray-800 mt-6  shadow-lg rounded-lg`}
     >
       <div className="flex-shrink-0">
         <CardRect icon={icon} />

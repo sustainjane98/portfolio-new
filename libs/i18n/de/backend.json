@@ -17,7 +17,7 @@
       "description": "Ich habe das Tutorial zu Kotlin, der Sprache selbst, abgeschlossen, habe sie aber noch nicht in einem größeren Projekt eingesetzt. Ich finde sie aber definitiv benutzerfreundlicher als Java."
     },
     "elixir": {
-      "title": "Elixier",
+      "title": "Elixir",
       "description": "Ich habe mich mit der Programmiersprache Elixir beschäftigt, als ich mich mit der Erstellung von sprachbasierten Chat-Anwendungen wie Discord beschäftigt habe. Discord verwendet Elixir für diese Funktionalität. Elixir hat eine sehr interessante Fehlerbehandlung, die entweder durch Werfen oder durch Rückgabetypen funktioniert, aber die fehlende Typisierung gefiel mir nicht besonders."
     },
     "java": {

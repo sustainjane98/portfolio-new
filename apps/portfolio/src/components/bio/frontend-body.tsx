@@ -56,6 +56,7 @@ export const FrontendBody: React.FC<Props> = () => {
             title: t("skills.monorepo.title"),
             description: t("skills.monorepo.description"),
             icon: <DocumentDuplicateIcon className="w-6 h-6" />,
+            stars: 4,
             bubbles: [
               {
                 icon: <NrwlIcon className="w-6 h-6" />,
@@ -79,6 +80,7 @@ export const FrontendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.react.title"),
+            stars: 4,
             description: t("skills.react.description"),
             href: "https://reactjs.org/",
             icon: <ReactIcon className="w-6 h-6" />,
@@ -147,6 +149,7 @@ export const FrontendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.swift.title"),
+            stars: 3,
             description: t("skills.swift.description"),
             href: "https://swift.org",
             icon: <SwiftIcon className="w-10 h-10" />,
@@ -155,6 +158,7 @@ export const FrontendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.angular.title"),
+            stars: 2,
             description: t("skills.angular.description"),
             href: "https://angular.io/",
             external: true,
@@ -170,6 +174,7 @@ export const FrontendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.typescript.title"),
+            stars: 4,
             description: t("skills.typescript.description"),
             href: "https://www.typescriptlang.org/",
             external: true,
@@ -200,6 +205,7 @@ export const FrontendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.html5.title"),
+            stars: 4,
             description: t("skills.html5.description"),
             href: "https://html5.org/",
             external: true,
@@ -219,6 +225,7 @@ export const FrontendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.css3.title"),
+            stars: 4,
             description: t("skills.css3.description"),
             href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
             external: true,

@@ -35,6 +35,7 @@ export const DesignBody: React.FC<Props> = () => {
         skills: [
           {
             title: t("skills.figma.title"),
+            stars: 4,
             description: t("skills.figma.description"),
             href: "https://www.figma.com/",
             external: true,
@@ -43,6 +44,7 @@ export const DesignBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.adobeXd.title"),
+            stars: 2,
             description: t("skills.adobeXd.description"),
             href: "https://www.adobe.com/products/xd.html",
             external: true,
@@ -51,6 +53,7 @@ export const DesignBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.affinity.title"),
+            stars: 3,
             description: t("skills.affinity.description"),
             href: "https://affinity.serif.com/",
             external: true,
@@ -59,6 +62,7 @@ export const DesignBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.dui.title"),
+            stars: 3,
             description: t("skills.dui.description"),
             href: "https://designingui.com/",
             external: true,

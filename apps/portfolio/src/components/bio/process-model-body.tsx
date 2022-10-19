@@ -43,6 +43,7 @@ export const ProcessModelBody: React.FC<Props> = () => {
         skills: [
           {
             title: t("skills.scrum.title"),
+            stars: 4,
             description: t("skills.scrum.description"),
             icon: <UsersIcon className="w-6 h-6 fill-white" />,
             href: "https://www.scrum.org/resources/what-is-scrum",
@@ -51,6 +52,7 @@ export const ProcessModelBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.atlassian.title"),
+            stars: 4,
             description: t("skills.atlassian.description"),
             icon: <AtlassianIcon className="w-8 h-8" />,
             bubbles: [
@@ -76,6 +78,7 @@ export const ProcessModelBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.office.title"),
+            stars: 3,
             description: t("skills.office.description"),
             icon: <MicrosoftIcon className="w-6 h-6" />,
             bubbles: [
@@ -113,6 +116,7 @@ export const ProcessModelBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.slack.title"),
+            stars: 4,
             description: t("skills.slack.description"),
             icon: <SlackIcon className="w-6 h-6" />,
             href: "https://www.slack.com/",
