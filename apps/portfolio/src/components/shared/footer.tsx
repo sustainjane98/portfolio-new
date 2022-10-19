@@ -86,7 +86,7 @@ export const Footer: React.FC<Props> = () => {
           <p className="text-gray-700 dark:text-gray-100 text-sm text-center sm:text-left">
             © 2022 Jane Will
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 gap-x-3 justify-center sm:justify-start">
             <Link
               external
               aria-label="github logo"
@@ -97,7 +97,7 @@ export const Footer: React.FC<Props> = () => {
               <GithubLogo
                 role="img"
                 title="Logo of GitHub a software development library"
-                className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200"
+                className="w-18 h-6 fill-gray-500 dark:fill-gray-200"
               />
             </Link>
             <Link
@@ -113,7 +113,7 @@ export const Footer: React.FC<Props> = () => {
               <GetInItLogo
                 role="img"
                 title="Logo of Get in IT a software development job search page"
-                className="w-18 h-6 ml-3 fill-gray-500 dark:fill-gray-200"
+                className="w-18 h-6 fill-gray-500 dark:fill-gray-200"
               />
             </Link>
             <Link
