@@ -12,6 +12,10 @@
     "contactReasonValues": {
       "jobOffer": "Job offer",
       "other": "Other"
-    }
+    },
+    "contactReasonInput": "Contact Reason (Value)",
+    "jobAdvertisementInput": "Job Advertisement",
+    "messageArea": "Message",
+    "hintText": "This form will be used to create an email to me. No additional information is stored, except the email itself."
   }
 }

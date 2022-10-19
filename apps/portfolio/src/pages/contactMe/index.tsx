@@ -156,7 +156,7 @@ const ContactMe: NextPage = () => {
                     <>
                       <Input
                         autoComplete="on"
-                        label="Job Advertisement"
+                        label={t("form.jobAdvertisementInput")}
                         name="jobAdvertisement"
                         data-testid={
                           DataTestIds.CONTACT_ME_JOB_ADVERTISEMENT_INPUT
@@ -167,7 +167,7 @@ const ContactMe: NextPage = () => {
                   ) : (
                     <Input
                       autoComplete="on"
-                      label="Contact Reason (Value)"
+                      label={t("form.contactReasonInput")}
                       name="contactReasonString"
                       required
                       data-testid={DataTestIds.CONTACT_ME_CONTACT_REASON_INPUT}
@@ -178,7 +178,7 @@ const ContactMe: NextPage = () => {
                   <InputContainer
                     data-testid={DataTestIds.CONTACT_ME_MESSAGE_TEXTAREA}
                     autoComplete="on"
-                    label="Message"
+                    label={t("form.messageArea")}
                     name="message"
                     className="xl:col-span-3 xl:row-span-4 w-full xl:min-h-full"
                   />
@@ -186,8 +186,7 @@ const ContactMe: NextPage = () => {
               </div>
               <div>
                 <p className="text-xs font-light text-gray-400 xl:col-span-2 mb-4">
-                  This form will be used to create an email to me. No additional
-                  information is stored, except the email itself.
+                  {t("form.hintText")}
                 </p>
               </div>
             </div>
