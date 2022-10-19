@@ -23,17 +23,16 @@ export const Link: React.FC<Props> = ({
   ...anchorProps
 }) => {
   const anchor = (
-    <a {...anchorProps} href={external ? undefined : anchorProps.href}>
+    <a
+      {...anchorProps}
+      href={external ? anchorProps.href : undefined}
+      className="cursor-pointer"
+    >
       <span className={noUnderline ? "" : "underline"}>{children}</span>
     </a>
   );
 
-  if (external)
-    return (
-      <LinkComp passHref href={anchorProps.href}>
-        {anchor}
-      </LinkComp>
-    );
+  if (!external) return <LinkComp href={anchorProps.href}>{anchor}</LinkComp>;
 
   return anchor;
 };
