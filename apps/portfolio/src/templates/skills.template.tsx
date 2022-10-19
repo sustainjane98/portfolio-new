@@ -25,6 +25,7 @@ export interface Props {
 
 const MotionHeadline = motion(Headline, { forwardMotionProps: true });
 const MotionBody = motion(HeadlineBody, { forwardMotionProps: true });
+const MotionButton = motion(Button);
 
 /**
  * An SkillsTemplate React Component.
@@ -76,7 +77,13 @@ export const SkillsTemplate: React.FC<Props> = ({
           {buttons && (
             <div className="mt-6 inline-flex">
               {buttons.map((button, index) => (
-                <Button key={index} {...button} />
+                <MotionButton
+                  variants={headlineShowUpAnimation}
+                  initial="hidden"
+                  animate="enter"
+                  key={index}
+                  {...(button as any)}
+                />
               ))}
             </div>
           )}
