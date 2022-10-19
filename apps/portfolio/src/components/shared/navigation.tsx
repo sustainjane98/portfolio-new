@@ -66,7 +66,7 @@ export const Navigation: React.FC<Props> = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="fixed z-20 h-full px-12 py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
+              className="fixed z-20 h-full px-6 py-4 sm:px-12 sm:py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
             >
               <Logo className="min-w-14 min-h-14 mb-6" />
               {main.map((props, index) => (

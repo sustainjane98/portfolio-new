@@ -54,7 +54,7 @@ export const NavigationItem: React.FC<Props> = ({
           isActive ? " text-navy-200" : ""
         }  md:p-0 flex flex-row gap-x-2 items-center`}
       >
-        <span className="font-semibold text-2xl text-right">
+        <span className="font-semibold break-all sm:break-words text-2xl text-right">
           {
             (
               t("navigation", { returnObjects: true }) as Record<string, string>
