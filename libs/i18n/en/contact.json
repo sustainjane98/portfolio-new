@@ -16,6 +16,7 @@
     "contactReasonInput": "Contact Reason (Value)",
     "jobAdvertisementInput": "Job Advertisement",
     "messageArea": "Message",
-    "hintText": "This form will be used to create an email to me. No additional information is stored, except the email itself."
+    "hintText": "This form will be used to create an email to me. No additional information is stored, except the email itself.",
+    "jobLocationInput": "Job Location"
   }
 }

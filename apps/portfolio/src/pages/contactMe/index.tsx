@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import React, { useState } from "react";
 import { Header } from "../../components/shared/header";
 import contactImage from "../../assets/pavan-trikutam-71CjSSB83Wo-unsplash.webp";
@@ -20,6 +20,7 @@ import { useButtonState } from "../../hooks/useButtonState.hook";
 import { useRouter } from "next/router";
 import { DataTestIds } from "@portfolio/shared-testing";
 import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export interface Props {}
 
@@ -162,7 +163,10 @@ const ContactMe: NextPage = () => {
                           DataTestIds.CONTACT_ME_JOB_ADVERTISEMENT_INPUT
                         }
                       />
-                      <Input label="Job Location" name="jobLocation" />
+                      <Input
+                        label={t("form.jobLocationInput")}
+                        name="jobLocation"
+                      />
                     </>
                   ) : (
                     <Input
@@ -199,3 +203,14 @@ const ContactMe: NextPage = () => {
 };
 
 export default ContactMe;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  locale = locale ?? "en";
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "contact"])),
+      // Will be passed to the page component as props
+    },
+  };
+};

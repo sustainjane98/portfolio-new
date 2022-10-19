@@ -16,6 +16,7 @@
     "contactReasonInput": "Kontaktgrund (Wert)",
     "jobAdvertisementInput": "Stellenausschreibung",
     "messageArea": "Nachricht",
-    "hintText": "Dieses Formular wird verwendet, um eine E-Mail an mich zu erstellen. Es werden keine weiteren Informationen gespeichert, außer der E-Mail selbst."
+    "hintText": "Dieses Formular wird verwendet, um eine E-Mail an mich zu erstellen. Es werden keine weiteren Informationen gespeichert, außer der E-Mail selbst.",
+    "jobLocationInput": "Job Standort"
   }
 }
