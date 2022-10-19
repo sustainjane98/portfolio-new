@@ -6,9 +6,9 @@ test.describe("Index Page", () => {
   let a11y: A11yPage;
   let p: IndexPage;
 
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, locale }) => {
     a11y = new A11yPage(page);
-    p = new IndexPage(page);
+    p = new IndexPage(page, locale);
     await p.goTo();
   });
 

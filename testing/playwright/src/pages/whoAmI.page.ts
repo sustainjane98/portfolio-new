@@ -1,10 +1,11 @@
 import { Page, expect } from "@playwright/test";
 
 export default class WhoAmIPage {
-  constructor(private page: Page) {}
+  constructor(private page: Page, private locale: string) {}
 
   public async goTo() {
-    await this.page.goto("/bio");
+    if (this.locale.includes("en")) await this.page.goto("/bio");
+    else await this.page.goto(`/${this.locale}/bio`);
   }
 
   public async checkStructure() {

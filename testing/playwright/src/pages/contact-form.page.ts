@@ -5,10 +5,11 @@ import {
 } from "@portfolio/shared-testing";
 
 export default class ContactFormPage {
-  constructor(private page: Page) {}
+  constructor(private page: Page, private locale: string) {}
 
   public async goTo() {
-    await this.page.goto("/contactMe");
+    if (this.locale.includes("en")) await this.page.goto("/contactMe");
+    else await this.page.goto(`/${this.locale}/contactMe`);
   }
 
   public async checkStructure() {

@@ -5,9 +5,9 @@ import WhoAmIPage from "../pages/whoAmI.page";
 test.describe("Who Am I Page", () => {
   let a11y: A11yPage;
   let p: WhoAmIPage;
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, locale }) => {
     a11y = new A11yPage(page);
-    p = new WhoAmIPage(page);
+    p = new WhoAmIPage(page, locale);
     await p.goTo();
   });
   test("Check visual stucture", async () => {

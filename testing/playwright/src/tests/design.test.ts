@@ -4,9 +4,9 @@ import DesignPage from "../pages/design.page";
 test.describe("Design Page", () => {
   let a11y: A11yPage;
   let p: DesignPage;
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, locale }) => {
     a11y = new A11yPage(page);
-    p = new DesignPage(page);
+    p = new DesignPage(page, locale);
     await p.goTo();
   });
   test("Check visual stucture", async ({ page }) => {

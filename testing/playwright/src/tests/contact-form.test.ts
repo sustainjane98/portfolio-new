@@ -8,10 +8,10 @@ test.describe("ContactForm", () => {
   let p: ContactFormPage;
   let ms = new EmailService();
 
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, locale }) => {
     a11y = new A11yPage(page);
     await ms.deleteAllEmails();
-    p = new ContactFormPage(page);
+    p = new ContactFormPage(page, locale);
     await p.goTo();
   });
 

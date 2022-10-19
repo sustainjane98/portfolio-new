@@ -5,9 +5,9 @@ import BackendPage from "../pages/backend.page";
 test.describe("Backend Page", () => {
   let a11y: A11yPage;
   let p: BackendPage;
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, locale }) => {
     a11y = new A11yPage(page);
-    p = new BackendPage(page);
+    p = new BackendPage(page, locale);
     await p.goTo();
   });
   test("Check visual stucture", async () => {
