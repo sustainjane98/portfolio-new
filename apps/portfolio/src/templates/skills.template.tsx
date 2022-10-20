@@ -12,6 +12,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { globalAnimationVariants } from "../animations/global";
 import { ProfilePicture } from "../components/shared/profilePicture";
 import { headlineShowUpAnimation } from "../animations/headlines";
+import { DataTestIds } from "@portfolio/shared-testing";
 
 export interface Props {
   header: {
@@ -88,7 +89,7 @@ export const SkillsTemplate: React.FC<Props> = ({
             </div>
           )}
         </Header>
-        <main>
+        <main data-testid={DataTestIds.SKILL_BODY_CONTAINER}>
           {skills && (
             <div className="max-w-7xl mx-auto">
               <Skills {...skills} />

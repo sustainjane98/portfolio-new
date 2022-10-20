@@ -5,6 +5,7 @@ const pages: string[] = [
   "/",
   "/projects",
   "/bio",
+  "/values",
   "/bio/skills/frontend",
   "/bio/skills/backend",
   "/bio/skills/design",

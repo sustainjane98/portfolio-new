@@ -13,6 +13,10 @@ export default class ContactFormPage {
   }
 
   public async checkStructure() {
+    await this.page
+      .locator(dataTestIdBodyGenerator(DataTestIds.SKILL_BODY_CONTAINER))
+      .scrollIntoViewIfNeeded();
+    await this.page.evaluate(() => window.scrollTo(0, 0));
     await expect(this.page).toHaveScreenshot("contact-form-page.png", {
       fullPage: true,
     });
