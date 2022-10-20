@@ -66,20 +66,22 @@ export const Navigation: React.FC<Props> = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="fixed z-20 h-full px-6 py-4 sm:px-12 sm:py-8 w-auto bg-gray-900 rounded-l-lg flex flex-col items-end gap-y-2 top-0 right-0 bottom-0 max-w-[70vw]"
+              className="overflow-scroll fixed z-20 h-full px-6 py-4 sm:px-12 sm:py-8 w-auto bg-gray-900 flex flex-col rounded-l-lg top-0 right-0 bottom-0 max-w-[70vw]"
             >
-              <Logo className="min-w-14 min-h-14 mb-6" />
-              {main.map((props, index) => (
-                <NavigationItem
-                  {...props}
-                  key={index}
-                  onClick={() => setOpen((prev) => !prev)}
-                  subItems={props.subItems?.map((props) => ({
-                    ...props,
-                    onClick: () => setOpen((prev) => !prev),
-                  }))}
-                />
-              ))}
+              <div className="flex flex-col items-end gap-y-2">
+                <Logo className="w-24 h-24 mb-3" />
+                {main.map((props, index) => (
+                  <NavigationItem
+                    {...props}
+                    key={index}
+                    onClick={() => setOpen((prev) => !prev)}
+                    subItems={props.subItems?.map((props) => ({
+                      ...props,
+                      onClick: () => setOpen((prev) => !prev),
+                    }))}
+                  />
+                ))}
+              </div>
               <div className="h-full" />
               <LanguageSwitcher onClick={() => setOpen((prev) => !prev)} />
             </motion.div>

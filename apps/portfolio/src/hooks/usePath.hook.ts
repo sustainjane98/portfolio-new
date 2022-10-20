@@ -19,7 +19,7 @@ export const usePath = (paths: string[]) => {
         break;
       }
     }
-  }, [paths]);
+  }, [paths, locale]);
 
   return isPath;
 };
