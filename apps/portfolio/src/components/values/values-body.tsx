@@ -6,6 +6,7 @@ import {
   UserGroupIcon,
   FlagIcon,
   BriefcaseIcon,
+  MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 
 export interface Props {}
@@ -45,6 +46,11 @@ export const ValuesBody: React.FC<Props> = () => {
             title: t("skills.flexibility.title"),
             description: t("skills.flexibility.description"),
             icon: <BriefcaseIcon className="w-6 h-6 text-white" />,
+          },
+          {
+            title: t("skills.quality.title"),
+            description: t("skills.quality.description"),
+            icon: <MagnifyingGlassIcon className="w-6 h-6 text-white" />,
           },
         ],
       }}
