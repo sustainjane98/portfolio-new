@@ -24,7 +24,7 @@ export const LanguageSwitcher: React.FC<Props> = ({ onClick }) => {
         }}
       >
         <DE
-          className={`${locale?.includes("de") ? "w-12" : "w-14"} rounded-md ${
+          className={`w-14 rounded-md ${
             locale?.includes("de") ? "border-2 border-navy-300" : ""
           }`}
         />
@@ -37,7 +37,7 @@ export const LanguageSwitcher: React.FC<Props> = ({ onClick }) => {
         }}
       >
         <US
-          className={`${locale?.includes("en") ? "w-12" : "w-14"} rounded-md ${
+          className={`w-14 rounded-md ${
             locale?.includes("en") ? "border-2 border-navy-300" : ""
           }`}
         />

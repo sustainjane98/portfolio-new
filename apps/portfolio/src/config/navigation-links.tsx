@@ -8,6 +8,7 @@ import {
   ArrowTrendingUpIcon,
   PhoneIcon,
   ArchiveBoxIcon,
+  UserGroupIcon,
 } from "@heroicons/react/24/solid";
 
 export const main: NavigationItem[] = [
@@ -16,6 +17,11 @@ export const main: NavigationItem[] = [
     href: "/bio",
     children: "whoAmI",
     icon: <UserIcon className="w-6 h-6" />,
+  },
+  {
+    href: "/values",
+    children: "values",
+    icon: <UserGroupIcon className="w-6 h-6" />,
   },
   {
     href: "/bio#skills",
