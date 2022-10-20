@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": "Meine Werte",
+    "description": "Die Werte, die ich für meine Arbeit habe"
+  },
+  "headline": "Meine Werte",
+  "subheadline": "Die Werte, die ich für meine Arbeit habe",
+  "bodyTitle": "Persönliche Werte",
+  "skills": {
+    "coherence": {
+      "title": "Zusammenhalt",
+      "description": "Ich möchte den Zusammenhalt im Team aktiv mitgehalten. Dazu gehört für mich ein positiver Umgang miteinander und die Klärung von Differenzen auf professioneller Ebene. Darüber hinaus gehört für mich auch das aktive Unterstützen, der Kolleg*innen dazu. Denn am Ende zählt vor allem die Teamleistung als Ergebnis für mich."
+    },
+    "diversity": {
+      "title": "Diversität",
+      "description": "Ich stehe jeder Art von Diskriminierung und Hass auf Minderheiten als Kontrapunkt gegenüber. Ich bin auch jeden Tag bereit etwas neu zu lernen und stehe meinem Verhalten hier reflektiv gegenüber."
+    },
+    "flexibility": {
+      "title": "Flexibilität",
+      "description": "Mein Anspruch ist es dem Arbeitgeber möglichst flexibel zur Verfügung zu stehen. Das gleiche erwarte ich aber auch von einem Arbeitgeber. So biete ich an Überstunden zu machen, wenn nötig und ein Arbeitgeber kann mir, wenn möglich, eine flexible Arbeitszeitregelung mit Homeoffice zur Verfügung."
+    }
+  }
+}

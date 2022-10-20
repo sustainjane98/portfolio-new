@@ -26,7 +26,7 @@ export const Link: React.FC<Props> = ({
     <a
       {...anchorProps}
       href={external ? anchorProps.href : undefined}
-      className="cursor-pointer"
+      className={`cursor-pointer ${anchorProps.className}`}
     >
       <span className={noUnderline ? "" : "underline"}>{children}</span>
     </a>

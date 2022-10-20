@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": "My Values",
+    "description": "The Values I have according to my work"
+  },
+  "headline": "My Personal Values",
+  "subheadline": "The Values I have according to my work",
+  "bodyTitle": "Personal Values",
+  "skills": {
+    "coherence": {
+      "title": "Coherence",
+      "description": "I want to actively maintain team cohesion. For me, this includes dealing positively with each other and clarifying differences on a professional level. In addition, I would also like to actively support my colleagues. Because in the end, it's the team's performance that counts for me."
+    },
+    "diversity": {
+      "title": "Diversity",
+      "description": "I stand against any kind of discrimination and hatred towards minorities as a counterpoint. I am also willing to learn something new every day and am reflective of my behavior here."
+    },
+    "flexibility": {
+      "title": "Flexibility",
+      "description": "My requirement is to be available to the employer as flexibly as possible. However, I also expect the same from an employer. So I offer to work overtime if necessary and an employer can provide me with a flexible work schedule with home office if possible."
+    }
+  }
+}
