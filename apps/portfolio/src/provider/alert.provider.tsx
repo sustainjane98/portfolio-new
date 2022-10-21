@@ -11,7 +11,7 @@ export interface Provider extends AlertProps {
 }
 
 const initalValue: Provider = {
-  enabled: true,
+  enabled: false,
   title: "",
   subtitle: undefined,
   type: AlertType.Success,
@@ -47,7 +47,7 @@ export const AlertProvider: React.FC<PropsWithChildren> = ({ children }) => {
       }}
     >
       <div className="absolute top-0 left-0 right-0 flex items-center">
-        <Alert {...values} />
+        {values.enabled && <Alert {...values} />}
       </div>
       {children}
     </AlertProviderContext.Provider>
