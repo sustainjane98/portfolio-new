@@ -49,6 +49,14 @@ export const EducationBody: React.FC<Props> = () => {
             href: "https://www.fh-dortmund.de/",
             external: true,
             "aria-label": "FH Dortmund Link",
+            links: [
+              {
+                description: t("skills.fhDortmund.download"),
+                href: "/fh-dortmund-certificate-jane-will.pdf",
+                external: true,
+                download: t("skills.fhDortmund.downloadTitle"),
+              },
+            ],
           },
         ],
       }}
