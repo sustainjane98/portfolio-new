@@ -1,0 +1,19 @@
+{
+  "seo": {
+    "title": "Berufserfahrung",
+    "description": "Meine Arbeitserfahrung im Bereich der Softwareentwicklung"
+  },
+  "headline": "Meine Berufserfahrung",
+  "subheadline": "Meine Berufserfahrung im Bereich der Softwareentwicklung",
+  "bodyTitle": "Meine Berufserfahrung",
+  "skills": {
+    "agido": {
+      "title": "Agido GmbH",
+      "description": "Bei der Agido GmbH habe ich erste praktische Erfahrungen im Java Umfeld sammeln können. Dabei habe ich die Entwicklung eines Java Servers und Clients (mit Swing) unterstützt."
+    },
+    "bookwire": {
+      "title": "Bookwire GmbH",
+      "description": "Bei der Bookwire GmbH habe ich zwei Frontendprojekte von der Konzeption, bis zur Entwicklung betreut. Dabei habe ich viel über den praktischen Einsatz von Webtechnologie, besonders von React und Next.js gelernt."
+    }
+  }
+}

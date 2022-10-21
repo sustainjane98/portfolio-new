@@ -1,0 +1,19 @@
+{
+  "seo": {
+    "title": "Work Experience",
+    "description": "My Work Experience in the field of software development"
+  },
+  "headline": "My Work Experience",
+  "subheadline": "My Work Experience in the field of software development",
+  "bodyTitle": "My Work Experience",
+  "skills": {
+    "agido": {
+      "title": "Agido GmbH",
+      "description": "At Agido GmbH I was able to gain my first practical experience in the Java environment. Thereby I supported the development of a Java server and clients (with Swing)."
+    },
+    "bookwire": {
+      "title": "Bookwire GmbH",
+      "description": "At Bookwire GmbH I managed two frontend projects from conception, to development. I learned a lot about the practical use of web technology, especially React and Next.js."
+    }
+  }
+}
