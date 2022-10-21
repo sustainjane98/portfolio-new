@@ -1,0 +1,20 @@
+{
+  "seo": { "title": "Ausbildung", "Beschreibung": "Meine Ausbildung" },
+  "headline": "Mein Bildungsweg",
+  "subheadline": "Mein Weg in der Bildung",
+  "bodyTitle": "Meine Ausbildung",
+  "skills": {
+    "phoenixGym": {
+      "title": "Phoenix-Gymnasium",
+      "description": "Auf dem Phoenix-Gymnasium habe ich mein Abitur erfolgreich abgeschlossen. Ich hatte im Abitur dabei den Leistungskurs Informatik.",
+      "dateFrom": "2009",
+      "dateTo": "2017"
+    },
+    "fhDortmund": {
+      "title": "FH Dortmund Wirtschaftsinformatik Bsc.",
+      "description": "In meinem Studium an der Fachhochschule Dortmund, habe ich sehr vertieft Java gelernt. Ebenso hatte ich Einblicke in die Bereiche Softwaretechnik und Webtechnologien.",
+      "dateFrom": "2017",
+      "dateTo": "2022"
+    }
+  }
+}

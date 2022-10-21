@@ -1,0 +1,20 @@
+{
+  "seo": { "title": "Education", "description": "My Path in Education" },
+  "headline": "My Education",
+  "subheadline": "My Path in Education",
+  "bodyTitle": "My Education",
+  "skills": {
+    "phoenixGym": {
+      "title": "Phoenix-Gymnasium",
+      "description": "I successfully completed my high school diploma at the Phoenix-Gymnasium. I had the advanced course in computer science in the Abitur.",
+      "dateFrom": "2009",
+      "dateTo": "2017"
+    },
+    "fhDortmund": {
+      "title": "FH Dortmund Business Informatics Bsc.",
+      "description": "During my studies at the University of Applied Sciences in Dortmund, I learned Java in great depth. I also had insights into the areas of software engineering and web technologies.",
+      "dateFrom": "2017",
+      "dateTo": "2022"
+    }
+  }
+}
