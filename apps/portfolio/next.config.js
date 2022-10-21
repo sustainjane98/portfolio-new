@@ -26,6 +26,15 @@ const nextConfig = {
       use: ["@svgr/webpack"],
     });
 
+    config.module.rules.push({
+      test: /\.pdf$/,
+      use: [
+        {
+          loader: "file-loader",
+        },
+      ],
+    });
+
     return config;
   },
 };

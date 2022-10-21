@@ -9,6 +9,7 @@ import {
   PhoneIcon,
   ArchiveBoxIcon,
   UserGroupIcon,
+  BriefcaseIcon,
 } from "@heroicons/react/24/solid";
 
 export const main: NavigationItem[] = [
@@ -22,6 +23,11 @@ export const main: NavigationItem[] = [
     href: "/values",
     children: "values",
     icon: <UserGroupIcon className="w-6 h-6" />,
+  },
+  {
+    href: "/work-experience",
+    children: "work-experience",
+    icon: <BriefcaseIcon className="w-6 h-6" />,
   },
   {
     href: "/bio#skills",

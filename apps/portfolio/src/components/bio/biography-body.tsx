@@ -58,7 +58,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
       }}
       githubProfileUrl={githubProfileUrl}
       skills={{
-        title: "Skills",
+        title: t("skills", { ns: "common" }),
         skills: [
           {
             title: t("skills.frontend.title"),

@@ -9,9 +9,11 @@
     "design": "Design",
     "projectManagement": "Project Management",
     "skills": "Skills",
-    "values": "My Values"
+    "values": "My Values",
+    "work-experience": "Work Experience"
   },
   "main": "Main pages",
   "skills": "Skills",
-  "getMoreInformation": "Get more Information"
+  "getMoreInformation": "Get more Information",
+  "today": "today"
 }

@@ -19,9 +19,12 @@ export interface Props {
     href: string;
     external?: boolean;
     "aria-label"?: string;
+    download?: boolean | string;
   }[];
   "aria-label"?: string;
   stars?: number;
+  dateFrom?: string;
+  dateTo?: string;
 }
 
 /**
@@ -38,6 +41,8 @@ export const Card: React.FC<Props> = ({
   bubbles,
   links,
   stars,
+  dateFrom,
+  dateTo,
   "aria-label": ariaLabel,
 }) => {
   const { t } = useTranslation();
@@ -48,11 +53,15 @@ export const Card: React.FC<Props> = ({
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       className={`inline-grid ${(() => {
-        if (bubbles && stars)
+        if (bubbles && stars && dateFrom) {
+          return "grid-rows-[auto_auto_auto_auto_auto_minmax(auto,_100%)_auto]";
+        } else if ((bubbles && stars) || (stars && dateFrom))
           return "grid-rows-[auto_auto_auto_auto_minmax(auto,_100%)_auto]";
         else if (bubbles) {
           return "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]";
         } else if (stars) {
+          return "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]";
+        } else if (dateFrom) {
           return "grid-rows-[auto_auto_auto_minmax(auto,_100%)_auto]";
         }
         return "grid-rows-[auto_auto_minmax(auto,_100%)_auto]";
@@ -82,6 +91,13 @@ export const Card: React.FC<Props> = ({
             return res;
           })()}
           <span className="ml-4 text-xs">{stars}/5</span>
+        </div>
+      )}
+      {dateFrom && (
+        <div className="text-sm font-medium flex justify-center gap-2">
+          <span>{dateFrom}</span>
+          <span>-</span>
+          <span>{dateTo ?? t("today")}</span>
         </div>
       )}
       <p className="text-md  text-gray-500 dark:text-gray-200 py-4 text-start">
@@ -118,13 +134,17 @@ export const Card: React.FC<Props> = ({
             </Link>
           ))}
         {links?.map(
-          ({ description, href, external, "aria-label": ariaLabel }, index) =>
+          (
+            { description, href, external, "aria-label": ariaLabel, download },
+            index
+          ) =>
             external ? (
               <a
                 aria-label={ariaLabel}
                 href={href}
                 target={"_blank"}
                 rel="noreferrer"
+                download={download}
               >
                 <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
                   {description}

@@ -9,11 +9,22 @@
   "skills": {
     "agido": {
       "title": "Agido GmbH",
-      "description": "At Agido GmbH I was able to gain my first practical experience in the Java environment. Thereby I supported the development of a Java server and clients (with Swing)."
+      "description": "At Agido GmbH I was able to gain my first practical experience in the Java environment. Thereby I supported the development of a Java server and clients (with Swing).",
+      "dateFrom": "June 2019",
+      "dateTo": "September 2019"
     },
     "bookwire": {
       "title": "Bookwire GmbH",
-      "description": "At Bookwire GmbH I managed two frontend projects from conception, to development. I learned a lot about the practical use of web technology, especially React and Next.js."
+      "description": "At Bookwire GmbH I managed two frontend projects from conception, to development. I learned a lot about the practical use of web technology, especially React and Next.js.",
+      "dateFrom": "April 2021",
+      "dateTo": "August 2022"
+    },
+    "tedi": {
+      "title": "Tedi GmbH",
+      "description": "At Tedi GmbH, I further developed a front-end application in the logistics area. Angular can be used as a single page application framework.",
+      "dateFrom": "September 2022"
     }
-  }
+  },
+  "certificate": "Download Certificate",
+  "certificate-filename": "Bookwire Certificate Jane Will"
 }

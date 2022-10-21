@@ -9,9 +9,11 @@
     "design": "Design",
     "projectManagement": "Project Management",
     "skills": "Fähigkeiten",
-    "values": "Meine Werte"
+    "values": "Meine Werte",
+    "work-experience": "Berufserfahrung"
   },
   "main": "Hauptseiten",
   "skills": "Fähigkeiten",
-  "getMoreInformation": "Weitere Informationen"
+  "getMoreInformation": "Weitere Informationen",
+  "today": "heute"
 }

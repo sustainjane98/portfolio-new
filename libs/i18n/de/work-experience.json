@@ -9,11 +9,22 @@
   "skills": {
     "agido": {
       "title": "Agido GmbH",
-      "description": "Bei der Agido GmbH habe ich erste praktische Erfahrungen im Java Umfeld sammeln können. Dabei habe ich die Entwicklung eines Java Servers und Clients (mit Swing) unterstützt."
+      "description": "Bei der Agido GmbH habe ich erste praktische Erfahrungen im Java Umfeld sammeln können. Dabei habe ich die Entwicklung eines Java Servers und Clients (mit Swing) unterstützt.",
+      "dateFrom": "Juni 2019",
+      "dateTo": "September 2019"
     },
     "bookwire": {
       "title": "Bookwire GmbH",
-      "description": "Bei der Bookwire GmbH habe ich zwei Frontendprojekte von der Konzeption, bis zur Entwicklung betreut. Dabei habe ich viel über den praktischen Einsatz von Webtechnologie, besonders von React und Next.js gelernt."
+      "description": "Bei der Bookwire GmbH habe ich zwei Frontendprojekte von der Konzeption, bis zur Entwicklung betreut. Dabei habe ich viel über den praktischen Einsatz von Webtechnologie, besonders von React und Next.js gelernt.",
+      "dateFrom": "April 2021",
+      "dateTo": "August 2022"
+    },
+    "tedi": {
+      "title": "Tedi GmbH",
+      "description": "Bei der Tedi GmbH habe ich eine Frontendanwendung im Logistikbereich weiterentwickelt. Dabei kann Angular als Single Page Application Framework zum Einsatz.",
+      "dateFrom": "September 2022"
     }
-  }
+  },
+  "certificate": "Zeugnis herunterladen",
+  "certificate-filename": "Bookwire Zeugnis Jane Will"
 }
