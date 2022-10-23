@@ -141,7 +141,7 @@ export const FrontendBody: React.FC<Props> = () => {
             links: [
               {
                 description: t("skills.react.links.example"),
-                href: "https://github.com/jawil003/example-app",
+                href: "https://github.com/jawil003/portfolio-new",
                 external: true,
                 "aria-label": "My Example React App Link",
               },
