@@ -1,5 +1,5 @@
 import "../src/styles.css";
-import * as NextImage from "next/image";
+import * as NextImage from "next/legacy/image";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 

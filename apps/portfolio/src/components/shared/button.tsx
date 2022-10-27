@@ -30,14 +30,13 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
 
     if (href)
       return (
-        <Link href={href}>
-          <a
-            ref={ref as React.LegacyRef<HTMLAnchorElement>}
-            aria-label={children}
-            className={classes}
-          >
-            <span>{children}</span>
-          </a>
+        <Link
+          href={href}
+          ref={ref as React.LegacyRef<HTMLAnchorElement>}
+          aria-label={children}
+          className={classes}
+        >
+          <span>{children}</span>
         </Link>
       );
     return (

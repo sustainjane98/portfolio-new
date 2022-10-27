@@ -29,8 +29,8 @@ export const CardBubble: React.FC<Props> = ({
 
   if (!external) {
     return (
-      <Link href={href}>
-        <a aria-label={ariaLabel}>{res}</a>
+      <Link href={href} aria-label={ariaLabel}>
+        {res}
       </Link>
     );
   }

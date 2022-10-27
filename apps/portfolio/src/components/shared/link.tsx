@@ -32,7 +32,12 @@ export const Link: React.FC<Props> = ({
     </a>
   );
 
-  if (!external) return <LinkComp href={anchorProps.href}>{anchor}</LinkComp>;
+  if (!external)
+    return (
+      <LinkComp href={anchorProps.href} legacyBehavior>
+        {anchor}
+      </LinkComp>
+    );
 
   return anchor;
 };

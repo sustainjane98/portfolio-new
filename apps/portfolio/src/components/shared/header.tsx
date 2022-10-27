@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 import { Link } from "./link";
 
 export interface Props {

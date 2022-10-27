@@ -91,7 +91,9 @@ export const NavigationItem: React.FC<Props> = ({
         ) : external ? (
           Anchor(href, download, "_blank", "noreferer")
         ) : (
-          <Link href={href}>{Anchor()}</Link>
+          <Link href={href} legacyBehavior>
+            {Anchor()}
+          </Link>
         )}
       </li>
       <AnimatePresence>

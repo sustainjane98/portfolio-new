@@ -125,12 +125,10 @@ export const Card: React.FC<Props> = ({
               </span>
             </a>
           ) : (
-            <Link href={href} passHref>
-              <a aria-label={ariaLabel}>
-                <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-                  {t("getMoreInformation")}
-                </span>
-              </a>
+            <Link href={href} passHref aria-label={ariaLabel}>
+              <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
+                {t("getMoreInformation")}
+              </span>
             </Link>
           ))}
         {links?.map(
@@ -151,12 +149,10 @@ export const Card: React.FC<Props> = ({
                 </span>
               </a>
             ) : (
-              <Link href={href} passHref key={index}>
-                <a aria-label={ariaLabel}>
-                  <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
-                    {description}
-                  </span>
-                </a>
+              <Link href={href} passHref key={index} aria-label={ariaLabel}>
+                <span className="underline text-navy-500 hover:text-navy-600 visited:navy-800 dark:text-gray-200 dark:visited:text-gray-300">
+                  {description}
+                </span>
               </Link>
             )
         )}
