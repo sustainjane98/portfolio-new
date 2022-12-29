@@ -84,7 +84,7 @@ export const Footer: React.FC<Props> = () => {
       <div className="bg-gray-100 dark:bg-gray-700 pb-ios-4">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-700 dark:text-gray-100 text-sm text-center sm:text-left">
-            © 2022 Jane Will
+            © 2022 Jane
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 gap-x-3 justify-center sm:justify-start">
             <Link
