@@ -34,7 +34,16 @@ const MotionButton = motion(Button);
  * @version 0.1
  */
 export const SkillsTemplate: React.FC<Props> = ({
-  header: { src, className, headline, body, buttons, source, background },
+  header: {
+    src,
+    className,
+    headline,
+    body,
+    buttons,
+    source,
+    background,
+    shadowDefault,
+  },
   skills,
   githubProfileUrl,
 }) => {
@@ -46,6 +55,7 @@ export const SkillsTemplate: React.FC<Props> = ({
         background={background}
         indicator={skills && <ScrollDownIndicator className="z-10" />}
         source={source}
+        shadowDefault={shadowDefault}
       >
         {githubProfileUrl && (
           <ProfilePicture

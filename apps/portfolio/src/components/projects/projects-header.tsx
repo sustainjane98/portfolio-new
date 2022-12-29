@@ -21,6 +21,7 @@ export const ProjectsBody: React.FC<Props> = () => {
           subheadline: t("subheadline"),
         },
         src: projectsImage,
+        shadowDefault: true,
         background: "bg-[#858a8c]",
         source: {
           copyright: "Markus Winkler",

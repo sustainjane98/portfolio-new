@@ -9,6 +9,7 @@ export interface Props {
   indicator?: React.ReactElement;
   source?: { href: string; copyright: string };
   background: string;
+  shadowDefault?: boolean;
 }
 
 /**
@@ -24,6 +25,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
   indicator,
   source,
   background,
+  shadowDefault,
 }) => {
   return (
     <header
@@ -31,7 +33,11 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
       className={`w-screen min-h-screen relative ${className} `}
     >
       <div className="relative w-[100vw_+_env(safe-area-inset-left)] min-h-screen">
-        <div className="dark:bg-black/30 dark:w-full dark:h-full dark:absolute dark:z-10">
+        <div
+          className={`${
+            shadowDefault ? "bg-black/30 dark:bg-black/40" : "dark:bg-black/30"
+          } w-full h-full absolute z-10`}
+        >
           {" "}
         </div>
         <Image
@@ -73,3 +79,5 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
     </header>
   );
 };
+
+Header.defaultProps = { shadowDefault: false };
