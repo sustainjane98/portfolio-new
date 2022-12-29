@@ -18,6 +18,7 @@ export const EducationBody: React.FC<Props> = () => {
       header={{
         headline: { headline: t("headline"), subheadline: t("subheadline") },
         src: bibImage,
+        background: "bg-[#87817c]",
       }}
       skills={{
         title: t("bodyTitle"),

@@ -24,7 +24,7 @@ export const DesignBody: React.FC<Props> = () => {
           subheadline: t("subheadline"),
         },
         src: uiImage,
-        className: "bg-[#949694]",
+        background: "bg-[#949694]",
         source: {
           href: "https://unsplash.com/@uxindo",
           copyright: "UX Indonesia",

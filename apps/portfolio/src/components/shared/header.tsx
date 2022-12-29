@@ -8,6 +8,7 @@ export interface Props {
   multipleChildren?: boolean;
   indicator?: React.ReactElement;
   source?: { href: string; copyright: string };
+  background: string;
 }
 
 /**
@@ -22,11 +23,12 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
   multipleChildren,
   indicator,
   source,
+  background,
 }) => {
   return (
     <header
       role="banner"
-      className={`w-screen min-h-screen relative ${className} `}
+      className={`w-screen min-h-screen relative ${background} ${className} `}
     >
       <div className="relative w-[100vw_+_env(safe-area-inset-left)] min-h-screen">
         <Image

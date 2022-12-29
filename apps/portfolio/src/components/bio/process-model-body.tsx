@@ -32,7 +32,7 @@ export const ProcessModelBody: React.FC<Props> = () => {
           subheadline: t("subheadline"),
         },
         src: processImage,
-        className: "bg-[#7e7e80]",
+        background: "bg-[#7e7e80]",
         source: {
           href: "https://unsplash.com/@kaleidico",
           copyright: "Kaleidico",

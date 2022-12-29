@@ -56,7 +56,7 @@ export const BackendBody: React.FC<Props> = () => {
         },
         body: t("body"),
         src: serverImage,
-        className: "bg-[#070b0e]",
+        background: "bg-[#070b0e]",
         source: {
           href: "https://unsplash.com/@adigold1",
           copyright: "Adi Goldstein",

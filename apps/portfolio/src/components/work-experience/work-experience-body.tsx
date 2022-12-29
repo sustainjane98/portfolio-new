@@ -19,6 +19,7 @@ export const WorkExperienceBody: React.FC<Props> = () => {
       header={{
         headline: { headline: t("headline"), subheadline: t("subheadline") },
         src: officeImage,
+        background: "bg-[#565250]",
         source: {
           copyright: "Alex Kotliarskyi",
           href: "https://unsplash.com/@frantic",

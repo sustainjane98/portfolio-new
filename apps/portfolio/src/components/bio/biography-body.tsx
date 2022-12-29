@@ -54,7 +54,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
           </>
         ),
         indicator: <ScrollDownIndicator className="z-10" />,
-        className: "bg-[#0c1116]",
+        background: "bg-[#0c1116]",
       }}
       githubProfileUrl={githubProfileUrl}
       skills={{

@@ -43,7 +43,7 @@ export const HomeBody: React.FC<Props> = () => {
           </>
         ),
         src: headerImage,
-        className: "bg-navy-500",
+        background: "bg-navy-500",
         buttons: [{ href: "/bio", children: t("ctaButton") }],
       }}
     />

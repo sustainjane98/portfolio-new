@@ -16,6 +16,7 @@ import { DataTestIds } from "@portfolio/shared-testing";
 export interface Props {
   header: {
     headline: HeadlineProps;
+    background: string;
     body?: React.ReactNode | string;
     buttons?: ButtonProps[];
   } & HeaderProps;
@@ -33,7 +34,7 @@ const MotionButton = motion(Button);
  * @version 0.1
  */
 export const SkillsTemplate: React.FC<Props> = ({
-  header: { src, className, headline, body, buttons, source },
+  header: { src, className, headline, body, buttons, source, background },
   skills,
   githubProfileUrl,
 }) => {
@@ -42,6 +43,7 @@ export const SkillsTemplate: React.FC<Props> = ({
       <Header
         src={src}
         className={className}
+        background={background}
         indicator={skills && <ScrollDownIndicator className="z-10" />}
         source={source}
       >

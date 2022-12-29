@@ -44,6 +44,7 @@ export const FrontendBody: React.FC<Props> = () => {
         },
         body: t("body"),
         src: frontendImage,
+        background: "bg-[#050e14]",
         source: {
           href: "https://unsplash.com/@charlesdeluvio",
           copyright: "charlesdeluvio",

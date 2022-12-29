@@ -23,11 +23,12 @@ export const ValuesBody: React.FC<Props> = () => {
       header={{
         headline: { headline: t("headline"), subheadline: t("subheadline") },
         src: stoneImage,
+
         source: {
           copyright: "Sean Stratton",
           href: "https://unsplash.com/@seanstratton",
         },
-        className: "bg-[#849566]",
+        background: "bg-[#849566]",
       }}
       skills={{
         title: t("bodyTitle"),
