@@ -94,7 +94,7 @@ export const Card: React.FC<Props> = ({
         </div>
       )}
       {dateFrom && (
-        <div className="text-sm font-medium flex justify-center gap-2">
+        <div className="text-sm font-medium flex justify-center gap-2 dark:text-gray-200">
           <span>{dateFrom}</span>
           <span>-</span>
           <span>{dateTo ?? t("today")}</span>

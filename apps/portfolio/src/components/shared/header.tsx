@@ -28,20 +28,24 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
   return (
     <header
       role="banner"
-      className={`w-screen min-h-screen relative ${background} ${className} `}
+      className={`w-screen min-h-screen relative ${className} `}
     >
       <div className="relative w-[100vw_+_env(safe-area-inset-left)] min-h-screen">
+        <div className="dark:bg-black/30 dark:w-full dark:h-full dark:absolute dark:z-10">
+          {" "}
+        </div>
         <Image
           src={src}
           alt="Man with Rainbow Flag"
           placeholder="blur"
           layout="fill"
-          className={`object-cover ${className}`}
+          className={`object-cover ${background}`}
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
           priority
         ></Image>
+
         {source && (
           <Link
             noUnderline
