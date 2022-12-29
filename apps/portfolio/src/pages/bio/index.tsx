@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async ({
 }) => {
   locale = locale ?? "en";
   const ghs = new GithubService();
-  const { avatar_url } = await ghs.getUser("jawil003");
+  const { avatar_url } = await ghs.getUser("sustainjane98");
 
   return {
     props: {

@@ -32,7 +32,7 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
       return (
         <Link
           href={href}
-          ref={ref as React.LegacyRef<HTMLAnchorElement>}
+          ref={ref as React.Ref<HTMLAnchorElement>}
           aria-label={children}
           className={classes}
         >
