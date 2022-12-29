@@ -14,7 +14,7 @@
     },
     "kotlin": {
       "title": "Kotlin",
-      "description": "Ich habe das Tutorial zu Kotlin, der Sprache selbst, abgeschlossen, habe sie aber noch nicht in einem größeren Projekt eingesetzt. Ich finde sie aber definitiv benutzerfreundlicher als Java."
+      "description": "Ich habe das Tutorial zu Kotlin, der Sprache selbst, abgeschlossen. Ich habe darüber hinaus in meiner Freizeit einen Ktor Server für die Nutzung mit Rest und GraphQL aufgesetzt und dadurch die Sprache verinnerlicht."
     },
     "elixir": {
       "title": "Elixir",

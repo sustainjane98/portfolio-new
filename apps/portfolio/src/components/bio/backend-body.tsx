@@ -90,7 +90,7 @@ export const BackendBody: React.FC<Props> = () => {
           },
           {
             title: t("skills.kotlin.title"),
-            stars: 1,
+            stars: 3,
             description: t("skills.kotlin.description"),
             href: "https://kotlinlang.org/",
             icon: <KotlinIcon className="w-6 h-6" />,
