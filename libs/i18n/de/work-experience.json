@@ -22,7 +22,13 @@
     "tedi": {
       "title": "Tedi GmbH",
       "description": "Bei der Tedi GmbH habe ich eine Frontendanwendung im Logistikbereich weiterentwickelt. Dabei kann Angular als Single Page Application Framework zum Einsatz.",
-      "dateFrom": "September 2022"
+      "dateFrom": "September 2022",
+      "dateTo": "Dezember 2022"
+    },
+    "brockhaus": {
+      "title": "Brockhaus AG",
+      "description": "Bei der Brockhaus AG unterstütze ich verschiedene Kund*innen bei der Realisierung von Frontend Anwendungen mithilfe von React und Angular",
+      "dateFrom": "Januar 2023"
     }
   },
   "certificate": "Zeugnis herunterladen",

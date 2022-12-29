@@ -22,7 +22,13 @@
     "tedi": {
       "title": "Tedi GmbH",
       "description": "At Tedi GmbH, I further developed a front-end application in the logistics area. Angular can be used as a single page application framework.",
-      "dateFrom": "September 2022"
+      "dateFrom": "September 2022",
+      "dateTo": "December 2022"
+    },
+    "brockhaus": {
+      "title": "Brockhaus AG",
+      "description": "At Brockhaus AG I support various clients in the realization of frontend applications using React and Angular.",
+      "dateFrom": "January 2023"
     }
   },
   "certificate": "Download Certificate",

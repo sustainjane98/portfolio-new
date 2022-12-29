@@ -4,6 +4,7 @@ import officeImage from "../../assets/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg"
 import { useTranslation } from "next-i18next";
 import AgidoIcon from "../../assets/agido.svg";
 import TediIcon from "../../assets/tedi.svg";
+import BrockhausIcon from "../../assets/logo-brockhaus.svg";
 
 export interface Props {}
 
@@ -68,6 +69,16 @@ export const WorkExperienceBody: React.FC<Props> = () => {
             external: true,
             "aria-label": "Bookwire Link",
             dateFrom: t("skills.tedi.dateFrom"),
+            dateTo: t("skills.tedi.dateTo"),
+          },
+          {
+            title: t("skills.brockhaus.title"),
+            description: t("skills.brockhaus.description"),
+            icon: <BrockhausIcon className="w-6 h-6" />,
+            href: "https://www.brockhaus-ag.de/",
+            external: true,
+            "aria-label": "brockhaus Link",
+            dateFrom: t("skills.brockhaus.dateFrom"),
           },
         ],
       }}
