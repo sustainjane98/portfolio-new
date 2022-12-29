@@ -32,6 +32,7 @@ export const Header: React.FC<PropsWithChildren<Props>> = ({
         <Image
           src={src}
           alt="Man with Rainbow Flag"
+          placeholder="blur"
           layout="fill"
           className={`object-cover ${className}`}
           sizes="(max-width: 768px) 100vw,
