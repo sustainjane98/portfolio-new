@@ -120,7 +120,7 @@ export const Footer: React.FC<Props> = () => {
               external
               aria-label="linkedin logo"
               className="ml-3 text-gray-500 dark:text-gray-200"
-              href={"https://www.linkedin.com/in/jannik-will-450564182/"}
+              href={"https://www.linkedin.com/in/jane-will-450564182/"}
               target="_blank"
               rel="noreferrer"
             >
