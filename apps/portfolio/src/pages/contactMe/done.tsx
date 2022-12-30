@@ -20,6 +20,7 @@ const Done: NextPage = () => {
             subheadline: "I will answer as fast as possible",
           },
           src: callcenterImage,
+          background: "bg-[#8f908b]",
           buttons: [{ children: "Contact again", href: "/contactMe" }],
           source: {
             copyright: "Charanjeet Dhiman",

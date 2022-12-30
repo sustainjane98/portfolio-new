@@ -98,7 +98,7 @@ const ContactMe: NextPage = () => {
       <Header
         multipleChildren
         src={contactImage}
-        className="bg-[#8f908b]"
+        background="bg-[#8f908b]"
         source={{
           copyright: "Pavan Trikutam",
           href: "https://unsplash.com/@ptrikutam",
