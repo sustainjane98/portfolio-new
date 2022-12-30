@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={qc}>
       <DefaultSeo
-        titleTemplate="%s | Jane Will"
+        titleTemplate="%s | Jane"
         openGraph={{
           images: [
             {
