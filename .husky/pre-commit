@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+lerna run build --scope=@portfolio/frontend
 yarn workspaces run lint
