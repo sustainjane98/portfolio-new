@@ -1,6 +1,5 @@
 import { Props as NavigationItem } from "../components/shared/navigation-item";
 import {
-  HomeIcon,
   UserIcon,
   ComputerDesktopIcon,
   ServerIcon,
@@ -14,9 +13,8 @@ import {
 } from "@heroicons/react/24/solid";
 
 export const main: NavigationItem[] = [
-  { href: "/", children: "home", icon: <HomeIcon className="w-6 h-6" /> },
   {
-    href: "/bio",
+    href: "/",
     children: "whoAmI",
     icon: <UserIcon className="w-6 h-6" />,
   },

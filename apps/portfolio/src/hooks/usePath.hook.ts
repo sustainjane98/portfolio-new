@@ -13,6 +13,10 @@ export const usePath = (paths: string[]) => {
       currentUrl = currentUrl.replace("/" + locale ?? "", "");
     }
 
+    if (currentUrl === "") {
+      currentUrl = "/";
+    }
+
     for (const path of paths) {
       if (currentUrl === path) {
         setIsPath(true);
