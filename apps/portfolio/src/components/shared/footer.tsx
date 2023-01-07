@@ -90,7 +90,7 @@ export const Footer: React.FC<Props> = () => {
             <Link
               external
               aria-label="github logo"
-              href={"https://github.com/jawil003"}
+              href={"https://github.com/sustainjane98"}
               target="_blank"
               rel="noreferrer"
             >
