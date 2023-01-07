@@ -90,7 +90,7 @@ export const Card: React.FC<Props> = ({
 
             return res;
           })()}
-          <span className="ml-4 text-xs">{stars}/5</span>
+          <span className="ml-4 text-xs dark:text-gray-200">{stars}/5</span>
         </div>
       )}
       {dateFrom && (
