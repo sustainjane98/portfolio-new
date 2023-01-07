@@ -48,37 +48,6 @@ export const Footer: React.FC<Props> = () => {
                 ))}
             </ul>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-6 dark:text-white">
-              {t("skills")}
-            </h2>
-
-            <ul className="list-none mb-10">
-              {main
-                .find(({ children }) => {
-                  return children === "skills";
-                })
-                ?.subItems?.map(({ href, children }, index) => (
-                  <li key={index}>
-                    <Link
-                      noUnderline
-                      href={href}
-                      aria-label={children}
-                      className="text-gray-600 inline-block hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300"
-                    >
-                      {
-                        (
-                          t("navigation", { returnObjects: true }) as Record<
-                            string,
-                            string
-                          >
-                        )[children]
-                      }
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
         </div>
       </div>
       <div className="bg-gray-100 dark:bg-gray-700 pb-ios-4">

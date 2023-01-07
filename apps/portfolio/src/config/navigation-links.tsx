@@ -1,10 +1,6 @@
 import { Props as NavigationItem } from "../components/shared/navigation-item";
 import {
   UserIcon,
-  ComputerDesktopIcon,
-  ServerIcon,
-  PencilIcon,
-  ArrowTrendingUpIcon,
   PhoneIcon,
   ArchiveBoxIcon,
   UserGroupIcon,
@@ -32,32 +28,6 @@ export const main: NavigationItem[] = [
     href: "/education",
     children: "education",
     icon: <HomeModernIcon className="w-6 h-6" />,
-  },
-  {
-    href: "/bio#skills",
-    children: "skills",
-    subItems: [
-      {
-        href: "/bio/skills/frontend",
-        children: "frontend",
-        icon: <ComputerDesktopIcon className="w-6 h-6" />,
-      },
-      {
-        href: "/bio/skills/backend",
-        children: "backend",
-        icon: <ServerIcon className="w-6 h-6" />,
-      },
-      {
-        href: "/bio/skills/design",
-        children: "design",
-        icon: <PencilIcon className="w-6 h-6" />,
-      },
-      {
-        href: "/bio/skills/process_model",
-        children: "projectManagement",
-        icon: <ArrowTrendingUpIcon className="w-6 h-6" />,
-      },
-    ],
   },
   {
     children: "myProjects",

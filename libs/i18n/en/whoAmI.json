@@ -11,6 +11,110 @@
     "and full-stack developer who is on fire for frontend development. I am particularly familiar with the following technologies..."
   ],
   "skills": {
+    "junit": {
+      "title": "JUnit",
+      "description": "JUnit 5 is the next generation of JUnit. The goal is to create an up-to-date foundation for developer-side testing on the JVM. This includes focusing on Java 8 and above, as well as enabling many different styles of testing."
+    },
+    "jest": {
+      "title": "Jest",
+      "description": "Jest is a delightful JavaScript Testing Framework with a focus on simplicity."
+    },
+    "testingLibary": {
+      "title": "(React) Testing Libary",
+      "description": "The @testing-library family of packages helps you test UI components in a user-centric way."
+    },
+    "cypress": {
+      "title": "Cypress",
+      "description": "Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications."
+    },
+    "playwright": {
+      "title": "Playwright",
+      "description": "Playwright Test was created specifically to accommodate the needs of end-to-end testing. Playwright supports all modern rendering engines including Chromium, WebKit, and Firefox. Test on Windows, Linux, and macOS, locally or on CI, headless or headed with native mobile emulation of Google Chrome for Android and Mobile Safari."
+    },
+    "softwareTesting": { "title": "Software Testing" },
+    "scrum": {
+      "title": "Scrum",
+      "description": "I have used Scrum practically in my last activities. Although it was a modified version due to the use of Atlassian Jira, I still had good experiences with agile working."
+    },
+    "atlassian": {
+      "title": "Atlassian Suite",
+      "description": "I practically used Atlassian Suite to have my development tasks clearly laid out. We used Jira to distribute tasks, Bitbucket for source code versioning and Confluence for notes and other documents."
+    },
+    "office": {
+      "title": "Microsoft Office",
+      "description": "I used the Microsoft Office Suite in my practical work to hold video conferences and communicate with my team via Teams. In addition, I had to fill out my timesheet in Excel. In the course of my studies, I also created various presentations and documents in PowerPoint and Word, and I know my way around these as well."
+    },
+    "slack": {
+      "title": "Slack",
+      "description": "I used the Slack messaging app in my job to keep in touch with my team and the company. In the process, I learned how this application works and how to use it effectively for team communication."
+    },
+    "monorepo": {
+      "title": "Monorepo + Package Manager",
+      "description": "In my activities I use both the npm and the yarn package manager, for adding external dependencies. In larger projects I have already used the nrwl nx monorepo manager."
+    },
+    "react": {
+      "title": "React (Native)",
+      "description": "In my practical work, I have gained extensive knowledge of the React library. I use only modern techniques, such as hooks and functional components. I also have knowledge about common libraries in the React cosmos.",
+      "links": {
+        "example": "Example"
+      }
+    },
+    "swift": {
+      "title": "Swift",
+      "description": "I have been exposed to the Swift programming language mainly in the area of native app development and used it in a private project. However, the language is also very suitable for the development of backend applications."
+    },
+    "angular": {
+      "title": "Angular",
+      "description": "Besides my knowledge of React, I also gained knowledge of Angular Framework for employment and actively used it."
+    },
+    "typescript": {
+      "title": "TypeScript",
+      "description": "I got involved with TypeScript because JavaScript didn't appeal to me due to the lack of typing. I have used TypeScript in various web applications privately and in employment. So I have a lot of experience and prefer it as a programming language for frontend applications."
+    },
+    "html5": {
+      "title": "HTML5",
+      "description": "The language for the structural design of web applications is HTML. So I use this for all my applications and prefer the modern HTML5 standard. I am also familiar with various template engines."
+    },
+    "css3": {
+      "title": "CSS3",
+      "description": "For the implementation of design specifications I use CSS. This allows in the specification CSS3 a precise implementation of different user interface designs. In addition, I am familiar with various tools that allow better style structuring"
+    },
+    "figma": {
+      "title": "Figma",
+      "description": "In my spare time, I exclusively use Figma to design new interfaces for web applications. I am therefore now very familiar with this tool and can realize UI/UX designs in it."
+    },
+    "adobeXd": {
+      "title": "Adobe XD",
+      "description": "In a large frontend project where I worked as a frontend developer, Adobe XD was used as a tool for the design drafts for the custom design system. Therefore I know the web interface of this tool very well, even if the styles are not always ideally output there, I could work with it."
+    },
+    "affinity": {
+      "title": "Affinity Suite",
+      "description": "In my spare time projects I use Affinity to edit photos fund to modify vector graphics for my web applications. In addition, I am also able to crop elements from photos to use them without a background, for example."
+    },
+    "dui": {
+      "title": "Designing User Interfaces",
+      "description": "I have long had an interest in learning how to make a web application beautiful and functional. Before reading this book, however, I could only do so by gfeel and the results were mixed. This book by two renowned UI/UX designers, has given it all a firm structure for me to follow. It has greatly improved my skills in this area. Unfortunately, I haven't had the opportunity to use these skills in a job yet, but would be very interested in doing so."
+    },
+    "golang": {
+      "title": "Golang",
+      "description": "I have been studying the Golang programming language in my spare time. I was particularly impressed by the simplicity and the strength in the area of parallel processing. I used the language together with the Gin framework to create web servers. It is currently my most used language for backend applications. I hope that a better error handling will be implemented soon."
+    },
+    "kotlin": {
+      "title": "Kotlin",
+      "description": "I have completed the tutorial on Kotlin, the language itself. I have also set up a Ktor server in my spare time for use with Rest and GraphQL, thus internalizing the language."
+    },
+    "elixir": {
+      "title": "Elixir",
+      "description": "I got involved with the Elixir programming language when I was looking into creating voice-based chat applications, like Discord. Discord uses Elixir for this functionality. Elixir has a very interesting error handling, which works either by throwing or by return types, but the missing typing didn't appeal to me very much."
+    },
+    "java": {
+      "title": "Java",
+      "description": "I have been working with Java already during my education in university and secondary school. In my studies I had subjects from the basics, over algorithms and data structures, to advanced technologies, like JavaFX. In my first part-time job, I then learned about data management with MySQL and Hibernate. Furthermore, I know my way around Spring and Lombok."
+    },
+    "apiDesign": {
+      "title": "API Design",
+      "description": "While working in the Java area, I learned a lot about creating REST APIs. In my spare time, I started to work with GraphQL in the Node.js area and I am still very enthusiastic about this technology. It allows to design an API as efficient as possible and at the same time to decide in the frontend which data is really needed for the current query."
+    },
     "frontend": {
       "title": "Frontend",
       "description": "In my studies I found the access to web application development through the subject web technologies. Since I had my problems with JavaScript due to the missing typing, I first dealt with TypeScript and later with the React library. In my first job, I realized several React web applications and learned a lot about design systems and practical web development."

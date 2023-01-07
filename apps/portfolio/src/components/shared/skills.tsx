@@ -20,9 +20,11 @@ export const Skills: React.FC<Props> = ({ skills, title, id }) => {
         <span>{title}</span>
       </h2>
       <CardContainer className="mt-6">
-        {skills?.map((skill, index) => (
-          <Card {...skill} key={index} />
-        ))}
+        {skills
+          ?.sort(({ stars }, { stars: bStars }) => (bStars ?? 0) - (stars ?? 0))
+          .map((skill, index) => (
+            <Card {...skill} key={index} />
+          ))}
       </CardContainer>
     </div>
   );

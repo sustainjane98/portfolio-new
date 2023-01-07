@@ -30,31 +30,33 @@ export const ValuesBody: React.FC<Props> = () => {
         },
         background: "bg-[#849566]",
       }}
-      skills={{
-        title: t("bodyTitle"),
-        skills: [
-          {
-            title: t("skills.coherence.title"),
-            description: t("skills.coherence.description"),
-            icon: <UserGroupIcon className="w-6 h-6 text-white" />,
-          },
-          {
-            title: t("skills.diversity.title"),
-            description: t("skills.diversity.description"),
-            icon: <FlagIcon className="w-6 h-6 text-white" />,
-          },
-          {
-            title: t("skills.flexibility.title"),
-            description: t("skills.flexibility.description"),
-            icon: <BriefcaseIcon className="w-6 h-6 text-white" />,
-          },
-          {
-            title: t("skills.quality.title"),
-            description: t("skills.quality.description"),
-            icon: <MagnifyingGlassIcon className="w-6 h-6 text-white" />,
-          },
-        ],
-      }}
+      skills={[
+        {
+          title: t("bodyTitle"),
+          skills: [
+            {
+              title: t("skills.coherence.title"),
+              description: t("skills.coherence.description"),
+              icon: <UserGroupIcon className="w-6 h-6 text-white" />,
+            },
+            {
+              title: t("skills.diversity.title"),
+              description: t("skills.diversity.description"),
+              icon: <FlagIcon className="w-6 h-6 text-white" />,
+            },
+            {
+              title: t("skills.flexibility.title"),
+              description: t("skills.flexibility.description"),
+              icon: <BriefcaseIcon className="w-6 h-6 text-white" />,
+            },
+            {
+              title: t("skills.quality.title"),
+              description: t("skills.quality.description"),
+              icon: <MagnifyingGlassIcon className="w-6 h-6 text-white" />,
+            },
+          ],
+        },
+      ]}
     />
   );
 };

@@ -21,47 +21,49 @@ export const EducationBody: React.FC<Props> = () => {
         background: "bg-[#87817c]",
         shadowDefault: true,
       }}
-      skills={{
-        title: t("bodyTitle"),
-        skills: [
-          {
-            title: t("skills.phoenixGym.title"),
-            description: t("skills.phoenixGym.description"),
-            icon: (
-              <div>
-                <span className="text-lg font-bold">PG</span>
-              </div>
-            ),
-            dateFrom: t("skills.phoenixGym.dateFrom"),
-            dateTo: t("skills.phoenixGym.dateTo"),
-            href: "https://www.phoenix-gymnasium-hoerde.de/",
-            external: true,
-            "aria-label": "Phoenix Gymnasium Link",
-          },
-          {
-            title: t("skills.fhDortmund.title"),
-            description: t("skills.fhDortmund.description"),
-            dateFrom: t("skills.fhDortmund.dateFrom"),
-            dateTo: t("skills.fhDortmund.dateTo"),
-            icon: (
-              <div>
-                <span className="text-lg font-bold">FH</span>
-              </div>
-            ),
-            href: "https://www.fh-dortmund.de/",
-            external: true,
-            "aria-label": "FH Dortmund Link",
-            links: [
-              {
-                description: t("skills.fhDortmund.download"),
-                href: "/fh-dortmund-certificate-jane-will.pdf",
-                external: true,
-                download: t("skills.fhDortmund.downloadTitle"),
-              },
-            ],
-          },
-        ],
-      }}
+      skills={[
+        {
+          title: t("bodyTitle"),
+          skills: [
+            {
+              title: t("skills.phoenixGym.title"),
+              description: t("skills.phoenixGym.description"),
+              icon: (
+                <div>
+                  <span className="text-lg font-bold">PG</span>
+                </div>
+              ),
+              dateFrom: t("skills.phoenixGym.dateFrom"),
+              dateTo: t("skills.phoenixGym.dateTo"),
+              href: "https://www.phoenix-gymnasium-hoerde.de/",
+              external: true,
+              "aria-label": "Phoenix Gymnasium Link",
+            },
+            {
+              title: t("skills.fhDortmund.title"),
+              description: t("skills.fhDortmund.description"),
+              dateFrom: t("skills.fhDortmund.dateFrom"),
+              dateTo: t("skills.fhDortmund.dateTo"),
+              icon: (
+                <div>
+                  <span className="text-lg font-bold">FH</span>
+                </div>
+              ),
+              href: "https://www.fh-dortmund.de/",
+              external: true,
+              "aria-label": "FH Dortmund Link",
+              links: [
+                {
+                  description: t("skills.fhDortmund.download"),
+                  href: "/fh-dortmund-certificate-jane-will.pdf",
+                  external: true,
+                  download: t("skills.fhDortmund.downloadTitle"),
+                },
+              ],
+            },
+          ],
+        },
+      ]}
     />
   );
 };

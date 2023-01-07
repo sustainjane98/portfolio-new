@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 import { ProfilePicture } from "../components/shared/profilePicture";
 import { headlineShowUpAnimation } from "../animations/headlines";
 import { DataTestIds } from "@portfolio/shared-testing";
+import { Pill, Props as PillProps } from "../components/shared/pill";
+import { StaticImageData } from "next/image";
 
 export interface Props {
   header: {
@@ -19,9 +21,10 @@ export interface Props {
     background: string;
     body?: React.ReactNode | string;
     buttons?: ButtonProps[];
+    pills?: PillProps[];
   } & HeaderProps;
-  skills?: SkillsProps;
-  githubProfileUrl?: string;
+  skills?: SkillsProps[];
+  githubProfileUrl?: StaticImageData;
 }
 
 const MotionHeadline = motion(Headline, { forwardMotionProps: true });
@@ -43,6 +46,7 @@ export const SkillsTemplate: React.FC<Props> = ({
     source,
     background,
     shadowDefault,
+    pills,
   },
   skills,
   githubProfileUrl,
@@ -59,8 +63,9 @@ export const SkillsTemplate: React.FC<Props> = ({
       >
         {githubProfileUrl && (
           <ProfilePicture
+            src={githubProfileUrl.src}
+            blurDataURL={githubProfileUrl.blurDataURL}
             alt="Github Profile Picture"
-            src={githubProfileUrl}
             layout="fill"
           />
         )}
@@ -79,6 +84,18 @@ export const SkillsTemplate: React.FC<Props> = ({
             {body}
           </MotionBody>
         )}
+        {pills && pills?.length > 0 && (
+          <motion.div
+            variants={headlineShowUpAnimation}
+            initial="hidden"
+            animate="enter"
+            className="flex flex-wrap mt-4"
+          >
+            {pills.map((pillProps, index) => (
+              <Pill key={index} {...pillProps} />
+            ))}
+          </motion.div>
+        )}
         {buttons && (
           <div className="mt-6 inline-flex">
             {buttons.map((button, index) => (
@@ -96,7 +113,14 @@ export const SkillsTemplate: React.FC<Props> = ({
       <main data-testid={DataTestIds.SKILL_BODY_CONTAINER}>
         {skills && (
           <div className="max-w-7xl mx-auto">
-            <Skills {...skills} />
+            {skills &&
+              skills?.map((s, i) => (
+                <Skills
+                  key={i}
+                  {...s}
+                  id={s.title.replaceAll(" ", "_").toLowerCase()}
+                />
+              ))}
           </div>
         )}
       </main>

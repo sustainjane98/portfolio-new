@@ -28,29 +28,31 @@ export const ProjectsBody: React.FC<Props> = () => {
           href: "https://unsplash.com/@markuswinkler",
         },
       }}
-      skills={{
-        title: t("bodyTitle"),
-        skills: [
-          {
-            icon: <CreatokiaIcon className="w-8 h-8 fill-white" />,
-            description: t("projects.creatokia.description"),
-            title: t("projects.creatokia.title"),
-            href: "https://www.creatokia.com/",
-            external: true,
-          },
-          {
-            icon: (
-              <div className="w-8 h-8 text-white flex items-center justify-center">
-                <span>OS</span>
-              </div>
-            ),
-            description: t("projects.bookwireOS.description"),
-            title: t("projects.bookwireOS.title"),
-            href: "https://www.bookwire.de/bookwire-os/",
-            external: true,
-          },
-        ],
-      }}
+      skills={[
+        {
+          title: t("bodyTitle"),
+          skills: [
+            {
+              icon: <CreatokiaIcon className="w-8 h-8 fill-white" />,
+              description: t("projects.creatokia.description"),
+              title: t("projects.creatokia.title"),
+              href: "https://www.creatokia.com/",
+              external: true,
+            },
+            {
+              icon: (
+                <div className="w-8 h-8 text-white flex items-center justify-center">
+                  <span>OS</span>
+                </div>
+              ),
+              description: t("projects.bookwireOS.description"),
+              title: t("projects.bookwireOS.title"),
+              href: "https://www.bookwire.de/bookwire-os/",
+              external: true,
+            },
+          ],
+        },
+      ]}
     />
   );
 };

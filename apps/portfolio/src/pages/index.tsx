@@ -1,10 +1,10 @@
 import React from "react";
 import { BiographyBody } from "../components/bio/biography-body";
 import { NextSeo } from "next-seo";
-import { GetStaticProps, NextPage } from "next";
-import GithubService from "../services/github.service";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import profilePic from "../assets/1672909551721.jpeg";
+import { GetStaticProps, NextPage } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export interface StaticProps {
   avatarUrl: string;
@@ -15,29 +15,25 @@ export interface StaticProps {
  * @author Jane Will
  * @version 0.1
  */
-const Biography: NextPage<StaticProps> = ({ avatarUrl }) => {
+const Biography: NextPage<StaticProps> = () => {
   const { t } = useTranslation(["whoAmI"]);
   return (
     <>
       <NextSeo title={t("seo.title")} description={t("seo.description")} />
-      <BiographyBody githubProfileUrl={avatarUrl} />
+      <BiographyBody githubProfileUrl={profilePic} />
     </>
   );
 };
 
 export default Biography;
 
-export const getStaticProps: GetStaticProps<StaticProps> = async ({
-  locale,
-}) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   locale = locale ?? "en";
-  const ghs = new GithubService();
-  const { avatar_url } = await ghs.getUser("sustainjane98");
 
   return {
     props: {
-      avatarUrl: avatar_url,
       ...(await serverSideTranslations(locale, ["common", "whoAmI"])),
+      // Will be passed to the page component as props
     },
   };
 };
