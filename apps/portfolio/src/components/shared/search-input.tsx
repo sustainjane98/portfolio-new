@@ -23,11 +23,11 @@ export const SearchInput: React.FC<Props> = ({ onUpdate }) => {
   return (
     <FormProvider {...form}>
       <form
-        className="flex w-full mt-4 gap-x-4 max-w-lg items-start"
+        className="flex w-full mt-4 gap-4 max-w-lg lg:items-start flex-col lg:flex-row items-center"
         onSubmit={form.handleSubmit(onUpdate)}
       >
         <Input
-          className="flex-1"
+          className="flex-1 w-full"
           name="search"
           placeholder={t("searchPlaceholder")}
         />

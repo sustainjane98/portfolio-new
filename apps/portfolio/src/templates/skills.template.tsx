@@ -145,7 +145,7 @@ const SkillsTemplateInner: React.FC<Props> = ({
               className={`flex ${classNames({
                 "justify-between": skills.length > 1,
                 "justify-center": skills.length <= 1,
-              })} w-full mt-4 flex-col-reverse gap-4 lg:flex-row`}
+              })} w-full mt-4 flex-col-reverse gap-8 lg:flex-row`}
             >
               {skills.length > 1 && (
                 <div className="flex flex-wrap gap-2 max-w-screen-sm align-center">
