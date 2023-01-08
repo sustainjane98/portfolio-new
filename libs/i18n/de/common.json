@@ -20,5 +20,21 @@
   "today": "heute",
   "search": "Suche",
   "searchPlaceholder": "Bitte geben Sie einen Skill zum Suchen ein...",
-  "clear": "Löschen"
+  "clear": "Löschen",
+  "form": {
+    "button": "Senden",
+    "nameInput": "Name",
+    "title": "Kontaktieren Sie mich",
+    "emailInput": "E-Mail-Adresse",
+    "contactReasonSelect": "Kontaktgrund",
+    "contactReasonValues": {
+      "jobOffer": "Stellenangebot",
+      "other": "Sonstiges"
+    },
+    "contactReasonInput": "Kontaktgrund (Wert)",
+    "jobAdvertisementInput": "Stellenausschreibung",
+    "messageArea": "Nachricht",
+    "hintText": "Dieses Formular wird verwendet, um eine E-Mail an mich zu erstellen. Es werden keine weiteren Informationen gespeichert, außer der E-Mail selbst.",
+    "jobLocationInput": "Job Standort"
+  }
 }

@@ -23,6 +23,7 @@ import classNames from "classnames";
 import { useIntersection } from "react-use";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
+import { MessagePill } from "../components/shared/message-pill";
 
 export interface Props {
   header: {
@@ -176,8 +177,13 @@ const SkillsTemplateInner: React.FC<Props> = ({
           </div>
         )}
       </main>
-      {intersection && intersection?.intersectionRatio < 1 && (
-        <div ref={scrollButtonRef} className="fixed bottom-4 right-4 z-50">
+
+      <div
+        ref={scrollButtonRef}
+        className="fixed bottom-4 right-4 z-50 flex flex-col gap-y-2"
+      >
+        <MessagePill />
+        {intersection && intersection?.intersectionRatio < 1 && (
           <Pill
             onClick={async () => {
               window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
@@ -189,8 +195,8 @@ const SkillsTemplateInner: React.FC<Props> = ({
           >
             <ArrowUpCircleIcon className="w-6 h-6" />
           </Pill>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
