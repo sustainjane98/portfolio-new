@@ -18,14 +18,20 @@ export const WorkExperienceBody: React.FC<Props> = () => {
   return (
     <SkillsTemplate
       header={{
-        headline: { headline: t("headline"), subheadline: t("subheadline") },
+        headline: { subheadline: t("subheadline") },
         src: officeImage,
         background: "bg-[#565250]",
+        body: t("body"),
         source: {
           copyright: "Alex Kotliarskyi",
           href: "https://unsplash.com/@frantic",
         },
+        pills: [
+          { children: t("skills.bookwire.title") },
+          { children: t("skills.brockhaus.title") },
+        ],
       }}
+      showProfilePic={true}
       skills={[
         {
           title: t("bodyTitle"),

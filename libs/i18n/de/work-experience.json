@@ -4,8 +4,9 @@
     "description": "Meine Arbeitserfahrung im Bereich der Softwareentwicklung"
   },
   "headline": "Meine Berufserfahrung",
-  "subheadline": "Meine Berufserfahrung im Bereich der Softwareentwicklung",
+  "subheadline": "Das ist meine Berufserfahrung im Bereich der Softwareentwicklung",
   "bodyTitle": "Meine Berufserfahrung",
+  "body": "Die Erfahrung die ich in verschiedenen Tätigkeiten neben dem Studium und in Vollzeit sammeln durfte. Diese Auflistung soll vorallem meine unternehmensnahen Erfahrungen zeigen. Darüber hinaus beschäftige ich mich aber auch in der Freizeit mit verschiedenen Projekten und Technologien.",
   "skills": {
     "agido": {
       "title": "Agido GmbH",

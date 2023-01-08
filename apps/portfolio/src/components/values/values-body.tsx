@@ -21,15 +21,20 @@ export const ValuesBody: React.FC<Props> = () => {
   return (
     <SkillsTemplate
       header={{
-        headline: { headline: t("headline"), subheadline: t("subheadline") },
+        headline: { subheadline: t("subheadline") },
         src: stoneImage,
-
+        body: t("body"),
         source: {
           copyright: "Sean Stratton",
           href: "https://unsplash.com/@seanstratton",
         },
         background: "bg-[#849566]",
+        pills: [
+          { children: t("skills.coherence.title") },
+          { children: t("skills.diversity.title") },
+        ],
       }}
+      showProfilePic={true}
       skills={[
         {
           title: t("bodyTitle"),

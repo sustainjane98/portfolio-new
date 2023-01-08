@@ -9,7 +9,6 @@ import {
 } from "@heroicons/react/24/solid";
 import { useTranslation } from "next-i18next";
 import { Link } from "../shared/link";
-import { StaticImageData } from "next/image";
 import ReactIcon from "../../assets/react-2.svg";
 import AngularIcon from "../../assets/angular-icon-1.svg";
 import TypescriptIcon from "../../assets/typescript.svg";
@@ -81,23 +80,20 @@ const javaAndKotlin = [
     "aria-label": "Project Lombok Link",
   },
 ];
-export interface Props {
-  githubProfileUrl: StaticImageData;
-}
+export interface Props {}
 
 /**
  * An HeaderWithTwoSections React Component.
  * @author Jane Will
  * @version 0.1
  */
-export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
+export const BiographyBody: React.FC<Props> = () => {
   const { t } = useTranslation(["whoAmI"]);
 
   return (
     <SkillsTemplate
       header={{
         headline: {
-          headline: t("headline"),
           subheadline: t("subheadline"),
         },
         pills: [
@@ -147,7 +143,7 @@ export const BiographyBody: React.FC<Props> = ({ githubProfileUrl }) => {
         indicator: <ScrollDownIndicator className="z-10" />,
         background: "bg-[#0c1116]",
       }}
-      githubProfileUrl={githubProfileUrl}
+      showProfilePic={true}
       skills={[
         {
           title: t("skills.frontend.title"),

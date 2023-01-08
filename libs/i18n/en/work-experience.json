@@ -4,8 +4,9 @@
     "description": "My Work Experience in the field of software development"
   },
   "headline": "My Work Experience",
-  "subheadline": "My Work Experience in the field of software development",
+  "subheadline": "This is my professional experience in the field of software development",
   "bodyTitle": "My Work Experience",
+  "body": "The experience I was able to gain in various jobs alongside my studies and full-time. This list should mainly show my company-related experiences. In addition, I also deal with various projects and technologies in my spare time.",
   "skills": {
     "agido": {
       "title": "Agido GmbH",

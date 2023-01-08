@@ -16,11 +16,17 @@ export const EducationBody: React.FC<Props> = () => {
   return (
     <SkillsTemplate
       header={{
-        headline: { headline: t("headline"), subheadline: t("subheadline") },
+        headline: { subheadline: t("subheadline") },
         src: bibImage,
         background: "bg-[#87817c]",
         shadowDefault: true,
+        body: t("body"),
+        pills: [
+          { children: t("skills.phoenixGym.title") },
+          { children: t("skills.fhDortmund.title") },
+        ],
       }}
+      showProfilePic={true}
       skills={[
         {
           title: t("bodyTitle"),

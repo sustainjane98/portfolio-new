@@ -13,7 +13,8 @@ import { ProfilePicture } from "../components/shared/profilePicture";
 import { headlineShowUpAnimation } from "../animations/headlines";
 import { DataTestIds } from "@portfolio/shared-testing";
 import { Pill, Props as PillProps } from "../components/shared/pill";
-import { StaticImageData } from "next/image";
+import profilePic from "../assets/1672909551721.jpeg";
+import { useTranslation } from "next-i18next";
 
 export interface Props {
   header: {
@@ -24,7 +25,7 @@ export interface Props {
     pills?: PillProps[];
   } & HeaderProps;
   skills?: SkillsProps[];
-  githubProfileUrl?: StaticImageData;
+  showProfilePic?: boolean;
 }
 
 const MotionHeadline = motion(Headline, { forwardMotionProps: true });
@@ -49,8 +50,10 @@ export const SkillsTemplate: React.FC<Props> = ({
     pills,
   },
   skills,
-  githubProfileUrl,
+  showProfilePic,
 }) => {
+  const { t } = useTranslation(["common"]);
+
   return (
     <div>
       <Header
@@ -61,15 +64,16 @@ export const SkillsTemplate: React.FC<Props> = ({
         source={source}
         shadowDefault={shadowDefault}
       >
-        {githubProfileUrl && (
+        {showProfilePic && (
           <ProfilePicture
-            src={githubProfileUrl.src}
-            blurDataURL={githubProfileUrl.blurDataURL}
+            src={profilePic.src}
+            blurDataURL={profilePic.blurDataURL}
             alt="Github Profile Picture"
             layout="fill"
           />
         )}
         <MotionHeadline
+          headline={t("defaultHeadline", { ns: "common" })}
           {...headline}
           variants={headlineShowUpAnimation}
           initial="hidden"

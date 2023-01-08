@@ -2,7 +2,6 @@ import React from "react";
 import { BiographyBody } from "../components/bio/biography-body";
 import { NextSeo } from "next-seo";
 import { useTranslation } from "next-i18next";
-import profilePic from "../assets/1672909551721.jpeg";
 import { GetStaticProps, NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -20,7 +19,7 @@ const Biography: NextPage<StaticProps> = () => {
   return (
     <>
       <NextSeo title={t("seo.title")} description={t("seo.description")} />
-      <BiographyBody githubProfileUrl={profilePic} />
+      <BiographyBody />
     </>
   );
 };

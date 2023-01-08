@@ -1,11 +1,12 @@
 {
   "seo": {
     "title": "Meine Werte",
-    "description": "Die Werte, die ich an meine Arbeit habe"
+    "description": "Das sind meine Werte, die ich an meine Arbeit habe"
   },
-  "headline": "Meine Werte",
-  "subheadline": "Die Werte, die ich an meine Arbeit habe",
+  "headline": "Ich bin Jane",
+  "subheadline": "Das sind meine Werte, die ich an meine Arbeit habe",
   "bodyTitle": "Persönliche Werte",
+  "body": "Die Werte des täglichen Zusammenarbeitens sind für mich mehr als leere Worthülsen. Für mich sind es elementare Bestandteile für den Erfolg eines Projektes oder Teams. Für mich ist das teilen dieser Werte unerlässlich. Daher kann ich nicht Teil eines Unternehmens sein, welches diese nicht teilt.",
   "skills": {
     "coherence": {
       "title": "Zusammenhalt",

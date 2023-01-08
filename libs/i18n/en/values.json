@@ -1,11 +1,12 @@
 {
   "seo": {
     "title": "My Values",
-    "description": "The Values I have according to my work"
+    "description": "These are the values I have for my work"
   },
-  "headline": "My Personal Values",
-  "subheadline": "The Values I have according to my work",
+  "headline": "I am Jane",
+  "subheadline": "These are the values I have for my work",
   "bodyTitle": "Personal Values",
+  "body": "For me, the values of daily collaboration are more than empty words. For me, they are elementary components for the success of a project or team. For me, sharing these values is essential. Therefore, I cannot be part of a company that does not share them.",
   "skills": {
     "coherence": {
       "title": "Coherence",
