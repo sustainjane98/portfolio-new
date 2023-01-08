@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Link from "next/link";
 import React, { PropsWithChildren } from "react";
 
@@ -21,7 +22,7 @@ export const Pill: React.FC<PropsWithChildren<Props>> = ({
     return (
       <Link
         href={href}
-        className="pill pill-primary pill-selectable h-min"
+        className="pill pill-primary pill-selectable h-min cursor-pointer"
         scroll={false}
       >
         <span>{children}</span>
@@ -29,7 +30,12 @@ export const Pill: React.FC<PropsWithChildren<Props>> = ({
     );
   else
     return (
-      <div onClick={onClick} className="pill pill-primary h-min">
+      <div
+        onClick={onClick}
+        className={classNames("pill pill-primary h-min", {
+          "cursor-pointer": !!onClick,
+        })}
+      >
         <span>{children}</span>
       </div>
     );
