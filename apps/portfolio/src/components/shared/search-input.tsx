@@ -27,25 +27,14 @@ export const SearchInput: React.FC<Props> = ({ onUpdate }) => {
         onSubmit={form.handleSubmit(onUpdate)}
       >
         <Input
+          clearable
+          variant="search"
           className="flex-1 w-full"
           name="search"
           placeholder={t("searchPlaceholder")}
         />
         <div className="flex gap-x-1">
           <Button>{t("search")}</Button>
-          <Button
-            variant="red"
-            type="button"
-            onClick={() => {
-              form.setValue("search", "", {
-                shouldDirty: true,
-                shouldTouch: true,
-              });
-              onUpdate({ search: "" });
-            }}
-          >
-            {t("clear")}
-          </Button>
         </div>
       </form>
     </FormProvider>
