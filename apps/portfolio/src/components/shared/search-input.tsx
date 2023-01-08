@@ -36,8 +36,8 @@ export const SearchInput: React.FC<Props> = ({ onUpdate }) => {
             onUpdate({ search: "" });
           }}
         />
-        <div className="flex gap-x-1">
-          <Button>{t("search")}</Button>
+        <div className="flex gap-x-1 lg:w-auto w-full">
+          <Button className="flex-1">{t("search")}</Button>
         </div>
       </form>
     </FormProvider>

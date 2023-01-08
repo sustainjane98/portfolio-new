@@ -143,12 +143,12 @@ const SkillsTemplateInner: React.FC<Props> = ({
           <div className="max-w-7xl mx-auto">
             <div
               className={`flex ${classNames({
-                "justify-between": skills.length > 1,
-                "justify-center": skills.length <= 1,
-              })} w-full mt-4 flex-col-reverse gap-8 lg:flex-row`}
+                "lg:justify-between": skills.length > 1,
+                "lg:justify-center": skills.length <= 1,
+              })} w-full mt-4 flex-col-reverse gap-8 lg:flex-row justify-center lg:items-start items-center`}
             >
               {skills.length > 1 && (
-                <div className="flex flex-wrap gap-2 max-w-screen-sm items-center">
+                <div className="flex flex-wrap gap-2 max-w-screen-sm items-center lg:justify-start justify-center">
                   {filteredSkills?.map(({ title }, i) => (
                     <Pill
                       key={i}
