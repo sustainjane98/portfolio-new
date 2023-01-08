@@ -1,9 +1,10 @@
 import Link from "next/link";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 export interface Props {
   href?: string;
-  children: string;
+  onClick?: () => void;
+  smoothScroll?: boolean;
 }
 
 /**
@@ -11,16 +12,24 @@ export interface Props {
  * @author Jane Will
  * @version 0.1
  */
-export const Pill: React.FC<Props> = ({ href, children }) => {
+export const Pill: React.FC<PropsWithChildren<Props>> = ({
+  href,
+  children,
+  onClick,
+}) => {
   if (href)
     return (
-      <Link href={href} className="pill pill-primary pill-selectable">
+      <Link
+        href={href}
+        className="pill pill-primary pill-selectable"
+        scroll={false}
+      >
         <span>{children}</span>
       </Link>
     );
   else
     return (
-      <div className="pill pill-primary">
+      <div onClick={onClick} className="pill pill-primary">
         <span>{children}</span>
       </div>
     );

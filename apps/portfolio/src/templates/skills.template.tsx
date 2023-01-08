@@ -20,6 +20,9 @@ import { SearchProvider } from "../provider/search.provider";
 import { useSearchTerm } from "../hooks/useSearchTerm.hook";
 import { useSearchFilter } from "../hooks/useSearchFilter";
 import classNames from "classnames";
+import { useIntersection } from "react-use";
+import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
 
 export interface Props {
   header: {
@@ -57,15 +60,27 @@ const SkillsTemplateInner: React.FC<Props> = ({
   skills,
   showProfilePic,
 }) => {
+  const headerRef = React.createRef<HTMLElement>();
+  const scrollButtonRef = React.useRef<HTMLDivElement>(null);
+
   const { t } = useTranslation(["common"]);
 
   const { setSearchTerm } = useSearchTerm();
 
   const filteredSkills = useSearchFilter(skills);
 
+  const intersection = useIntersection(headerRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+
+  const { pathname, push } = useRouter();
+
   return (
     <div>
       <Header
+        ref={headerRef}
         src={src}
         className={className}
         background={background}
@@ -161,6 +176,21 @@ const SkillsTemplateInner: React.FC<Props> = ({
           </div>
         )}
       </main>
+      {intersection && intersection?.intersectionRatio < 1 && (
+        <div ref={scrollButtonRef} className="fixed bottom-4 right-4 z-50">
+          <Pill
+            onClick={async () => {
+              window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+
+              window.setTimeout(async () => {
+                await push(pathname);
+              }, 1000);
+            }}
+          >
+            <ArrowUpCircleIcon className="w-6 h-6" />
+          </Pill>
+        </div>
+      )}
     </div>
   );
 };

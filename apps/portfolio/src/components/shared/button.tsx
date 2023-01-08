@@ -10,7 +10,6 @@ export interface Props
   > {
   href?: string;
   onClick?: () => void;
-  children: string;
   isLoading?: boolean;
   variant?: "primary" | "secondary" | "red";
 }
@@ -35,7 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
         <Link
           href={href}
           ref={ref as React.Ref<HTMLAnchorElement>}
-          aria-label={children}
+          aria-label={children as string}
           className={classes}
         >
           <span>{children}</span>
@@ -44,7 +43,7 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
     return (
       <button
         ref={ref as React.LegacyRef<HTMLButtonElement>}
-        aria-label={children}
+        aria-label={children as string}
         onClick={onClick}
         {...buttonProps}
         disabled={isDisabled}
