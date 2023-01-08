@@ -7,7 +7,7 @@ export interface Props
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {
-  label: string;
+  label?: string;
   className?: string;
   name: string;
   required?: boolean;
@@ -25,15 +25,17 @@ export const Input: React.FC<Props> = ({ label, className, ...inputprops }) => {
   } = useFormContext(inputprops.name);
 
   return (
-    <div className={`mb-6 ${className}`}>
+    <div className={`${className}`}>
       <div>
-        <label
-          htmlFor={inputprops.name}
-          className={`block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300`}
-        >
-          {label}
-          {inputprops.required ? "*" : ""}
-        </label>
+        {label && (
+          <label
+            htmlFor={inputprops.name}
+            className={`block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300`}
+          >
+            {label}
+            {inputprops.required ? "*" : ""}
+          </label>
+        )}
         <input
           id={inputprops.name}
           {...inputprops}

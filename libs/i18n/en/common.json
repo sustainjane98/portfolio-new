@@ -17,5 +17,7 @@
   "main": "Main pages",
   "skills": "Skills",
   "getMoreInformation": "Get more Information",
-  "today": "today"
+  "today": "today",
+  "search": "Search",
+  "searchPlaceholder": "Please enter a skill to search..."
 }

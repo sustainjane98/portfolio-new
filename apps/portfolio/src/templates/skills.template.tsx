@@ -15,6 +15,9 @@ import { DataTestIds } from "@portfolio/shared-testing";
 import { Pill, Props as PillProps } from "../components/shared/pill";
 import profilePic from "../assets/1672909551721.jpeg";
 import { useTranslation } from "next-i18next";
+import { SearchInput } from "../components/shared/search-input";
+import { SearchProvider } from "../provider/search.provider";
+import { useSearchTerm } from "../hooks/useSearchTerm.hook";
 
 export interface Props {
   header: {
@@ -37,7 +40,7 @@ const MotionButton = motion(Button);
  * @author Jane Will
  * @version 0.1
  */
-export const SkillsTemplate: React.FC<Props> = ({
+const SkillsTemplateInner: React.FC<Props> = ({
   header: {
     src,
     className,
@@ -53,6 +56,8 @@ export const SkillsTemplate: React.FC<Props> = ({
   showProfilePic,
 }) => {
   const { t } = useTranslation(["common"]);
+
+  const { setSearchTerm } = useSearchTerm();
 
   return (
     <div>
@@ -117,6 +122,14 @@ export const SkillsTemplate: React.FC<Props> = ({
       <main data-testid={DataTestIds.SKILL_BODY_CONTAINER}>
         {skills && (
           <div className="max-w-7xl mx-auto">
+            {" "}
+            <div className="flex pl-[90px] justify-center w-full">
+              <SearchInput
+                onUpdate={({ searchTerm }) => {
+                  setSearchTerm(searchTerm);
+                }}
+              />
+            </div>
             {skills &&
               skills?.map((s, i) => (
                 <Skills
@@ -129,5 +142,13 @@ export const SkillsTemplate: React.FC<Props> = ({
         )}
       </main>
     </div>
+  );
+};
+
+export const SkillsTemplate: React.FC<Props> = (props) => {
+  return (
+    <SearchProvider>
+      <SkillsTemplateInner {...props} />
+    </SearchProvider>
   );
 };

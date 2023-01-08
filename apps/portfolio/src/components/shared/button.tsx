@@ -26,7 +26,8 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
 
     const classes = classNames(
       { "bg-gray-300": !isDisabled, [`button-${variant}`]: true },
-      "button"
+      "button",
+      "justify-center items-center"
     );
 
     if (href)
