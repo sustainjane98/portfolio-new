@@ -16,7 +16,7 @@ const ArrowDownIconMotionComponent = motion(ArrowDownIcon);
 export const ScrollDownIndicator: React.FC<Props> = ({ className }) => {
   return (
     <div
-      className={`absolute bottom-0 left-0 w-full flex justify-center items-center ${className}`}
+      className={`absolute lg:bottom-0 bottom-8 left-0 w-full flex justify-center items-center ${className}`}
     >
       <ArrowDownIconMotionComponent
         initial={{ y: -20 }}
