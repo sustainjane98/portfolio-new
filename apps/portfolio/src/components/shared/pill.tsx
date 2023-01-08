@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import React, { PropsWithChildren } from "react";
 
-export interface Props {
+export interface Props extends PropsWithChildren {
   href?: string;
   onClick?: () => void;
   smoothScroll?: boolean;
@@ -13,11 +13,7 @@ export interface Props {
  * @author Jane Will
  * @version 0.1
  */
-export const Pill: React.FC<PropsWithChildren<Props>> = ({
-  href,
-  children,
-  onClick,
-}) => {
+export const Pill: React.FC<Props> = ({ href, children, onClick }) => {
   if (href)
     return (
       <Link

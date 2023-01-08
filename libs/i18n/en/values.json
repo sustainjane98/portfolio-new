@@ -6,6 +6,7 @@
   "headline": "I am Jane",
   "subheadline": "These are the values I have for my work",
   "bodyTitle": "Personal Values",
+  "bodyTitle2": "Work-related values",
   "body": "For me, the values of daily collaboration are more than empty words. For me, they are elementary components for the success of a project or team. For me, sharing these values is essential. Therefore, I cannot be part of a company that does not share them.",
   "skills": {
     "coherence": {
@@ -23,6 +24,10 @@
     "quality": {
       "title": "Quality standard",
       "description": "I have a quality standard for my own work. To ensure that I can maintain this quality, I know that I can have a say in my equipment."
+    },
+    "codequality": {
+      "title": "Code quality",
+      "description": "I have the ambition to develop software architecture in such a way that it is aligned with best practices"
     }
   }
 }

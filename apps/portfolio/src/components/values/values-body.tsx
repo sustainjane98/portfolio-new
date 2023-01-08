@@ -8,6 +8,7 @@ import {
   BriefcaseIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
 export interface Props {}
 
@@ -54,10 +55,20 @@ export const ValuesBody: React.FC<Props> = () => {
               description: t("skills.flexibility.description"),
               icon: <BriefcaseIcon className="w-6 h-6 text-white" />,
             },
+          ],
+        },
+        {
+          title: t("bodyTitle2"),
+          skills: [
             {
               title: t("skills.quality.title"),
               description: t("skills.quality.description"),
               icon: <MagnifyingGlassIcon className="w-6 h-6 text-white" />,
+            },
+            {
+              title: t("skills.codequality.title"),
+              description: t("skills.codequality.description"),
+              icon: <CodeBracketIcon className="w-6 h-6 text-white" />,
             },
           ],
         },

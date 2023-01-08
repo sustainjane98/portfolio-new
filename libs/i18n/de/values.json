@@ -6,6 +6,7 @@
   "headline": "Ich bin Jane",
   "subheadline": "Das sind meine Werte, die ich an meine Arbeit habe",
   "bodyTitle": "Persönliche Werte",
+  "bodyTitle2": "Arbeitsbezogene Werte",
   "body": "Die Werte des täglichen Zusammenarbeitens sind für mich mehr als leere Worthülsen. Für mich sind es elementare Bestandteile für den Erfolg eines Projektes oder Teams. Für mich ist das teilen dieser Werte unerlässlich. Daher kann ich nicht Teil eines Unternehmens sein, welches diese nicht teilt.",
   "skills": {
     "coherence": {
@@ -23,6 +24,10 @@
     "quality": {
       "title": "Qualitätsanspruch",
       "description": "Ich habe einen Qualitätsanspruch an meine eigene Arbeit. Um sicherzustellen, diese Qualität auch halten zu können, weiß ich die Möglichkeit bei meiner Ausrüstung ein Mitspracherecht zu haben."
+    },
+    "codequality": {
+      "title": "Codequalität",
+      "description": "Ich habe den Anspruch Softwarearchitektur so zu entwickeln, dass sie sich an Best Practices orientiert"
     }
   }
 }
