@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import SyncLoader from "react-spinners/SyncLoader";
+import classNames from "classnames";
 
 export interface Props
   extends React.DetailedHTMLProps<
@@ -11,6 +12,7 @@ export interface Props
   onClick?: () => void;
   children: string;
   isLoading?: boolean;
+  variant?: "primary" | "secondary";
 }
 
 /**
@@ -19,14 +21,13 @@ export interface Props
  * @version 0.1
  */
 export const Button = React.forwardRef<HTMLButtonElement, Props>(
-  ({ href, onClick, children, isLoading, ...buttonProps }, ref) => {
+  ({ href, onClick, children, isLoading, variant, ...buttonProps }, ref) => {
     const isDisabled = isLoading || buttonProps.disabled;
 
-    const classes = `py-4 px-6  ${
-      !isDisabled
-        ? "bg-navy-600 hover:bg-navy-700 focus:ring-navy-700 focus:ring-offset-indigo-200"
-        : "bg-gray-300"
-    } text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg`;
+    const classes = classNames(
+      { "bg-gray-300": !isDisabled, [`button-${variant}`]: true },
+      "button"
+    );
 
     if (href)
       return (
@@ -58,5 +59,5 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
   }
 );
 
-Button.defaultProps = { isLoading: false };
+Button.defaultProps = { isLoading: false, variant: "primary" };
 Button.displayName = "Button";

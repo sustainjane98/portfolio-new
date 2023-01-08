@@ -14,16 +14,13 @@ export interface Props {
 export const Pill: React.FC<Props> = ({ href, children }) => {
   if (href)
     return (
-      <Link
-        href={href}
-        className="text-white bg-navy-500 hover:bg-navy-600 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
-      >
+      <Link href={href} className="pill pill-primary pill-selectable">
         <span>{children}</span>
       </Link>
     );
   else
     return (
-      <div className="text-white bg-navy-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
+      <div className="pill pill-primary">
         <span>{children}</span>
       </div>
     );
