@@ -19,5 +19,6 @@
   "getMoreInformation": "Get more Information",
   "today": "today",
   "search": "Search",
-  "searchPlaceholder": "Please enter a skill to search..."
+  "searchPlaceholder": "Please enter a skill to search...",
+  "clear": "Clear"
 }

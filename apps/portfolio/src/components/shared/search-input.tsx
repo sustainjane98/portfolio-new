@@ -6,7 +6,7 @@ import { Input } from "./input";
 
 export interface Props {
   onUpdate: SubmitHandler<{
-    searchTerm: string;
+    search: string;
   }>;
 }
 
@@ -16,14 +16,14 @@ export interface Props {
  * @version 0.1
  */
 export const SearchInput: React.FC<Props> = ({ onUpdate }) => {
-  const form = useForm<{ searchTerm: string }>();
+  const form = useForm<{ search: string }>();
 
   const { t } = useTranslation(["common"]);
 
   return (
     <FormProvider {...form}>
       <form
-        className="flex w-full mt-4 gap-x-2 max-w-md"
+        className="flex w-full mt-4 gap-x-4 max-w-lg"
         onSubmit={form.handleSubmit(onUpdate)}
       >
         <Input
@@ -31,7 +31,22 @@ export const SearchInput: React.FC<Props> = ({ onUpdate }) => {
           name="search"
           placeholder={t("searchPlaceholder")}
         />
-        <Button>{t("search")}</Button>
+        <div className="flex gap-x-1">
+          <Button>{t("search")}</Button>
+          <Button
+            variant="red"
+            type="button"
+            onClick={() => {
+              form.setValue("search", "", {
+                shouldDirty: true,
+                shouldTouch: true,
+              });
+              onUpdate({ search: "" });
+            }}
+          >
+            {t("clear")}
+          </Button>
+        </div>
       </form>
     </FormProvider>
   );

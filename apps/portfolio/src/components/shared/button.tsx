@@ -12,7 +12,7 @@ export interface Props
   onClick?: () => void;
   children: string;
   isLoading?: boolean;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "red";
 }
 
 /**

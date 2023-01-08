@@ -18,6 +18,7 @@ import { useTranslation } from "next-i18next";
 import { SearchInput } from "../components/shared/search-input";
 import { SearchProvider } from "../provider/search.provider";
 import { useSearchTerm } from "../hooks/useSearchTerm.hook";
+import { useSearchFilter } from "../hooks/useSearchFilter";
 
 export interface Props {
   header: {
@@ -59,6 +60,8 @@ const SkillsTemplateInner: React.FC<Props> = ({
 
   const { setSearchTerm } = useSearchTerm();
 
+  const filteredSkills = useSearchFilter(skills);
+
   return (
     <div>
       <Header
@@ -98,7 +101,7 @@ const SkillsTemplateInner: React.FC<Props> = ({
             variants={headlineShowUpAnimation}
             initial="hidden"
             animate="enter"
-            className="flex flex-wrap mt-4"
+            className="flex flex-wrap mt-4 gap-2"
           >
             {pills.map((pillProps, index) => (
               <Pill key={index} {...pillProps} />
@@ -122,16 +125,15 @@ const SkillsTemplateInner: React.FC<Props> = ({
       <main data-testid={DataTestIds.SKILL_BODY_CONTAINER}>
         {skills && (
           <div className="max-w-7xl mx-auto">
-            {" "}
             <div className="flex pl-[90px] justify-center w-full">
               <SearchInput
-                onUpdate={({ searchTerm }) => {
-                  setSearchTerm(searchTerm);
+                onUpdate={({ search }) => {
+                  setSearchTerm(search);
                 }}
               />
             </div>
             {skills &&
-              skills?.map((s, i) => (
+              filteredSkills?.map((s, i) => (
                 <Skills
                   key={i}
                   {...s}
