@@ -23,7 +23,7 @@ export const SearchInput: React.FC<Props> = ({ onUpdate }) => {
   return (
     <FormProvider {...form}>
       <form
-        className="flex w-full mt-4 gap-x-4 max-w-lg"
+        className="flex w-full mt-4 gap-x-4 max-w-lg items-start"
         onSubmit={form.handleSubmit(onUpdate)}
       >
         <Input

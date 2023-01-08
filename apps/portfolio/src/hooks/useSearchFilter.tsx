@@ -31,7 +31,7 @@ export const useSearchFilter = (array?: SkillsProps[]) => {
     }
 
     setFilteredArray(filteredArrayCopy);
-  }, [searchTerm]);
+  }, [searchTerm, array]);
 
   return filteredArray;
 };

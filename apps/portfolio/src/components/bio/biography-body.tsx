@@ -98,24 +98,28 @@ export const BiographyBody: React.FC<Props> = () => {
         },
         pills: [
           {
-            children: t("skills.frontend.title"),
-            href: `/#frontend`,
+            children: t("skills.react.title"),
           },
           {
-            children: t("skills.backend.title"),
-            href: `/#backend`,
+            children: t("skills.typescript.title"),
           },
           {
-            children: t("skills.design.title"),
-            href: `/#design`,
+            children: t("skills.css3.title"),
           },
           {
-            children: t("skills.softwareTesting.title"),
-            href: `/#software_testing`,
+            children: t("skills.html5.title"),
           },
           {
-            children: t("skills.projectManagement.title"),
-            href: `/#project_management`,
+            children: t("skills.playwright.title"),
+          },
+          {
+            children: t("skills.figma.title"),
+          },
+          {
+            children: t("skills.kotlin.title"),
+          },
+          {
+            children: t("skills.golang.title"),
           },
         ],
         src: programmingBackground,

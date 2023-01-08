@@ -19,6 +19,7 @@ import { SearchInput } from "../components/shared/search-input";
 import { SearchProvider } from "../provider/search.provider";
 import { useSearchTerm } from "../hooks/useSearchTerm.hook";
 import { useSearchFilter } from "../hooks/useSearchFilter";
+import classNames from "classnames";
 
 export interface Props {
   header: {
@@ -125,7 +126,24 @@ const SkillsTemplateInner: React.FC<Props> = ({
       <main data-testid={DataTestIds.SKILL_BODY_CONTAINER}>
         {skills && (
           <div className="max-w-7xl mx-auto">
-            <div className="flex pl-[90px] justify-center w-full">
+            <div
+              className={`flex ${classNames({
+                "justify-between": skills.length > 1,
+                "justify-center": skills.length <= 1,
+              })} w-full mt-4`}
+            >
+              {skills.length > 1 && (
+                <div className="flex flex-wrap gap-2 max-w-screen-sm">
+                  {skills?.map(({ title }, i) => (
+                    <Pill
+                      key={i}
+                      href={`/#${title.replaceAll(" ", "_").toLowerCase()}`}
+                    >
+                      {title}
+                    </Pill>
+                  ))}
+                </div>
+              )}
               <SearchInput
                 onUpdate={({ search }) => {
                   setSearchTerm(search);
