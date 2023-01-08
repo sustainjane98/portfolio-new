@@ -1,7 +1,6 @@
 import { Props as NavigationItem } from "../components/shared/navigation-item";
 import {
   UserIcon,
-  PhoneIcon,
   UserGroupIcon,
   BriefcaseIcon,
   HomeModernIcon,
@@ -27,11 +26,5 @@ export const main: NavigationItem[] = [
     href: "/education",
     children: "education",
     icon: <HomeModernIcon className="w-6 h-6" />,
-  },
-
-  {
-    children: "contactMe",
-    href: "/contactMe",
-    icon: <PhoneIcon className="w-6 h-6" />,
   },
 ];
