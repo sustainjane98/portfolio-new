@@ -133,7 +133,7 @@ const SkillsTemplateInner: React.FC<Props> = ({
               })} w-full mt-4`}
             >
               {skills.length > 1 && (
-                <div className="flex flex-wrap gap-2 max-w-screen-sm">
+                <div className="flex flex-wrap gap-2 max-w-screen-sm align-center">
                   {skills?.map(({ title }, i) => (
                     <Pill
                       key={i}
