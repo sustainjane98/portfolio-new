@@ -6,8 +6,17 @@
   "headline": "Meine Berufserfahrung",
   "subheadline": "Das ist meine Berufserfahrung im Bereich der Softwareentwicklung",
   "bodyTitle": "Meine Berufserfahrung",
+  "bodyTitle2": "Betreute Projekte",
   "body": "Die Erfahrung die ich in verschiedenen Tätigkeiten neben dem Studium und in Vollzeit sammeln durfte. Diese Auflistung soll vorallem meine unternehmensnahen Erfahrungen zeigen. Darüber hinaus beschäftige ich mich aber auch in der Freizeit mit verschiedenen Projekten und Technologien.",
   "skills": {
+    "creatokia": {
+      "title": "Creatokia",
+      "description": "Creatokia ist ein NFT-Marktplatz für digitale Medien. Er wird mit Next.js und React entwickelt. Ich habe ein komplettes Designsystem entwickelt, das auf Designvorgaben basiert."
+    },
+    "bookwireOS": {
+      "title": "Bookwire OS",
+      "description": "Ich habe neue Funktionen im bestehenden Bookwire OS System mit React im Frontend entwickelt. Ich habe die Technologie auf SPA übertragen."
+    },
     "agido": {
       "title": "Agido GmbH",
       "description": "Bei der Agido GmbH habe ich erste praktische Erfahrungen im Java Umfeld sammeln können. Dabei habe ich die Entwicklung eines Java Servers und Clients (mit Swing) unterstützt.",

@@ -6,8 +6,17 @@
   "headline": "My Work Experience",
   "subheadline": "This is my professional experience in the field of software development",
   "bodyTitle": "My Work Experience",
+  "bodyTitle2": "Maintained Projects",
   "body": "The experience I was able to gain in various jobs alongside my studies and full-time. This list should mainly show my company-related experiences. In addition, I also deal with various projects and technologies in my spare time.",
   "skills": {
+    "creatokia": {
+      "title": "Creatokia",
+      "description": "Creatokia is an NFT Marketplace for digital media. It is developed with Next.js and React. I developed an entire design system based on design specifications."
+    },
+    "bookwireOS": {
+      "title": "Bookwire OS",
+      "description": "I developed new features in the existent Bookwire OS System with React in Frontend. I transferred the technology to SPA."
+    },
     "agido": {
       "title": "Agido GmbH",
       "description": "At Agido GmbH I was able to gain my first practical experience in the Java environment. Thereby I supported the development of a Java server and clients (with Swing).",

@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import AgidoIcon from "../../assets/agido.svg";
 import TediIcon from "../../assets/tedi.svg";
 import BrockhausIcon from "../../assets/logo-brockhaus.svg";
+import CreatokiaIcon from "../../assets/creatokia.svg";
 
 export interface Props {}
 
@@ -29,6 +30,8 @@ export const WorkExperienceBody: React.FC<Props> = () => {
         pills: [
           { children: t("skills.bookwire.title") },
           { children: t("skills.brockhaus.title") },
+          { children: t("skills.creatokia.title") },
+          { children: t("skills.bookwireOS.title") },
         ],
       }}
       showProfilePic={true}
@@ -86,6 +89,29 @@ export const WorkExperienceBody: React.FC<Props> = () => {
               external: true,
               "aria-label": "brockhaus Link",
               dateFrom: t("skills.brockhaus.dateFrom"),
+            },
+          ],
+        },
+        {
+          title: t("bodyTitle2"),
+          skills: [
+            {
+              icon: <CreatokiaIcon className="w-8 h-8 fill-white" />,
+              description: t("skills.creatokia.description"),
+              title: t("skills.creatokia.title"),
+              href: "https://www.creatokia.com/",
+              external: true,
+            },
+            {
+              icon: (
+                <div className="w-8 h-8 text-white flex items-center justify-center">
+                  <span>OS</span>
+                </div>
+              ),
+              description: t("skills.bookwireOS.description"),
+              title: t("skills.bookwireOS.title"),
+              href: "https://www.bookwire.de/bookwire-os/",
+              external: true,
             },
           ],
         },
