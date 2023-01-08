@@ -21,7 +21,7 @@ export const Pill: React.FC<PropsWithChildren<Props>> = ({
     return (
       <Link
         href={href}
-        className="pill pill-primary pill-selectable"
+        className="pill pill-primary pill-selectable h-min"
         scroll={false}
       >
         <span>{children}</span>
@@ -29,7 +29,7 @@ export const Pill: React.FC<PropsWithChildren<Props>> = ({
     );
   else
     return (
-      <div onClick={onClick} className="pill pill-primary">
+      <div onClick={onClick} className="pill pill-primary h-min">
         <span>{children}</span>
       </div>
     );

@@ -32,6 +32,9 @@ export const SearchInput: React.FC<Props> = ({ onUpdate }) => {
           className="flex-1 w-full"
           name="search"
           placeholder={t("searchPlaceholder")}
+          onDelete={() => {
+            onUpdate({ search: "" });
+          }}
         />
         <div className="flex gap-x-1">
           <Button>{t("search")}</Button>

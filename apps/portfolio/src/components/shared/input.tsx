@@ -14,6 +14,7 @@ export interface Props
   required?: boolean;
   variant?: "standard" | "search";
   clearable?: boolean;
+  onDelete?: () => void;
 }
 
 /**
@@ -26,6 +27,7 @@ export const Input: React.FC<Props> = ({
   className,
   variant,
   clearable,
+  onDelete,
   ...inputprops
 }) => {
   const {
@@ -67,12 +69,13 @@ export const Input: React.FC<Props> = ({
               />
               {clearable && (
                 <button
-                  type="submit"
-                  onClick={() =>
+                  type="button"
+                  onClick={() => {
                     setValue(inputprops.name, "", {
                       shouldDirty: true,
-                    })
-                  }
+                    });
+                    onDelete?.();
+                  }}
                   className="absolute right-0 pr-2.5 bottom-0 flex items-center justify-center h-full"
                 >
                   <BackspaceIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />

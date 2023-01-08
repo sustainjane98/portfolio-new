@@ -148,8 +148,8 @@ const SkillsTemplateInner: React.FC<Props> = ({
               })} w-full mt-4 flex-col-reverse gap-8 lg:flex-row`}
             >
               {skills.length > 1 && (
-                <div className="flex flex-wrap gap-2 max-w-screen-sm align-center">
-                  {skills?.map(({ title }, i) => (
+                <div className="flex flex-wrap gap-2 max-w-screen-sm items-center">
+                  {filteredSkills?.map(({ title }, i) => (
                     <Pill
                       key={i}
                       href={`/#${title.replaceAll(" ", "_").toLowerCase()}`}
